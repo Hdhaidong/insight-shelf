@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注册 — FactoryToShelf 从工厂到货架</title>
+<meta name="description" content="工厂/厂商直接注册，免费建立数字档案被美国买手发现；买家免费注册，精准匹配供应商。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='18' width='24' height='4' rx='1' fill='%23E8A33D'/><rect x='4' y='26' width='24' height='3' rx='1' fill='%23E8A33D'/><rect x='8' y='4' width='6' height='12' rx='1' fill='%23F2EEE6'/><rect x='18' y='8' width='6' height='8' rx='1' fill='%23F2EEE6'/></svg>">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body id="top">
+
+
+<header class="reg-hero">
+  <div class="container">
+    <div class="kicker" style="justify-content:center">Free Registration · 免费注册</div>
+    <h1 style="font-size:clamp(28px,3.6vw,42px)">10 分钟完成注册，<span class="hl">开启美国货架之旅</span></h1>
+    <div class="reg-tabs" id="regTabs">
+      <button class="reg-tab active" data-tab="supplier">🏭 工厂 / 厂商注册</button>
+      <button class="reg-tab" data-tab="buyer">🛒 买家注册</button>
+    </div>
+  </div>
+</header>
+
+<div class="container" id="regForm">
+  <div class="reg-form-wrap">
+    <!-- 工厂注册 -->
+    <form id="formSupplier" class="reg-form">
+      <div class="f-row">
+        <div class="f-group">
+          <label>公司 / 工厂名称 <span class="req">*</span></label>
+          <input type="text" name="company" placeholder="如：佛山市铭轩家居制造有限公司" required maxlength="60">
+        </div>
+        <div class="f-group">
+          <label>联系人 <span class="req">*</span></label>
+          <input type="text" name="name" placeholder="姓名" required maxlength="40">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>邮箱 <span class="req">*</span></label>
+          <input type="email" name="email" placeholder="name@factory.com" required>
+        </div>
+        <div class="f-group">
+          <label>手机 / WhatsApp</label>
+          <input type="text" name="phone" placeholder="+86 138 xxxx xxxx" maxlength="30">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>设置密码 <span class="req">*</span></label>
+          <input type="password" name="password" placeholder="8-20 位，含大小写字母与数字" required minlength="8" maxlength="20">
+          <p class="pw-note">密码长度 8-20 位，须包含大小写字母与数字</p>
+        </div>
+        <div class="f-group">
+          <label>工厂所在地 <span class="req">*</span></label>
+          <input type="text" name="country" placeholder="如：广东佛山 / 浙江宁波" required maxlength="40">
+        </div>
+      </div>
+      <div class="f-group">
+        <label>主营品类（可多选）<span class="req">*</span></label>
+        <div class="f-check">
+          <label><input type="checkbox" name="categories" value="家具">家具</label>
+          <label><input type="checkbox" name="categories" value="户外">户外庭院</label>
+          <label><input type="checkbox" name="categories" value="健身">健身运动</label>
+          <label><input type="checkbox" name="categories" value="厨卫">厨卫</label>
+          <label><input type="checkbox" name="categories" value="照明">照明</label>
+          <label><input type="checkbox" name="categories" value="汽配">汽配</label>
+          <label><input type="checkbox" name="categories" value="宠物">宠物</label>
+          <label><input type="checkbox" name="categories" value="玩具">玩具</label>
+        </div>
+      </div>
+      <div class="f-group">
+        <label>合作模式 <span class="req">*</span></label>
+        <div class="f-check">
+          <label><input type="radio" name="model" value="OEM" checked>OEM 代工</label>
+          <label><input type="radio" name="model" value="ODM">ODM 贴牌</label>
+          <label><input type="radio" name="model" value="OBM">OBM 自有品牌</label>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>工厂规模</label>
+          <select name="size">
+            <option value="">请选择</option>
+            <option value="50人以下">50 人以下</option>
+            <option value="50-200人">50-200 人</option>
+            <option value="200-500人">200-500 人</option>
+            <option value="500人以上">500 人以上</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label>目标渠道（可多选）</label>
+          <div class="f-check">
+            <label><input type="checkbox" name="channels" value="Home Depot">Home Depot</label>
+            <label><input type="checkbox" name="channels" value="Wayfair">Wayfair</label>
+            <label><input type="checkbox" name="channels" value="Target">Target</label>
+            <label><input type="checkbox" name="channels" value="Amazon">Amazon</label>
+            <label><input type="checkbox" name="channels" value="Costco">Costco</label>
+            <label><input type="checkbox" name="channels" value="其他">其他</label>
+          </div>
+        </div>
+      </div>
+      <div class="f-group">
+        <label>工厂简介 / 优势（选填）</label>
+        <textarea name="note" placeholder="认证资质（BSCI/ISO/UL…）、主打产品、出口经验、代表客户…" maxlength="400"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%">提交注册 · 免费建档</button>
+      <div class="reg-benefits">
+        <div class="reg-benefit">✓ 注册免费</div>
+        <div class="reg-benefit">✓ 48h 完成审核建档</div>
+        <div class="reg-benefit">✓ 12,000+ 买手可见</div>
+      </div>
+      <div class="form-msg" id="msgSupplier"></div>
+    </form>
+
+    <!-- 买家注册 -->
+    <form id="formBuyer" class="reg-form" style="display:none">
+      <div class="f-group">
+        <label>邮箱 <span class="req">*</span></label>
+        <input type="email" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>设置密码 <span class="req">*</span></label>
+          <input type="password" name="password" placeholder="8-20 位" required minlength="8" maxlength="20">
+          <p class="pw-note">密码长度 8-20 位，须包含大小写字母与数字</p>
+        </div>
+        <div class="f-group">
+          <label>确认密码 <span class="req">*</span></label>
+          <input type="password" name="password2" placeholder="再次输入密码" required minlength="8" maxlength="20">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" name="firstName" placeholder="名 / First name" required maxlength="40">
+        </div>
+        <div class="f-group">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" name="lastName" placeholder="姓 / Last name" required maxlength="40">
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-group">
+          <label>国家 / 地区 <span class="req">*</span></label>
+          <select name="country" required>
+            <option value="">请选择</option>
+            <option value="United States">United States 美国</option>
+            <option value="Canada">Canada 加拿大</option>
+            <option value="United Kingdom">United Kingdom 英国</option>
+            <option value="Germany">Germany 德国</option>
+            <option value="Australia">Australia 澳大利亚</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label>电话 <span class="req">*</span></label>
+          <input type="text" name="phone" placeholder="+1 555 000 0000" required maxlength="30">
+        </div>
+      </div>
+      <div class="f-group">
+        <label>所在渠道 / 零售商（可多选）</label>
+        <div class="f-check">
+          <label><input type="checkbox" name="channels" value="Home Depot">Home Depot</label>
+          <label><input type="checkbox" name="channels" value="Wayfair">Wayfair</label>
+          <label><input type="checkbox" name="channels" value="Target">Target</label>
+          <label><input type="checkbox" name="channels" value="Costco">Costco</label>
+          <label><input type="checkbox" name="channels" value="Amazon">Amazon</label>
+          <label><input type="checkbox" name="channels" value="独立站/其他">独立站 / 其他</label>
+        </div>
+      </div>
+      <div class="f-group">
+        <label>感兴趣的品类（可多选）</label>
+        <div class="f-check">
+          <label><input type="checkbox" name="categories" value="家具">家具</label>
+          <label><input type="checkbox" name="categories" value="户外">户外庭院</label>
+          <label><input type="checkbox" name="categories" value="健身">健身运动</label>
+          <label><input type="checkbox" name="categories" value="厨卫">厨卫</label>
+          <label><input type="checkbox" name="categories" value="照明">照明</label>
+          <label><input type="checkbox" name="categories" value="汽配">汽配</label>
+          <label><input type="checkbox" name="categories" value="宠物">宠物</label>
+          <label><input type="checkbox" name="categories" value="玩具">玩具</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%">提交注册 · 开通品类匹配</button>
+      <div class="reg-benefits">
+        <div class="reg-benefit">✓ 注册免费</div>
+        <div class="reg-benefit">✓ 海外仓快速索样</div>
+        <div class="reg-benefit">✓ AI 买手社媒分析</div>
+      </div>
+      <div class="form-msg" id="msgBuyer"></div>
+    </form>
+  </div>
+</div>
+
+<footer style="margin-top:40px">
+  <div class="container">
+    <div class="foot-bottom" style="border:none;padding-top:0">
+      <span>© 2026 FactoryToShelf · 深圳运营中心 · 美国海外仓配中心</span>
+      <span class="mono">info@factorytoshelf.com</span>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" id="chatFab" aria-label="AI 客服">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 01-8 8H5l-2 2V12a8 8 0 0116 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="12" r="0.6" fill="currentColor"/><circle cx="13" cy="12" r="0.6" fill="currentColor"/><circle cx="17" cy="12" r="0.6" fill="currentColor"/></svg>
+</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <span class="dot"></span>
+    <b>AI 客服 · Shelf 助手</b>
+    <span class="st">ONLINE</span>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick">
+    <button data-q="注册后多久能上架样品？">注册后多久上架？</button>
+    <button data-q="注册收费吗？">注册收费吗？</button>
+    <button data-q="买家注册后怎么匹配供应商？">怎么匹配供应商？</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="输入您的问题…" maxlength="300">
+    <button id="chatSend" aria-label="发送">➤</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Tab 切换（支持 ?tab=buyer）
+  var tabs = document.querySelectorAll(".reg-tab");
+  function show(tab) {
+    tabs.forEach(function (t) { t.classList.toggle("active", t.getAttribute("data-tab") === tab); });
+    document.getElementById("formSupplier").style.display = tab === "supplier" ? "" : "none";
+    document.getElementById("formBuyer").style.display = tab === "buyer" ? "" : "none";
+  }
+  tabs.forEach(function (t) { t.addEventListener("click", function () { show(t.getAttribute("data-tab")); }); });
+  var q = new URLSearchParams(location.search).get("tab");
+  if (q === "buyer") show("buyer");
+
+  function collect(form, role) {
+    var f = new FormData(form);
+    var getChecks = function (name) {
+      return Array.prototype.map.call(form.querySelectorAll('[name="' + name + '"]:checked'), function (c) { return c.value; }).join("、");
+    };
+    var data = {
+      role: role,
+      email: f.get("email") || "",
+      password: f.get("password") || "",
+      name: (f.get("firstName") || "") + " " + (f.get("lastName") || ""),
+      company: f.get("company") || "",
+      phone: f.get("phone") || "",
+      country: f.get("country") || "",
+      categories: getChecks("categories"),
+      channels: getChecks("channels"),
+      note: f.get("note") || "",
+    };
+    if (role === "supplier") {
+      var model = form.querySelector('[name="model"]:checked');
+      data.model = model ? model.value : "OEM";
+      data.size = f.get("size") || "";
+    }
+    return data;
+  }
+
+  function submit(form, role, msgEl) {
+    fetch("/api/register", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(collect(form, role)),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        msgEl.className = "form-msg show " + (res.ok ? "ok" : "err");
+        msgEl.textContent = res.ok ? "✓ " + res.message + "（注册编号 #" + res.id + "）" : res.error || "提交失败，请稍后再试";
+        if (res.ok) form.reset();
+      })
+      .catch(function () {
+        msgEl.className = "form-msg show err";
+        msgEl.textContent = "网络异常，请稍后再试";
+      });
+  }
+
+  document.getElementById("formSupplier").addEventListener("submit", function (e) {
+    e.preventDefault();
+    submit(this, "supplier", document.getElementById("msgSupplier"));
+  });
+  document.getElementById("formBuyer").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var pw = this.querySelector('[name="password"]').value;
+    var pw2 = this.querySelector('[name="password2"]').value;
+    var msg = document.getElementById("msgBuyer");
+    if (pw !== pw2) {
+      msg.className = "form-msg show err";
+      msg.textContent = "两次输入的密码不一致";
+      return;
+    }
+    submit(this, "buyer", msg);
+  });
+})();
+</script>
+<script src="/assets/js/chat.js"></script>
+<script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

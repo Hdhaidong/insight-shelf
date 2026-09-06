@@ -1,0 +1,58 @@
+# FactoryToShelf
+
+> FactoryToShelf（美国渠道公司）：帮中国工厂与供应商进入美国及全球零售与电商渠道。核心服务：OEM/ODM/OBM 合作模式、20+ 渠道网络、端到端仓配履约、品牌营销、红人营销、数据订阅（选品/定价/消费者/竞品/众筹信号/品牌声量）、Agent 与 ERP 定制、展会服务。76 个全球电商平台官方卖家入驻入口目录，每个平台附入驻条件、佣金费用与开店流程。
+
+## 主站
+
+- [平台首页](https://factorytoshelf.hdhaidong.workers.dev/): 三条客户路径（工厂出海 / 品牌增长 / 数据与分销）+ 样品展厅 × 供应商网络 × AI 买手分析，35+ 渠道、12,000+ 验证买手。
+- [供应商入驻（中文主页面）](https://factorytoshelf.hdhaidong.workers.dev/supplier.html): 三条路径（工厂出海 / 品牌增长 / 数据与分销）、非收费项七项与收费项次、OEM/ODM/OBM 合作模式、全部服务线目录。
+- [Supplier Onboarding (English)](https://factorytoshelf.hdhaidong.workers.dev/sell-on-oem-odm-en.html): English version — cooperation models, fee model, channels, brand marketing, influencer marketing.
+- [业务总览](https://factorytoshelf.hdhaidong.workers.dev/overview.html): 产品层 × 服务层全局结构，工厂出海 / 品牌增长 / 数据分发三条客户路径。
+- [热点雷达](https://factorytoshelf.hdhaidong.workers.dev/radar.html): 已升级为博客，跳转至 blog.html。
+- [博客](https://factorytoshelf.hdhaidong.workers.dev/blog.html): 每周更新的内容板块：热点产品与众筹分析（AI 硬件 / AI 营销 / Agent 业绩）、平台季度热招品类、国外主力展会档期、Omni Talk 零售科技视频精选与合作业绩动态。含分类筛选（AI 硬件 / Agent 业绩 / AI 营销 / 众筹周报 / 平台热招 / 展会动态 / 科技视频 / 播客）与 8 篇独立文章：国产 AI 硬件众筹出海（$334 万+ 3D 打印机、价格带与路径）、口袋 AI 超算 307 万美元（本地跑 Agent）、裸眼 3D 显示器 30 分钟 1000%、Cosori 先测后上发布模型、众筹周报、平台季度热招 2026 Q3、国外展会档期（High Point / CES / NRF / LV Market / Ambiente / MAGIC）、零售科技视频精选。
+- [播客 · Product Hub](https://factorytoshelf.hdhaidong.workers.dev/podcast.html): 自产音频节目——面向出海工厂的每周电台，三个固定板块：Product 产品（众筹爆品与 AI 硬件信号）、Agent 智能体（业绩与一线应用）、Impact 营销 Agent（AI 营销打法）。讲稿自写、音频自录、RSS 自托管分发（podcast.xml），可入驻 Apple Podcasts / 小宇宙 / Spotify。[第 1 期讲稿](https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-001.html)：AI 硬件正在众筹集中出海。[第 2 期讲稿](https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html)：12.6 万行代码零手写——Agent 板块拆美国电商老兵的公司大脑案例（Claude Code、每小时自动更新的数据上下文、模型分层），Product 看 M5Stack 口袋 Linux 电脑 HK$1,496 万，Impact 讲头部 25% 品牌拿走 10 倍 AI 引用与 AI 可发现性研究。
+- [Business Overview (English)](https://factorytoshelf.hdhaidong.workers.dev/overview-en.html): English overview.
+
+## 服务线
+
+- [数据订阅 · 业务数据](https://factorytoshelf.hdhaidong.workers.dev/data-platforms.html): 六条订阅线（选品/定价/消费者/竞品/众筹信号/品牌声量）与三种交付形式；行业信息源（RMW Commerce 等）。
+- [品牌洞察](https://factorytoshelf.hdhaidong.workers.dev/insights.html): 品牌侧洞察服务与订阅分工说明。
+- [品牌增长服务](https://factorytoshelf.hdhaidong.workers.dev/brand-growth.html): 品牌增长服务线。
+- [合规与企业服务](https://factorytoshelf.hdhaidong.workers.dev/compliance.html): 合规、财税与企业服务。
+- [系统工具与定制开发](https://factorytoshelf.hdhaidong.workers.dev/systems.html): Agent 定制、ERP 定制与私有系统。
+- [展会服务](https://factorytoshelf.hdhaidong.workers.dev/exhibitions.html): 12+ 行业展会日历与买家邀约服务。
+- [OEM/ODM 入驻资质清单](https://factorytoshelf.hdhaidong.workers.dev/oem-odm-onboarding-checklist/index.html): 工厂入驻资质自查清单。
+- [口播文案库](https://factorytoshelf.hdhaidong.workers.dev/voice-scripts.html): 获客短视频口播脚本：8 个主题 × 15s/30s/60s 三档时长共 24 条成稿，含开头 3 秒钩子与结尾动作钩子。
+- [品牌进货架](https://factorytoshelf.hdhaidong.workers.dev/retail-shelf.html): 品牌侧北美零售渠道拓展：品牌诊断（免费）→ 渠道匹配 → 申请准备 → 买手对接；渠道申请按项次报价，无订阅制。
+
+## 76 个平台卖家入驻入口（常见平台）
+
+- [Amazon 亚马逊](https://factorytoshelf.hdhaidong.workers.dev/sell-on/amazon/): 入驻条件、专业卖家 $39.99/月、佣金 8%–15%、FBA 物流。
+- [Walmart Marketplace 沃尔玛](https://factorytoshelf.hdhaidong.workers.dev/sell-on/walmart/): 中国公司可入驻、无月租、佣金约 6%–15%、WFS 履约。
+- [TikTok Shop](https://factorytoshelf.hdhaidong.workers.dev/sell-on/tiktok-shop/): 入驻条件、佣金、开店流程。
+- [Temu](https://factorytoshelf.hdhaidong.workers.dev/sell-on/temu/): 入驻条件、佣金、开店流程。
+- [SHEIN](https://factorytoshelf.hdhaidong.workers.dev/sell-on/shein/): 入驻条件、佣金、开店流程。
+- [eBay](https://factorytoshelf.hdhaidong.workers.dev/sell-on/ebay/): 入驻条件、费用、开店流程。
+- [Target+](https://factorytoshelf.hdhaidong.workers.dev/sell-on/target-plus/): 入驻条件、费用、开店流程。
+- [Costco](https://factorytoshelf.hdhaidong.workers.dev/sell-on/costco/): 入驻条件、费用、开店流程。
+- [Best Buy](https://factorytoshelf.hdhaidong.workers.dev/sell-on/best-buy/): 入驻条件、费用、开店流程。
+- [Home Depot](https://factorytoshelf.hdhaidong.workers.dev/sell-on/home-depot/): 入驻条件、费用、开店流程。
+- [Wayfair](https://factorytoshelf.hdhaidong.workers.dev/sell-on/wayfair/): 入驻条件、费用、开店流程。
+- [Macy's](https://factorytoshelf.hdhaidong.workers.dev/sell-on/macys/): 入驻条件、费用、开店流程。
+- [Kroger](https://factorytoshelf.hdhaidong.workers.dev/sell-on/kroger/): 入驻条件、费用、开店流程。
+- [Lowe's](https://factorytoshelf.hdhaidong.workers.dev/sell-on/lowes/): 入驻条件、费用、开店流程。
+- [AliExpress 速卖通](https://factorytoshelf.hdhaidong.workers.dev/sell-on/aliexpress/): 入驻条件、费用、开店流程。
+- [Allegro](https://factorytoshelf.hdhaidong.workers.dev/sell-on/allegro/): 入驻条件、费用、开店流程。
+- [Shopee](https://factorytoshelf.hdhaidong.workers.dev/sell-on/shopee/): 入驻条件、费用、开店流程。
+- [Lazada](https://factorytoshelf.hdhaidong.workers.dev/sell-on/lazada/): 入驻条件、费用、开店流程。
+- [Otto](https://factorytoshelf.hdhaidong.workers.dev/sell-on/otto/): 入驻条件、费用、开店流程。
+- [Zalando](https://factorytoshelf.hdhaidong.workers.dev/sell-on/zalando/): 入驻条件、费用、开店流程。
+- [noon](https://factorytoshelf.hdhaidong.workers.dev/sell-on/noon/): 入驻条件、费用、开店流程。
+- [Ozon](https://factorytoshelf.hdhaidong.workers.dev/sell-on/ozon/): 入驻条件、费用、开店流程。
+- [Wildberries](https://factorytoshelf.hdhaidong.workers.dev/sell-on/wildberries/): 入驻条件、费用、开店流程。
+- [Sell on China 卖进中国](https://factorytoshelf.hdhaidong.workers.dev/sell-on/china/): 反向通道——海外品牌进入中国市场（天猫国际/京东国际/抖音全球购/小红书全球购）。
+- [全部 76 个平台入口目录](https://factorytoshelf.hdhaidong.workers.dev/sell-on/index.html): 完整目录，含每个平台的入驻条件、佣金费用与开店流程。
+
+## 站点地图
+
+- [sitemap.xml](https://factorytoshelf.hdhaidong.workers.dev/sitemap.xml): 全部 102 个 URL。

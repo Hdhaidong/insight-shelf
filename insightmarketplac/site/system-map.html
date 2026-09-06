@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>系统总图 · 全业务 + 卖家注册入口一览 | insightmarketplac 内部参考</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--bg:#000000;--bg2:#0A0A0A;--bg3:#111111;--ink:#F2EEE6;--dim:#A7ADB8;--faint:#6E7683;--gold:#E8A33D;--goldhi:#F4BA60;--line:rgba(242,238,230,.12);--line2:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
+.top-in{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.top .mk{font-weight:700}
+.top .mk em{font-style:normal;color:var(--gold)}
+.jump{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem}
+.jump a{color:var(--dim);font-family:var(--mono)}
+.jump a:hover{color:var(--gold)}
+.hero{padding:56px 0 36px;border-bottom:1px solid var(--line2);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-140px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(232,163,61,.09),transparent 65%);pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.2;letter-spacing:-.01em}
+.hero p{max-width:760px;margin-top:14px;color:var(--dim)}
+.hero p b{color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:26px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.stat .v{font-size:1.5rem;font-weight:700;color:var(--gold);font-family:var(--mono)}
+.stat .k{font-size:.72rem;color:var(--faint);margin-top:2px}
+section{padding:44px 0;border-bottom:1px solid var(--line2)}
+h2{font-size:1.45rem;letter-spacing:-.01em}
+.sec-sub{color:var(--dim);font-size:.9rem;margin:6px 0 22px;max-width:780px}
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+th{text-align:left;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:8px 10px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:hover td{background:rgba(232,163,61,.03)}
+td.num{font-family:var(--mono);color:var(--faint);width:34px}
+td.plat{font-weight:600;white-space:nowrap}
+td.reg{font-family:var(--mono);font-size:.72rem;color:var(--dim);word-break:break-all}
+.region{margin:26px 0 10px;display:flex;align-items:baseline;gap:12px}
+.region h3{font-size:1.02rem;color:var(--goldhi)}
+.region .rn{font-family:var(--mono);font-size:.7rem;color:var(--faint)}
+.region .rd{font-size:.78rem;color:var(--faint)}
+.layers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.layer{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.layer .ln{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.layer h4{font-size:1rem;margin:6px 0 8px}
+.layer p{font-size:.78rem;color:var(--dim)}
+.layer ul{list-style:none;margin-top:8px}
+.layer li{font-size:.76rem;color:var(--dim);padding:3px 0;border-top:1px dashed var(--line2)}
+.layer li b{color:var(--ink)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card .cn{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.card h4{font-size:1rem;margin:6px 0 6px}
+.card p{font-size:.8rem;color:var(--dim)}
+.card ul{list-style:none;margin-top:8px}
+.card li{font-size:.76rem;color:var(--dim);padding:3px 0;border-top:1px dashed var(--line2)}
+.card li b{color:var(--ink)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.66rem;color:var(--gold);border:1px solid rgba(232,163,61,.35);border-radius:99px;padding:2px 9px;margin:2px 4px 2px 0;background:rgba(232,163,61,.06)}
+.note{background:rgba(232,163,61,.05);border:1px solid rgba(232,163,61,.25);border-radius:10px;padding:14px 18px;font-size:.82rem;color:var(--dim);margin-top:20px}
+.note b{color:var(--goldhi)}
+.path{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.path .flow{font-family:var(--mono);font-size:.74rem;color:var(--goldhi);margin:8px 0;line-height:1.8}
+footer{padding:36px 0 48px;color:var(--faint);font-size:.76rem;font-family:var(--mono)}
+@media(max-width:800px){.layers{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.layers{grid-template-columns:1fr}.reg-hide{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="top-in">
+  <span class="mk">insight<em>marketplac</em> · 系统总图</span>
+  <nav class="jump">
+    <a href="#arch">四层架构</a><a href="#lines">七大服务线</a><a href="#pages">全部页面</a><a href="#fees">合作与收费</a><a href="#affiliate">联盟营销位置</a><a href="#entries">77 注册入口</a><a href="#exposure">曝光绩效</a><a href="business-system-review/business-system-review.html" style="color:var(--gold)">业务梳理报告 →</a>
+  </nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Internal Reference · 2026-09-02 · noindex</div>
+  <h1>整个系统，一页看全：<br>所有业务 + 全部卖家注册入口</h1>
+  <p>insightmarketplac 是一套自底向上生长的系统——<b>硬件层</b>提供算力与物理边界，<b>智能体层</b>生产洞察，<b>系统层</b>沉淀为平台，<b>服务层</b>交付到客户手里；四层共享同一套底层：<b>渠道 · 数据 · 内容</b>三条主线。本页同时收录全部 <b>77 个平台卖家注册直达入口</b>。</p>
+  <div class="stats">
+    <div class="stat"><div class="v">4</div><div class="k">层系统架构</div></div>
+    <div class="stat"><div class="v">3</div><div class="k">条客户主线</div></div>
+    <div class="stat"><div class="v">7</div><div class="k">大服务线</div></div>
+    <div class="stat"><div class="v">12</div><div class="k">个业务分区</div></div>
+    <div class="stat"><div class="v">62+</div><div class="k">个页面</div></div>
+    <div class="stat"><div class="v">76</div><div class="k">个平台入驻页</div></div>
+    <div class="stat"><div class="v">100%</div><div class="k">官方注册直达</div></div>
+    <div class="stat"><div class="v">20+</div><div class="k">渠道分发网络</div></div>
+  </div>
+  <div class="note" style="margin-top:26px"><b>配套文档：</b>本总图的结构化分析版已生成——<a href="business-system-review/business-system-review.html">《insightmarketplac 业务梳理报告》</a>（九章：执行摘要 / 四层架构解析 / 七线详解 / 客户路径 / 商业模式分析 / 渠道资产盘点 / 内容资产 / 联盟营销定位 / 评估建议，含架构图与数据图表）；另有 <a href="skill-gap-analysis.html">《技能库业务映射与缺口分析》</a>（131 个 Agent 技能 × 三路径 × 七服务线映射，数据六线深查，11 项缺口与 P0/P1/P2 补齐路线）。总图管「看全」，报告管「看懂」，技能映射管「盘点弹药」。</div>
+</div></div>
+
+<!-- ============ 四层架构 ============ -->
+<section id="arch"><div class="wrap">
+  <h2>一、四层架构（自下而上）</h2>
+  <p class="sec-sub">每一层只依赖下一层、为上一层供给——同一套数据与流程贯穿四层，这是各业务线结论能互相咬合的原因。能力流向：硬件算力 → 智能体产能 → 平台沉淀 → 服务交付。</p>
+  <div class="layers">
+    <div class="layer">
+      <span class="ln">Layer 01 · 底座</span>
+      <h4>硬件层</h4>
+      <p>Agent 硬件与边缘算力——给智能体造身体，给数据上锁。</p>
+      <ul>
+        <li><b>能力：</b>工业与无线网关（Modbus / CAN / BLE / LoRa），端侧本地推理</li>
+        <li><b>边界：</b>物理 Approve 门禁 + 可拔插加密隐私卡</li>
+        <li><b>用途：</b>数据不出域的客户场景，分析跑在端侧</li>
+      </ul>
+    </div>
+    <div class="layer">
+      <span class="ln">Layer 02 · 产能</span>
+      <h4>智能体层</h4>
+      <p>研究与运营数字员工——替人跑研究腿，不做聊天窗口。</p>
+      <ul>
+        <li><b>产能去向：</b>数据洞察线的分析结论与数据 token</li>
+        <li><b>闭环：</b>token 装回 Agent，数据养 Agent、Agent 产出数据</li>
+        <li><b>方式：</b>多源采集 + 交叉验证 + 人工研判，结论可复核</li>
+      </ul>
+    </div>
+    <div class="layer">
+      <span class="ln">Layer 03 · 平台</span>
+      <h4>系统层</h4>
+      <p>自有商业平台——业务在系统里沉淀为客户资产。</p>
+      <ul>
+        <li><b>规模：</b>12 个业务分区、62 个页面，覆盖客户全生命周期</li>
+        <li><b>底座：</b>ERP / WMS / CRM 与智能体交付都跑在这一层</li>
+      </ul>
+    </div>
+    <div class="layer">
+      <span class="ln">Layer 04 · 交付</span>
+      <h4>服务层</h4>
+      <p>面向客户的交付形态——七大业务线，独立交付、按阶段组合。</p>
+      <ul>
+        <li><b>七线：</b>渠道入驻 · 数据洞察 · 系统工具 · 品牌增长 · 众筹分销 · 合规企业 · 展会服务</li>
+        <li><b>交付物：</b>入驻方案 · 数据结论与 token · 系统部署 · 内容与增长 · 展期执行</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 七大服务线 ============ -->
+<section id="lines"><div class="wrap">
+  <h2>二、七大服务线 × 三条主线</h2>
+  <p class="sec-sub">每张卡片是一条可独立交付的业务线，卡片底部是直达入口。三条主线：渠道（入驻·代理·展会·合规）、数据（分析·Token·洞察·雷达）、内容（红人·短剧·众筹·系统）。</p>
+  <div class="grid3">
+    <div class="card"><span class="cn">Business 01 · 渠道线</span><h4>渠道入驻</h4>
+      <p>77 个平台专属入驻页 + 欧美渠道网络——从平台开店到销售代理对接，解决「货往哪放」。</p>
+      <ul><li><b>平台：</b>美国 / 欧洲 / 全球 77 平台，条件佣金一站看懂</li><li><b>网络：</b>美国零售销售代理 + 欧洲电商服务商体系</li><li><b>资质：</b>OEM/ODM 工厂入驻资质自查清单</li></ul>
+      <div style="margin-top:8px"><span class="pill">sell-on/</span><span class="pill">sell-on-oem-odm.html</span><span class="pill">onboarding-checklist</span></div>
+    </div>
+    <div class="card"><span class="cn">Business 02 · 数据线</span><h4>数据洞察</h4>
+      <p>数据分析与数据 token 交付——结论和数据给客户，<b style="color:var(--ink)">数据源头不披露</b>（核心纪律）。</p>
+      <ul><li><b>分析：</b>选品、定价、评论、竞品、趋势——按问题交付结论</li><li><b>token：</b>接口 / 数据包形式接入客户系统</li><li><b>订阅：</b>六条线——选品 / 定价 / 消费者 / 竞对 / 众筹信号 / 品牌声量</li></ul>
+      <div style="margin-top:8px"><span class="pill">insights.html</span><span class="pill">data-platforms.html</span></div>
+    </div>
+    <div class="card"><span class="cn">Business 03 · 系统线</span><h4>系统工具</h4>
+      <p>ERP / WMS / CRM / AI Agent 定制——卖给客户的系统，自己先跑通。</p>
+      <ul><li><b>ERP：</b>订单库存采购财务一体化，多平台统一管</li><li><b>WMS：</b>海外仓收发存、批次库位、一件代发</li><li><b>CRM：</b>线索自动化旅程、展后跟进、分层运营</li><li><b>Agent：</b>客服 / 运营 / 洞察智能体，按业务流程编排</li></ul>
+      <div style="margin-top:8px"><span class="pill">systems.html</span></div>
+    </div>
+    <div class="card"><span class="cn">Business 04 · 内容线</span><h4>品牌增长</h4>
+      <p>红人营销投放、AI 短剧定制、网红经纪、社媒推广、三方撮合——内容侧完整弹药库。</p>
+      <ul><li><b>红人：</b>头部造声量、腰部做转化、尾部铺矩阵</li><li><b>短剧：</b>一剧多版本多语种，AI 测试方向 → 真人放大</li><li><b>撮合：</b>网红 × 品牌 × 内容三方撮合平台</li></ul>
+      <div style="margin-top:8px"><span class="pill">brand-growth.html</span></div>
+    </div>
+    <div class="card"><span class="cn">Business 05 · 数据×渠道</span><h4>众筹分销</h4>
+      <p>雷达发现全球科技新品信号，分销体系把爆筹产品接进渠道。</p>
+      <ul><li><b>上游：</b>Kickstarter / Indiegogo 科技品类监测</li><li><b>研判：</b>达成速度、增速曲线、评论区反馈——区分真需求与泡沫</li><li><b>下游：</b>爆筹产品对接 77 平台与线下渠道，提前半年卡位</li></ul>
+      <div style="margin-top:8px"><span class="pill">insights.html#radar</span></div>
+    </div>
+    <div class="card"><span class="cn">Business 06 · 渠道线</span><h4>合规与企业</h4>
+      <p>出海底座工程：先把身份和合规立住，再谈生意。</p>
+      <ul><li><b>主体：</b>美国 LLC / C-Corp、欧盟主体注册</li><li><b>知产：</b>USPTO / EUIPO / UKIPO / 马德里商标</li><li><b>税务：</b>销售税、欧盟 VAT、EPR、海关 Bond</li><li><b>数字：</b>域名注册与品牌社媒资产开局</li></ul>
+      <div style="margin-top:8px"><span class="pill">compliance.html</span></div>
+    </div>
+    <div class="card" style="grid-column:1/-1"><span class="cn">Business 07 · 渠道线</span><h4>展会服务</h4>
+      <p>线下渠道的见面引擎：12+ 主力展会（High Point、Ambiente、Outdoor Retailer、MAGIC…）的选展、搭建、物流、买家邀约与展后跟进。展前 60 天邀约体系 · 展后 30 天线索分级进 CRM（T+72h 红线）。</p>
+      <div style="margin-top:8px"><span class="pill">exhibitions.html</span><span class="pill">or-buyer-outreach.html</span></div>
+    </div>
+  </div>
+  <div class="note"><b>组合拳 · 三条客户路径：</b>
+    ① <b>工厂出海</b>（资质自查 → 合规主体 → 77 平台入驻 → ERP/WMS/CRM → 展会见买家 → 品牌转型）；
+    ② <b>品牌增长</b>（声量摸底 → 红人投放 → AI 短剧 → 社媒矩阵 → 三层影响复盘）；
+    ③ <b>数据与分销</b>（雷达发现 → 热度研判 → token 接入 → 分销对接）。
+  </div>
+</div></section>
+
+<!-- ============ 全部页面 ============ -->
+<section id="pages"><div class="wrap">
+  <h2>三、全部业务页面（线上 URL）</h2>
+  <p class="sec-sub">站点根目录 https://insightmarketplac.hdhaidong.workers.dev/ — 基础域名 hdhaidong.github.io 根页跳转到 /supplier/。</p>
+  <table>
+    <tr><th>#</th><th>页面</th><th>定位</th><th>URL（supplier/ 下）</th></tr>
+    <tr><td class="num">01</td><td class="plat">入驻主落地页（中文）</td><td>首页：渠道加速 · 品牌营销 · 红人营销 · 合作模式 · 全部业务</td><td class="reg">sell-on-oem-odm.html</td></tr>
+    <tr><td class="num">02</td><td class="plat">English Main Page</td><td>英文版主落地页（Partnership Models 同构）</td><td class="reg">sell-on-oem-odm-en.html</td></tr>
+    <tr><td class="num">03</td><td class="plat">全局业务总览</td><td>四层架构 + 七大服务线 + 三条客户路径</td><td class="reg">overview.html / overview-en.html</td></tr>
+    <tr><td class="num">04</td><td class="plat">平台卖家入口目录</td><td>77 平台 · 9 大市场区域 · 100% 官方直达</td><td class="reg">sell-on/index.html</td></tr>
+    <tr><td class="num">05</td><td class="plat">品牌洞察</td><td>红人×品牌×内容三方洞察 + 众筹新品雷达</td><td class="reg">insights.html</td></tr>
+    <tr><td class="num">06</td><td class="plat">业务数据订阅</td><td>六条订阅线 × 四个维度 · 数据 token 与订阅报告</td><td class="reg">data-platforms.html</td></tr>
+    <tr><td class="num">07</td><td class="plat">品牌增长服务</td><td>红人营销 · 网剧/AI 短剧 · 网红经纪 · 社媒 · 撮合</td><td class="reg">brand-growth.html</td></tr>
+    <tr><td class="num">08</td><td class="plat">系统工具服务</td><td>ERP · WMS · CRM · AI Agent 定制</td><td class="reg">systems.html</td></tr>
+    <tr><td class="num">09</td><td class="plat">合规与企业服务</td><td>公司注册 · 商标域名 · VAT · Bond · EPR</td><td class="reg">compliance.html</td></tr>
+    <tr><td class="num">10</td><td class="plat">展会服务</td><td>选展 · 搭建 · 样品物流 · 买家邀约 · 展后跟进</td><td class="reg">exhibitions.html</td></tr>
+    <tr><td class="num">11</td><td class="plat">品牌进货架</td><td>品牌侧北美零售渠道拓展（诊断免费 · 按项次报价）</td><td class="reg">retail-shelf.html</td></tr>
+    <tr><td class="num">12</td><td class="plat">入驻资质清单</td><td>OEM/ODM 工厂入驻资质自查</td><td class="reg">oem-odm-onboarding-checklist/index.html</td></tr>
+    <tr><td class="num">13</td><td class="plat">口播文案库</td><td>8 主题 × 15s/30s/60s 获客口播脚本</td><td class="reg">voice-scripts.html</td></tr>
+    <tr><td class="num">14</td><td class="plat">博客</td><td>9 篇文章：AI 硬件 · Agent 业绩 · AI 营销 · 众筹周报 · 热招 · 展会 · 科技视频</td><td class="reg">blog.html + blog/*.html（8 篇）</td></tr>
+    <tr><td class="num">15</td><td class="plat">Product Hub 播客</td><td>每周电台：Product / Agent / Impact 三板块 · 2 期已上线</td><td class="reg">podcast.html + podcast/ep-00N.html + podcast.xml</td></tr>
+    <tr><td class="num">16</td><td class="plat">OR 买家邀约</td><td>Outdoor Retailer 展会买家邀约作战页</td><td class="reg">or-buyer-outreach.html</td></tr>
+    <tr><td class="num">17</td><td class="plat">77 平台入驻页</td><td>每平台一页：官方入口 + 条件 + 费用 + 流程</td><td class="reg">sell-on/{platform}/index.html × 76</td></tr>
+  </table>
+</div></section>
+
+<!-- ============ 合作与收费 ============ -->
+<section id="fees"><div class="wrap">
+  <h2>四、合作模式与收费结构</h2>
+  <p class="sec-sub">三种合作模式可逐步升级：多数伙伴从 OEM 起步，产品成熟叠 ODM，品牌就绪升 OBM——同一张渠道网络，每步利润更深。</p>
+  <div class="grid3">
+    <div class="card"><span class="cn">Model 01</span><h4>OEM · 来图代工</h4>
+      <ul><li><b>设计：</b>买方图纸（金样封存）</li><li><b>备货：</b>无需海外仓</li><li><b>物流：</b>工厂交货，我司接管</li><li><b>利润：</b>制造利润</li><li><b>特点：</b>库存买断、PO 结算、不收服务费——最快首单</li></ul>
+    </div>
+    <div class="card"><span class="cn">Model 02</span><h4>ODM · 选款贴牌</h4>
+      <ul><li><b>设计：</b>供应商自有设计 IP</li><li><b>备货：</b>海外仓入仓</li><li><b>物流：</b>海外仓本地发货</li><li><b>利润：</b>设计 + 制造</li></ul>
+    </div>
+    <div class="card"><span class="cn">Model 03</span><h4>OBM · 品牌出海</h4>
+      <ul><li><b>设计：</b>品牌全链路自有</li><li><b>备货：</b>备货 + 品牌授权</li><li><b>物流：</b>协同仓配网络</li><li><b>利润：</b>制造 + 品牌溢价</li></ul>
+    </div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><span class="cn">Included Free · 7 项</span><h4>非收费项（任何合作均含）</h4>
+      <ul><li>渠道账号开设（20+ 平台开户搭建）</li><li>Agent 智能客服</li><li>账号安全维护（风控申诉）</li><li>数据周报（销售/库存/广告）</li><li>红人资源对接</li><li>内容素材库</li><li>专属对接人（1 工作日响应）</li></ul>
+    </div>
+    <div class="card" style="grid-column:span 2"><span class="cn">Per-Item Fees · 6 项</span><h4>收费项次（注册后解锁报价）</h4>
+      <table>
+        <tr><th>服务项</th><th>计费方式</th></tr>
+        <tr><td>联合运营（选品/定价/广告）</td><td class="reg">按销售额分成，比例按品类评估；或项目制全包</td></tr>
+        <tr><td>端到端仓配履约</td><td class="reg">按实际成本（头程+仓储+尾程）· 99.8% 当日出库</td></tr>
+        <tr><td>红人营销投放</td><td class="reg">固定费 / 佣金分成 / 混合，按投放案件报价</td></tr>
+        <tr><td>网剧 / AI 短剧定制</td><td class="reg">按项目报价</td></tr>
+        <tr><td>Agent / ERP 定制开发</td><td class="reg">按需求评估报价</td></tr>
+        <tr><td>数据订阅（六条订阅线）</td><td class="reg">按订阅线与周期计费</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="note"><b>注册机制：</b>注册免费——注册前见全部业务介绍与计费方式；注册后解锁逐项单价与分成比例，报价单（含品类评估）1 个工作日内发送。OEM 库存买断不收任何服务费。</div>
+</div></section>
+
+<!-- ============ 联盟营销位置 ============ -->
+<section id="affiliate"><div class="wrap">
+  <h2>五、联盟营销 · 现状位置（非独立业务线）</h2>
+  <p class="sec-sub">联盟营销以三种身份存在于内容线内，无专属页面、无独立收费项——按现状应放在品牌增长页红人板块下展开。</p>
+  <div class="grid3">
+    <div class="card"><span class="cn">身份 1 · 玩法</span><h4>联盟带货</h4>
+      <p>红人营销投放（Service 01）四种玩法之一：测评种草 · 开箱 · 直播切片 · <b style="color:var(--ink)">联盟带货</b>。英文页对应 affiliate。</p>
+    </div>
+    <div class="card"><span class="cn">身份 2 · 变现</span><h4>联盟分佣</h4>
+      <p>网红经纪（Service 03）三种变现之一：品牌商单对接 · 直播带货 · <b style="color:var(--ink)">联盟分佣</b>——自有红人池的佣金结算通道。</p>
+    </div>
+    <div class="card"><span class="cn">身份 3 · 结算</span><h4>佣金分成模式</h4>
+      <p>红人投放结算三选一：固定费 / <b style="color:var(--ink)">佣金分成</b> / 混合——利益绑定机制，全站 4 处口径一致。</p>
+    </div>
+  </div>
+  <table style="margin-top:16px">
+    <tr><th>#</th><th>页面</th><th>位置</th><th>原文表述</th></tr>
+    <tr><td class="num">1</td><td class="plat">sell-on-oem-odm.html</td><td>红人营销 Line 01</td><td class="reg">玩法：测评种草、开箱、直播切片、联盟带货；结算：固定费/佣金分成/混合</td></tr>
+    <tr><td class="num">2</td><td class="plat">sell-on-oem-odm.html</td><td>收费项次表</td><td class="reg">红人营销投放：固定费/佣金分成/混合，按投放案件报价</td></tr>
+    <tr><td class="num">3</td><td class="plat">brand-growth.html</td><td>Service 01 红人投放</td><td class="reg">玩法：测评种草、开箱、直播切片、联盟带货</td></tr>
+    <tr><td class="num">4</td><td class="plat">brand-growth.html</td><td>Service 03 网红经纪</td><td class="reg">变现：品牌商单对接 · 直播带货 · 联盟分佣</td></tr>
+    <tr><td class="num">5</td><td class="plat">brand-growth.html</td><td>FAQ「不白花钱」</td><td class="reg">结算支持佣金分成模式（利益绑定）</td></tr>
+    <tr><td class="num">6</td><td class="plat">brand-growth.html</td><td>收费方式 + FAQ</td><td class="reg">结算支持固定费/佣金分成/混合模式，按项目约定</td></tr>
+    <tr><td class="num">7</td><td class="plat">sell-on-oem-odm-en.html</td><td>Influencer Line 01</td><td class="reg">Formats: reviews and seeding, unboxings, livestream clips, affiliate</td></tr>
+    <tr><td class="num">8</td><td class="plat">sell-on/tiktok-shop/</td><td>FAQ「无内容团队」</td><td class="reg">可借助达人分销（联盟计划）起步：设定佣金比例让达人带货</td></tr>
+  </table>
+</div></section>
+
+<!-- ============ 77 注册入口 ============ -->
+<section id="entries"><div class="wrap">
+  <h2>六、卖家注册入口一览（77 平台 · 100% 官方直达）</h2>
+  <p class="sec-sub">每行：平台 · 指南页（站内）· 官方注册直达。指南页在 sell-on/{platform}/；「直达注册」为平台官方入口，注册本身不收费。中国跨境入口为 1 页覆盖天猫国际、京东国际、抖音全球购、小红书全球购四大官方入口。</p>
+
+  <div class="region"><h3>中国市场 · 进口跨境</h3><span class="rn">1 页 · 4 官方入口</span><span class="rd">反向通道：海外品牌跨境进入中国（保税仓备货 + 海外直邮）</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">1</td><td class="plat">中国（进口跨境）</td><td class="reg reg-hide">跨境进口（天猫国际/京东国际/抖音全球购/小红书全球购）</td><td class="reg"><a href="https://merchant.tmall.hk/" target="_blank" rel="noopener">merchant.tmall.hk</a></td></tr>
+  </table>
+
+  <div class="region"><h3>全球综合平台</h3><span class="rn">5 平台</span><span class="rd">亚马逊与 eBay 等全球市场 + 中国出海平台全球站点</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">2</td><td class="plat">Amazon</td><td class="reg reg-hide">3P 开放市场（Seller Central）</td><td class="reg"><a href="https://sellercentral.amazon.com/" target="_blank" rel="noopener">sellercentral.amazon.com</a></td></tr>
+    <tr><td class="num">3</td><td class="plat">eBay</td><td class="reg reg-hide">3P 开放市场（拍卖 + 一口价）</td><td class="reg"><a href="https://www.ebay.com/sellercenter/selling" target="_blank" rel="noopener">ebay.com/sellercenter/selling</a></td></tr>
+    <tr><td class="num">4</td><td class="plat">Temu</td><td class="reg reg-hide">半托管 + 全托管（供货制）</td><td class="reg"><a href="https://seller.temu.com/" target="_blank" rel="noopener">seller.temu.com</a></td></tr>
+    <tr><td class="num">5</td><td class="plat">AliExpress</td><td class="reg reg-hide">POP 店 + 全托管 / 半托管</td><td class="reg"><a href="https://sell.aliexpress.com/" target="_blank" rel="noopener">sell.aliexpress.com</a></td></tr>
+    <tr><td class="num">6</td><td class="plat">SHEIN Marketplace</td><td class="reg reg-hide">自营 + 平台（供货 / 开店）</td><td class="reg"><a href="https://seller.shein.com/" target="_blank" rel="noopener">seller.shein.com</a></td></tr>
+  </table>
+
+  <div class="region"><h3>美国市场</h3><span class="rn">23 平台</span><span class="rd">全球最大消费市场：开放市场 → 邀请制商超 → 内容电商 → 买手制零售</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">7</td><td class="plat">Walmart Marketplace</td><td class="reg reg-hide">3P 申请审核制</td><td class="reg"><a href="https://marketplace.walmart.com/sell" target="_blank" rel="noopener">marketplace.walmart.com/sell</a></td></tr>
+    <tr><td class="num">8</td><td class="plat">TikTok Shop</td><td class="reg reg-hide">内容电商（短视频 + 直播带货）</td><td class="reg"><a href="https://seller-us.tiktok.com/" target="_blank" rel="noopener">seller-us.tiktok.com</a></td></tr>
+    <tr><td class="num">9</td><td class="plat">Target+</td><td class="reg reg-hide">邀请制封闭市场</td><td class="reg"><a href="https://partner.target.com/" target="_blank" rel="noopener">partner.target.com</a></td></tr>
+    <tr><td class="num">10</td><td class="plat">Wayfair</td><td class="reg reg-hide">1P 批发直供（drop-ship）</td><td class="reg"><a href="https://sell.wayfair.com/" target="_blank" rel="noopener">sell.wayfair.com</a></td></tr>
+    <tr><td class="num">11</td><td class="plat">Home Depot</td><td class="reg reg-hide">1P 供应商 + 线上市场</td><td class="reg"><a href="https://supplierhub-prospective.homedepot.com/" target="_blank" rel="noopener">supplierhub-prospective.homedepot.com</a></td></tr>
+    <tr><td class="num">12</td><td class="plat">Best Buy Marketplace</td><td class="reg reg-hide">3P 新开放市场（Mirakl）</td><td class="reg"><a href="https://www.bestbuy.com/seller/signup" target="_blank" rel="noopener">bestbuy.com/seller/signup</a></td></tr>
+    <tr><td class="num">13</td><td class="plat">Lowe's Marketplace</td><td class="reg reg-hide">邀请制市场（Mirakl）</td><td class="reg"><a href="https://www.lowes.com/l/about/lowes-marketplace" target="_blank" rel="noopener">lowes.com/l/about/lowes-marketplace</a></td></tr>
+    <tr><td class="num">14</td><td class="plat">Overstock / Bed Bath &amp; Beyond</td><td class="reg reg-hide">1P 合作 + 供应商计划</td><td class="reg"><a href="https://www.bedbathandbeyond.com/partner" target="_blank" rel="noopener">bedbathandbeyond.com/partner</a></td></tr>
+    <tr><td class="num">15</td><td class="plat">Costco</td><td class="reg reg-hide">买手制供应商（vendor）</td><td class="reg"><a href="https://www.costco.com/f/-/supplier-diversity" target="_blank" rel="noopener">costco.com/f/-/supplier-diversity</a></td></tr>
+    <tr><td class="num">16</td><td class="plat">Macy's</td><td class="reg reg-hide">Vendor Partner 申请制</td><td class="reg"><a href="https://www.macysinc.com/work-with-us/vendors/Become-a-Vendor-Partner/default.aspx" target="_blank" rel="noopener">macysinc.com/work-with-us/vendors</a></td></tr>
+    <tr><td class="num">17</td><td class="plat">Kohl's</td><td class="reg reg-hide">供应商门户申请制</td><td class="reg"><a href="https://www.kohlssuppliers.com/become-a-supplier" target="_blank" rel="noopener">kohlssuppliers.com/become-a-supplier</a></td></tr>
+    <tr><td class="num">18</td><td class="plat">AAFES The Exchange</td><td class="reg reg-hide">美军渠道供应商（联邦体系）</td><td class="reg"><a href="https://www.shopmyexchange.com/business-partners" target="_blank" rel="noopener">shopmyexchange.com/business-partners</a></td></tr>
+    <tr><td class="num">19</td><td class="plat">Bellacor</td><td class="reg reg-hide">1P / 供应商合作</td><td class="reg"><a href="https://www.bellacor.com/" target="_blank" rel="noopener">bellacor.com</a></td></tr>
+    <tr><td class="num">20</td><td class="plat">Build.com</td><td class="reg reg-hide">供应商合作（Ferguson 旗下）</td><td class="reg"><a href="https://www.build.com/about/become-a-partner" target="_blank" rel="noopener">build.com/about/become-a-partner</a></td></tr>
+    <tr><td class="num">21</td><td class="plat">Etsy</td><td class="reg reg-hide">3P 市场（手作制）</td><td class="reg"><a href="https://www.etsy.com/sell" target="_blank" rel="noopener">etsy.com/sell</a></td></tr>
+    <tr><td class="num">22</td><td class="plat">Newegg Marketplace</td><td class="reg reg-hide">3P 市场（3C 垂直）</td><td class="reg"><a href="https://sellerportal.newegg.com/" target="_blank" rel="noopener">sellerportal.newegg.com</a></td></tr>
+    <tr><td class="num">23</td><td class="plat">Facebook Marketplace</td><td class="reg reg-hide">社交流量 + 本地交易</td><td class="reg"><a href="https://www.facebook.com/business/commerce" target="_blank" rel="noopener">facebook.com/business/commerce</a></td></tr>
+    <tr><td class="num">24</td><td class="plat">Shopify</td><td class="reg reg-hide">DTC 独立站（自建渠道）</td><td class="reg"><a href="https://www.shopify.com/" target="_blank" rel="noopener">shopify.com</a></td></tr>
+    <tr><td class="num">25</td><td class="plat">Bonanza</td><td class="reg reg-hide">3P 市场（低费用）</td><td class="reg"><a href="https://www.bonanza.com/sell" target="_blank" rel="noopener">bonanza.com/sell</a></td></tr>
+    <tr><td class="num">26</td><td class="plat">Poshmark</td><td class="reg reg-hide">社交电商（时尚）</td><td class="reg"><a href="https://poshmark.com/sell" target="_blank" rel="noopener">poshmark.com/sell</a></td></tr>
+    <tr><td class="num">27</td><td class="plat">Mercari</td><td class="reg reg-hide">C2C + 专业卖家</td><td class="reg"><a href="https://www.mercari.com/sell/" target="_blank" rel="noopener">mercari.com/sell</a></td></tr>
+    <tr><td class="num">28</td><td class="plat">Reverb</td><td class="reg reg-hide">3P 垂直市场（乐器）</td><td class="reg"><a href="https://reverb.com/sell" target="_blank" rel="noopener">reverb.com/sell</a></td></tr>
+    <tr><td class="num">29</td><td class="plat">Houzz</td><td class="reg reg-hide">社区 + 商城（家装）</td><td class="reg"><a href="https://www.houzz.com/pro" target="_blank" rel="noopener">houzz.com/pro</a></td></tr>
+  </table>
+
+  <div class="region"><h3>欧洲市场</h3><span class="rn">33 平台</span><span class="rd">德法荷波西等主要市场，本土平台与中国卖家成熟通道并存</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">市场 / 模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">30</td><td class="plat">Zalando</td><td class="reg reg-hide">德语区 · Partner Program</td><td class="reg"><a href="https://partner.zalando.com/" target="_blank" rel="noopener">partner.zalando.com</a></td></tr>
+    <tr><td class="num">31</td><td class="plat">OTTO Market</td><td class="reg reg-hide">德国 · 3P（月费 + 佣金）</td><td class="reg"><a href="https://www.otto.market/en/howitworks/registration.html" target="_blank" rel="noopener">otto.market/en/howitworks/registration.html</a></td></tr>
+    <tr><td class="num">32</td><td class="plat">bol.com</td><td class="reg reg-hide">荷比卢 · Partner Platform</td><td class="reg"><a href="https://partnerplatform.bol.com/nl/cdp/verkopen-via-bol" target="_blank" rel="noopener">partnerplatform.bol.com</a></td></tr>
+    <tr><td class="num">33</td><td class="plat">Allegro</td><td class="reg reg-hide">波兰 / 中东欧 · 3P 开放</td><td class="reg"><a href="https://allegro.pl/rejestracja/konto-firmowe/nowe-konto?lang=en-US" target="_blank" rel="noopener">allegro.pl/rejestracja</a></td></tr>
+    <tr><td class="num">34</td><td class="plat">Cdiscount Marketplace</td><td class="reg reg-hide">法国 · 3P</td><td class="reg"><a href="https://marketplace.cdiscount.com/lancez-votre-boutique/" target="_blank" rel="noopener">marketplace.cdiscount.com</a></td></tr>
+    <tr><td class="num">35</td><td class="plat">Carrefour Marketplace</td><td class="reg reg-hide">法国 / 欧洲 · 3P（商超系）</td><td class="reg"><a href="https://www.carrefour.fr/services/carrefour-marketplace-vendeurs" target="_blank" rel="noopener">carrefour.fr/services/carrefour-marketplace</a></td></tr>
+    <tr><td class="num">36</td><td class="plat">Fnac Marketplace</td><td class="reg reg-hide">法国 / 比荷卢 · Fnac Darty 体系</td><td class="reg"><a href="https://fnacdartymarketplace.com/" target="_blank" rel="noopener">fnacdartymarketplace.com</a></td></tr>
+    <tr><td class="num">37</td><td class="plat">MediaMarkt Marketplace</td><td class="reg reg-hide">德国 / 欧洲连锁 · Mirakl</td><td class="reg"><a href="https://sell.mediamarktsaturn.com/de-ES/registration-and-shop-setup/1-registration" target="_blank" rel="noopener">sell.mediamarktsaturn.com</a></td></tr>
+    <tr><td class="num">38</td><td class="plat">El Corte Inglés</td><td class="reg reg-hide">西班牙 / 葡萄牙 · 3P 百货</td><td class="reg"><a href="https://marketplace.elcorteingles.es/" target="_blank" rel="noopener">marketplace.elcorteingles.es</a></td></tr>
+    <tr><td class="num">39</td><td class="plat">YOOX Net-a-Porter</td><td class="reg reg-hide">奢侈品 · Brand Partner</td><td class="reg"><a href="https://www.yoox.com/brand-partnership" target="_blank" rel="noopener">yoox.com/brand-partnership</a></td></tr>
+    <tr><td class="num">40</td><td class="plat">Back Market</td><td class="reg reg-hide">欧美 · 翻新认证卖家</td><td class="reg"><a href="https://www.backmarket.com/en-us/become-a-seller" target="_blank" rel="noopener">backmarket.com/en-us/become-a-seller</a></td></tr>
+    <tr><td class="num">41</td><td class="plat">AUTODOC</td><td class="reg reg-hide">欧洲 27 国 · 3P 汽配垂直</td><td class="reg"><a href="https://www.autodoc.de/services/partner" target="_blank" rel="noopener">autodoc.de/services/partner</a></td></tr>
+    <tr><td class="num">42</td><td class="plat">Boulanger</td><td class="reg reg-hide">法国电器 · Fnac Darty 体系</td><td class="reg"><a href="https://www.boulanger.com/" target="_blank" rel="noopener">boulanger.com</a></td></tr>
+    <tr><td class="num">43</td><td class="plat">Brico</td><td class="reg reg-hide">法比荷 · DIY 连锁</td><td class="reg"><a href="https://www.brico.fr/" target="_blank" rel="noopener">brico.fr</a></td></tr>
+    <tr><td class="num">44</td><td class="plat">BUT</td><td class="reg reg-hide">法国 · 家居连锁</td><td class="reg"><a href="https://www.but.fr/" target="_blank" rel="noopener">but.fr</a></td></tr>
+    <tr><td class="num">45</td><td class="plat">2ememain / 2dehands</td><td class="reg reg-hide">荷比 · 分类信息 + 专业卖家</td><td class="reg"><a href="https://www.2ememain.be/" target="_blank" rel="noopener">2ememain.be</a></td></tr>
+    <tr><td class="num">46</td><td class="plat">Kaufland Marketplace</td><td class="reg reg-hide">德国 / 中东欧 · 前身 real.de</td><td class="reg"><a href="https://www.kaufland.de/marktplatz/" target="_blank" rel="noopener">kaufland.de/marktplatz</a></td></tr>
+    <tr><td class="num">47</td><td class="plat">ManoMano</td><td class="reg reg-hide">法德西意英 · DIY / 园艺垂直</td><td class="reg"><a href="https://www.manomano.de/become-a-seller" target="_blank" rel="noopener">manomano.de/become-a-seller</a></td></tr>
+    <tr><td class="num">48</td><td class="plat">Douglas Marketplace</td><td class="reg reg-hide">德国 / 欧洲美妆垂直</td><td class="reg"><a href="https://www.douglas.de/de/c/marketplace/01" target="_blank" rel="noopener">douglas.de/de/c/marketplace/01</a></td></tr>
+    <tr><td class="num">49</td><td class="plat">Conrad Marketplace</td><td class="reg reg-hide">德国 / 欧洲 B2B 垂直</td><td class="reg"><a href="https://www.conrad.de/de/marktplatz.html" target="_blank" rel="noopener">conrad.de/de/marktplatz.html</a></td></tr>
+    <tr><td class="num">50</td><td class="plat">idealo Direktkauf</td><td class="reg reg-hide">德国 · 比价导流 + 直销</td><td class="reg"><a href="https://business.idealo.com/" target="_blank" rel="noopener">business.idealo.com</a></td></tr>
+    <tr><td class="num">51</td><td class="plat">Hood.de</td><td class="reg reg-hide">德国 · 本土低成本</td><td class="reg"><a href="https://www.hood.de/verkaufen.htm" target="_blank" rel="noopener">hood.de/verkaufen.htm</a></td></tr>
+    <tr><td class="num">52</td><td class="plat">Decathlon Marketplace</td><td class="reg reg-hide">欧洲多国 · 运动垂直</td><td class="reg"><a href="https://www.decathlon.de/marketplace" target="_blank" rel="noopener">decathlon.de/marketplace</a></td></tr>
+    <tr><td class="num">53</td><td class="plat">Galaxus Marketplace</td><td class="reg reg-hide">瑞士 / 德国 · 高端综合</td><td class="reg"><a href="https://www.galaxus.de/de/page/marketplace-16754" target="_blank" rel="noopener">galaxus.de/de/page/marketplace-16754</a></td></tr>
+    <tr><td class="num">54</td><td class="plat">Worten Marketplace</td><td class="reg reg-hide">葡 / 西 · 3C 垂直</td><td class="reg"><a href="https://www.worten.pt/" target="_blank" rel="noopener">worten.pt</a></td></tr>
+    <tr><td class="num">55</td><td class="plat">La Redoute Marketplace</td><td class="reg reg-hide">法国 · 时尚家居</td><td class="reg"><a href="https://www.laredoute.fr/marketplace" target="_blank" rel="noopener">laredoute.fr/marketplace</a></td></tr>
+    <tr><td class="num">56</td><td class="plat">Leroy Merlin</td><td class="reg reg-hide">法国 / 欧洲 · 家装连锁</td><td class="reg"><a href="https://www.leroymerlin.fr/pro" target="_blank" rel="noopener">leroymerlin.fr/pro</a></td></tr>
+    <tr><td class="num">57</td><td class="plat">Conforama Marketplace</td><td class="reg reg-hide">法国 / 瑞士 · 家具连锁</td><td class="reg"><a href="https://www.conforama.fr/marketplace" target="_blank" rel="noopener">conforama.fr/marketplace</a></td></tr>
+    <tr><td class="num">58</td><td class="plat">Maisons du Monde</td><td class="reg reg-hide">法国 / 欧洲家居装饰</td><td class="reg"><a href="https://www.maisonsdumonde.com/FR/fr/marketplace" target="_blank" rel="noopener">maisonsdumonde.com/FR/fr/marketplace</a></td></tr>
+    <tr><td class="num">59</td><td class="plat">E.Leclerc Marketplace</td><td class="reg reg-hide">法国超市 · 邀请制</td><td class="reg"><a href="https://www.e.leclerc/" target="_blank" rel="noopener">e.leclerc</a></td></tr>
+    <tr><td class="num">60</td><td class="plat">Veepee</td><td class="reg reg-hide">法国 / 欧洲多国 · 品牌闪购（供货制）</td><td class="reg"><a href="https://www.veepee.fr/marques" target="_blank" rel="noopener">veepee.fr/marques</a></td></tr>
+    <tr><td class="num">61</td><td class="plat">Miravia</td><td class="reg reg-hide">西班牙 · 阿里系 3P</td><td class="reg"><a href="https://seller.miravia.es/" target="_blank" rel="noopener">seller.miravia.es</a></td></tr>
+    <tr><td class="num">62</td><td class="plat">PcComponentes</td><td class="reg reg-hide">西班牙 · 3C 垂直</td><td class="reg"><a href="https://www.pccomponentes.com/marketplace" target="_blank" rel="noopener">pccomponentes.com/marketplace</a></td></tr>
+  </table>
+
+  <div class="region"><h3>英国市场</h3><span class="rn">2 平台</span><span class="rd">商超与时尚平台；脱欧后英国与欧盟合规分别准备</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">63</td><td class="plat">ASOS Marketplace</td><td class="reg reg-hide">申请制独立设计师市场</td><td class="reg"><a href="https://marketplace.asos.com/sell" target="_blank" rel="noopener">marketplace.asos.com/sell</a></td></tr>
+    <tr><td class="num">64</td><td class="plat">Tesco Marketplace</td><td class="reg reg-hide">3P 商超市场（申请制）</td><td class="reg"><a href="https://toolkit.tesco.com/seller/apply-to-sell/" target="_blank" rel="noopener">toolkit.tesco.com/seller/apply-to-sell</a></td></tr>
+  </table>
+
+  <div class="region"><h3>中东与欧亚</h3><span class="rn">3 平台</span><span class="rd">高客单价市场与土耳其枢纽，竞争密度低</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">65</td><td class="plat">noon</td><td class="reg reg-hide">阿联酋/沙特/埃及 · 3P（本地+跨境）</td><td class="reg"><a href="https://sell.noon.com/" target="_blank" rel="noopener">sell.noon.com</a></td></tr>
+    <tr><td class="num">66</td><td class="plat">Namshi</td><td class="reg reg-hide">海湾地区 · 3P 时尚</td><td class="reg"><a href="https://help.namshi.com/portal/en/" target="_blank" rel="noopener">help.namshi.com/portal/en</a></td></tr>
+    <tr><td class="num">67</td><td class="plat">Trendyol</td><td class="reg reg-hide">土耳其 / 欧亚 · Seller Center</td><td class="reg"><a href="https://partner.trendyol.com/" target="_blank" rel="noopener">partner.trendyol.com</a></td></tr>
+  </table>
+
+  <div class="region"><h3>东南亚市场</h3><span class="rn">3 平台</span><span class="rd">移动端为王、佣金低、增速快</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">68</td><td class="plat">Shopee</td><td class="reg reg-hide">东南亚 / 台湾 · 3P 移动优先</td><td class="reg"><a href="https://seller.shopee.com/" target="_blank" rel="noopener">seller.shopee.com</a></td></tr>
+    <tr><td class="num">69</td><td class="plat">Lazada</td><td class="reg reg-hide">东南亚 · 3P（阿里系）</td><td class="reg"><a href="https://sellercenter.lazada.com/" target="_blank" rel="noopener">sellercenter.lazada.com</a></td></tr>
+    <tr><td class="num">70</td><td class="plat">11street</td><td class="reg reg-hide">韩国 / 东南亚 · 3P</td><td class="reg"><a href="https://www.11st.co.kr/" target="_blank" rel="noopener">11st.co.kr</a></td></tr>
+  </table>
+
+  <div class="region"><h3>日本市场</h3><span class="rn">2 平台</span><span class="rd">客群忠诚、客单价高，对品质细节容忍度极低</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">71</td><td class="plat">Rakuten</td><td class="reg reg-hide">日本 · 3P（Rakuten Marketplace）</td><td class="reg"><a href="https://marketplace.rakuten.net/" target="_blank" rel="noopener">marketplace.rakuten.net</a></td></tr>
+    <tr><td class="num">72</td><td class="plat">LINE Shopping</td><td class="reg reg-hide">日本 / 东南亚 · 社交流量</td><td class="reg"><a href="https://lineshoppingseller.com/" target="_blank" rel="noopener">lineshoppingseller.com</a></td></tr>
+  </table>
+
+  <div class="region"><h3>澳大利亚 / 新西兰</h3><span class="rn">2 平台</span><span class="rd">人口不多但消费力强、竞争密度低</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">73</td><td class="plat">Kogan.com</td><td class="reg reg-hide">澳新 · 3P（Mirakl）</td><td class="reg"><a href="https://www.kogan.com/au/kogan-marketplace/" target="_blank" rel="noopener">kogan.com/au/kogan-marketplace</a></td></tr>
+    <tr><td class="num">74</td><td class="plat">MyDeal</td><td class="reg reg-hide">澳洲 · 3P（Woolworths 旗下）</td><td class="reg"><a href="https://portal.mydeal.com.au/" target="_blank" rel="noopener">portal.mydeal.com.au</a></td></tr>
+  </table>
+
+  <div class="region"><h3>俄语区市场</h3><span class="rn">2 平台</span><span class="rd">本土平台绝对主导，欧美品牌退出后类目空白多</span></div>
+  <table>
+    <tr><th>#</th><th>平台</th><th class="reg-hide">模式</th><th>官方注册直达</th></tr>
+    <tr><td class="num">75</td><td class="plat">Ozon</td><td class="reg reg-hide">俄罗斯 · 3P</td><td class="reg"><a href="https://seller.ozon.ru/" target="_blank" rel="noopener">seller.ozon.ru</a></td></tr>
+    <tr><td class="num">76</td><td class="plat">Wildberries</td><td class="reg reg-hide">俄罗斯 · 3P（流量第一）</td><td class="reg"><a href="https://seller.wildberries.ru/" target="_blank" rel="noopener">seller.wildberries.ru</a></td></tr>
+  </table>
+
+  <div class="note"><b>卖家自助入驻 vs 通过渠道进入：</b>自己入驻适合有运营团队的工厂（自建店铺、自投广告、自担库存）；通过渠道进入则是提交货盘、评审后分发 20+ 渠道——海外仓、合规认证与销售运营由渠道侧承担，工厂专注生产。两条路都在 <b>sell-on/index.html</b> 与入驻主落地页承接。</div>
+</div></section>
+
+<!-- ============ 曝光与收录绩效 ============ -->
+<section id="exposure"><div class="wrap">
+  <h2>七、曝光与收录绩效（基线 + 追踪框架）</h2>
+  <p class="sec-sub">按「浏览 / 曝光绩效」驱动系统更新的前提是有数据——当前站点曝光刚启动（今晨提交 GSC），先记录实测基线，数据到位后按此框架持续更新。</p>
+
+  <div class="region"><h3>当前基线（2026-09-02 下午实测）</h3><span class="rn">收录与排名均为零</span></div>
+  <table>
+    <tr><th>指标</th><th>实测值</th><th>说明</th></tr>
+    <tr><td class="plat">搜索引擎收录</td><td class="reg">0 页</td><td class="reg">site:hdhaidong.github.io 在搜索后端与 Bing/DuckDuckGo 均无结果——新站正常（GSC 今晨才提交 sitemap）</td></tr>
+    <tr><td class="plat">品牌词排名</td><td class="reg">无</td><td class="reg">「insightmarketplac 出海 渠道」等品牌词搜索未见本站——收录未开始，排名无从谈起</td></tr>
+    <tr><td class="plat">站内浏览统计</td><td class="reg">无（有意为之）</td><td class="reg">未安装第三方分析（GA 等），符合自建偏好；浏览量级以 GSC 点击数据为准</td></tr>
+    <tr><td class="plat">仓库流量 API</td><td class="reg">无权限</td><td class="reg">gh token 缺 metrics scope（403）；且仓库浏览量 ≠ 站点流量，不补授权</td></tr>
+  </table>
+
+  <div class="region"><h3>曝光基建（已就绪）</h3><span class="rn">今日完成</span></div>
+  <table>
+    <tr><th>基建项</th><th>状态</th><th>作用</th></tr>
+    <tr><td class="plat">Google Search Console</td><td class="reg">✅ 已验证 + sitemap.xml（103 URLs）已提交</td><td class="reg">曝光 / 点击 / 排名的唯一真实数据源</td></tr>
+    <tr><td class="plat">IndexNow</td><td class="reg">✅ 已提交（key b636f4…）</td><td class="reg">加速 Bing / Yandex 收录；注意 Google 不参与 IndexNow，只能走 GSC</td></tr>
+    <tr><td class="plat">SEO 元素</td><td class="reg">✅ 全站就绪</td><td class="reg">og 标签 / JSON-LD / canonical / llms.txt / RSS 全部在线</td></tr>
+    <tr><td class="plat">提交前检查</td><td class="reg">✅ 19 项技术检查全过</td><td class="reg">RSS / 封面 / 音频字节级核对（播客提交用）</td></tr>
+  </table>
+
+  <div class="region"><h3>绩效追踪表</h3><span class="rn">GSC 数据到位后按周填写</span></div>
+  <table>
+    <tr><th>周次</th><th>收录页数</th><th>曝光 Impressions</th><th>点击 Clicks</th><th>CTR</th><th>平均排名</th><th>动作</th></tr>
+    <tr><td class="reg">W1（9/2 起）</td><td class="reg">基线：0</td><td class="reg">—</td><td class="reg">—</td><td class="reg">—</td><td class="reg">—</td><td class="reg">等待首批收录（通常 3–14 天）</td></tr>
+    <tr><td class="reg">W2</td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg">按曝光 Top 页面重排内容优先级</td></tr>
+    <tr><td class="reg">W3</td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg">低 CTR 高曝光页 → 改标题/描述</td></tr>
+    <tr><td class="reg">W4+</td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg"></td><td class="reg">按查询词扩内容；零曝光页诊断</td></tr>
+  </table>
+
+  <div class="note"><b>数据怎么给我：</b>GSC → 「效果」（Performance）→ 日期范围选 28 天 → 右上导出 CSV 或直接截图发我。我按数据执行三件事：① 重排页面与内容优先级（曝光高者加强）② 低 CTR 页面改写标题与描述 ③ 零收录页排查技术原因。<b>预期节奏：</b>新站首次收录通常 3–14 天，首批有意义的曝光数据约 1–2 周后出现——在那之前「按绩效更新」无数据可依，本表即基线。</div>
+</div></section>
+
+<footer><div class="wrap">
+  insightmarketplac · 系统总图（内部参考） · 数据核对自线上页面 2026-09-02 · 本页内部链接，noindex 不进 sitemap
+</div></footer>
+
+</body>
+</html>

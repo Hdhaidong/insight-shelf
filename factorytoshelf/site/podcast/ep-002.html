@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第 2 期：12.6 万行代码零手写，Agent 开始替公司干活 | Product Hub 播客 | FactoryToShelf</title>
+<meta name="description" content="Product Hub 第 2 期：Product 看 M5Stack 口袋电脑筹 HK$1,496 万，Agent 拆美国电商老兵 5 周零手写 12.6 万行代码的「公司大脑」，Impact 讲头部品牌拿走 10 倍 AI 引用。音频已上线，AI 配音 5 分 30 秒。">
+<meta name="keywords" content="出海播客, Product Hub, Agent 业绩, Claude Code, 公司大脑, M5Stack, 口袋电脑, AI 可发现性, AI 引用, 品牌声量, Agent 提业绩">
+<link rel="canonical" href="https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 2 期：12.6 万行代码零手写，Agent 开始替公司干活 | Product Hub 播客 | FactoryToShelf">
+<meta property="og:description" content="Product Hub 第 2 期：Product 看 M5Stack 口袋电脑，Agent 拆零手写公司大脑，Impact 讲头部品牌拿走 10 倍 AI 引用。音频已上线，AI 配音 5 分 30 秒。">
+<meta property="og:url" content="https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html">
+<meta property="og:image" content="https://factorytoshelf.hdhaidong.workers.dev/podcast/cover/cover-1200.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0E13'/%3E%3Ctext x='16' y='21' font-family='Consolas,monospace' font-size='13' font-weight='700' fill='%23E8A33D' text-anchor='middle'%3Eim%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"PodcastEpisode","episodeNumber":2,"name":"12.6 万行代码零手写：Agent 开始替公司干活","url":"https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html","datePublished":"2026-09-02","timeRequired":"PT5M30S","description":"Product Hub 第 2 期：Product 板块看 M5Stack 口袋 Linux 电脑 HK$1,496 万，Agent 板块拆美国电商老兵的公司大脑案例，Impact 板块讲头部品牌拿走 10 倍 AI 引用。","partOfSeries":{"@type":"PodcastSeries","name":"Product Hub","url":"https://factorytoshelf.hdhaidong.workers.dev/podcast.html"},"author":{"@type":"Organization","name":"FactoryToShelf"},"publisher":{"@type":"Organization","name":"FactoryToShelf"}}
+</script>
+<style>
+:root{--bg:#0B0E13;--bg-2:#10141B;--bg-3:#151A23;--ink:#F2EEE6;--ink-dim:#A7ADB8;--ink-faint:#6E7683;--accent:#E8A33D;--accent-hi:#F4BA60;--hairline:rgba(242,238,230,.12);--hairline-soft:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono","Cascadia Code",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{border-bottom:1px solid var(--hairline-soft);background:rgba(11,14,19,.92);position:sticky;top:0;z-index:40;backdrop-filter:blur(10px)}
+.top-in{max-width:1000px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mk{font-weight:700;font-size:1rem}
+.brand .mk em{font-style:normal;color:var(--accent)}
+.brand .bc{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em}
+.brand .bc a{color:var(--ink-faint)}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+.btn{display:inline-block;font-size:.95rem;font-weight:600;padding:13px 28px;border-radius:8px;transition:all .2s}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--accent-hi));color:#141414}
+.btn-p:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 24px rgba(232,163,61,.25)}
+.btn-s{border:1px solid var(--hairline);color:var(--ink-dim)}
+.btn-s:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.playbox{display:flex;align-items:center;gap:14px;margin-top:26px;padding:16px 18px;border:1px dashed rgba(232,163,61,.35);border-radius:10px;background:rgba(232,163,61,.04);flex-wrap:wrap}
+.playbox .pb-ic{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid rgba(232,163,61,.5);display:flex;align-items:center;justify-content:center}
+.playbox .pb-ic::before{content:"";display:block;width:0;height:0;border-left:13px solid var(--accent);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.playbox b{display:block;font-size:.92rem}
+.playbox span{display:block;font-size:.78rem;color:var(--ink-dim);margin-top:2px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 4px}
+.num{border:1px solid var(--hairline-soft);border-radius:8px;padding:12px 14px;background:var(--bg-3)}
+.num .kv{font-family:var(--mono);font-size:.6rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.num .vv{font-size:.95rem;font-weight:700;margin-top:4px}
+.num .vv small{font-weight:400;color:var(--ink-dim);font-size:.72rem;display:block;margin-top:2px}
+.takeaway{margin-top:16px;padding:14px 18px;border-left:3px solid var(--accent);background:rgba(232,163,61,.06);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--ink-dim)}
+.takeaway b{color:var(--accent)}
+.src{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);margin-top:14px;letter-spacing:.04em}
+.crumbs{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em;margin-bottom:18px}
+.art{max-width:860px;padding:56px 0 0}
+.art h1{font-size:clamp(1.4rem,3.2vw,2.05rem);font-weight:700;line-height:1.25;letter-spacing:-.01em}
+.dek{color:var(--ink-dim);font-size:1.02rem;margin-top:14px}
+.prose{margin-top:28px}
+.prose h2{font-size:1.18rem;font-weight:700;margin:34px 0 12px}
+.prose h2 .seg{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:6px}
+.prose p{color:var(--ink-dim);font-size:.95rem;margin-top:12px}
+.prose p b{color:var(--ink)}
+.art-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px}
+.art-nav a{border:1px solid var(--hairline-soft);border-radius:10px;padding:16px 18px;background:var(--bg-2)}
+.art-nav a:hover{border-color:rgba(232,163,61,.4);text-decoration:none}
+.art-nav .dir{font-family:var(--mono);font-size:.62rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.art-nav .t{font-size:.9rem;font-weight:600;margin-top:6px;color:var(--ink)}
+.cta-band{margin:64px 0 0;padding:40px;border-radius:14px;background:linear-gradient(135deg,rgba(232,163,61,.1),rgba(232,163,61,.03));border:1px solid rgba(232,163,61,.22);text-align:center}
+.cta-band h2{font-size:1.3rem;font-weight:700;margin-bottom:10px}
+.cta-band p{color:var(--ink-dim);max-width:540px;margin:0 auto 20px;font-size:.92rem}
+footer{margin-top:64px;border-top:1px solid var(--hairline-soft);padding:44px 0 54px}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.f-brand .mk{font-weight:700;font-size:1rem}
+.f-brand .mk em{font-style:normal;color:var(--accent)}
+.f-brand p{color:var(--ink-faint);font-size:.78rem;margin-top:6px;max-width:360px}
+.f-links{text-align:right}
+.f-links .fk{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:8px}
+.f-links a{display:block;font-size:.8rem;color:var(--ink-dim);padding:2px 0}
+.f-links a:hover{color:var(--accent)}
+@media (max-width:800px){.nums{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}.cta-band{padding:28px 18px}.f-links{text-align:left}.art-nav{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+
+<div class="wrap">
+  <article class="art">
+    <div class="crumbs">2026-09-02 · 第 2 期 · 5 分 30 秒 · AI 配音</div>
+    <div class="eyebrow">Podcast · Product Hub · Ep.02</div>
+    <h1>12.6 万行代码零手写：Agent 开始替公司干活</h1>
+    <p class="dek">第 2 期三个板块：Product 看 M5Stack 口袋 Linux 电脑筹到 HK$1,496 万，Agent 拆美国电商老兵用 Claude Code 搭的「公司大脑」，Impact 讲头部品牌拿走 10 倍 AI 引用。音频已上线，讲稿全文同步。</p>
+
+    <div class="playbox" style="flex-direction:column;align-items:stretch;gap:10px">
+      <audio controls preload="none" src="audio/ep-002.mp3" style="width:100%;display:block"></audio>
+      <span>第 2 期 · AI 配音版 · 已同步 <a href="../podcast.xml">RSS feed</a> 分发至 Apple Podcasts / 小宇宙 / Spotify</span>
+    </div>
+
+    <div class="prose">
+      <h2>本期读数</h2>
+      <div class="nums">
+        <div class="num"><div class="kv">M5Stack CardputerZero</div><div class="vv">HK$1,496 万<small>13,644 名支持者的口袋 Linux 电脑</small></div></div>
+        <div class="num"><div class="kv">公司大脑</div><div class="vv">12.6 万行<small>5 周 · 零手写 · 全靠 Claude Code</small></div></div>
+        <div class="num"><div class="kv">AI 引用差距</div><div class="vv">10 倍<small>头部 25% 品牌 vs 下一梯队</small></div></div>
+      </div>
+
+      <h2><span class="seg">Segment 01 · Product</span>口袋设备又爆了：从「AI 玩具」到「生产力入口」</h2>
+      <p>上期我们讲过 Tiiny AI Pocket Lab——巴掌大的 AI 超算，<b>$307 万</b>、2,181 名支持者。当时说：买它的人不是在买玩具，是在要「自己的算力」。</p>
+      <p>这一周，同一个信号又出现了一次，而且更大——M5Stack 的 <b>CardputerZero</b>，信用卡大小的口袋 Linux 电脑：<b>13,644 名支持者、认缴 HK$14,960,226</b>（约 190 万美元），目标只有 HK$7.85 万，达成约 <b>190 倍</b>。它能干什么？SSH 连服务器、跑 Python、用 Git 和 Vim 干活，还能跑轻量边缘 AI——开发者的整个工作环境，装进了口袋。</p>
+      <p>更值得工厂看的是打法：M5Stack 卖的不是单品——<b>100+ 配件模块、社区固件商店、可扩展通信 Cap</b>，众筹破百万美元后解锁「透明黑」限定配色。单品做成生态、众筹变成新品发布节奏——这是成熟硬件公司的做法。给做硬件出海的判断：同一个信号出现两次就是趋势——<b>口袋形态 × 可编程 × 生态配件</b>，三个词凑齐，护城河就有了雏形。</p>
+
+      <h2><span class="seg">Segment 02 · Agent</span>电商老兵的公司大脑：12.6 万行代码、5 周、零手写</h2>
+      <p>本期 Agent 板块的主角，是一位 20 多年的电商老兵——Rick Watson，美国电商咨询公司 RMW Commerce 的创始人，早年做过 ChannelAdvisor、BarnesandNoble.com，后来在 Pitney Bowes 带过业务。今年 5 月底他一头扎进 Claude Code，然后干了一件让同行侧目的事：<b>5 周、12.6 万行代码、零手写</b>。</p>
+      <p>他建的东西叫「公司大脑」：Markdown 打底、GitHub 托管，数据源<b>每小时自动更新</b>——Slack、Gmail、日历、云盘、CRM、通话记录一个不落，外部再接上 EDGAR 财报数据库和新闻源。所有信息被解析成一张<b>本体论关系网</b>：商户、品牌、合作伙伴之间谁连着谁，一查全出来。这个大脑不只是「知道」，还会干活：生成图片幻灯、起草邮件、写播客脚本、出提案。</p>
+      <p>老兵复盘时说了三句大实话，比代码更值钱——第一句：<b>「最难的不是让 AI 写代码，是维护上下文。」</b>数据每小时在刷新，维护这套系统本身成了一份新工作。第二句：「像在管理一队散漫、健忘、偶尔粗心的开发者——有时让你觉得自己是天才，有时想砸墙。」第三句关于省钱：<b>模型要分层用</b>——杂活给 Haiku、大多数任务 Sonnet 就够、主构建用 Opus 反而更便宜，因为错误少、返工少；他还让 Claude Code 搭了 A/B 测试，按成本和准确率自动选模型。</p>
+      <p>给工厂的翻译：你不需要 12 万行的雄心，先把「上下文」管起来——你的报价历史、订单记录、买家往来邮件，就是工厂版公司大脑的原料。<b>Agent 的门槛从来不在代码，在数据。</b></p>
+
+      <h2><span class="seg">Segment 03 · Impact</span>头部品牌拿走 10 倍 AI 引用</h2>
+      <p>同一位老兵最近做了一项 AI 可发现性研究——品牌怎么在 AI 时代被 AI 引用、被 AI 推荐。四个结论，每一个都值得出海品牌抄下来。</p>
+      <p>一、<b>AI 搜索比 Google 首页更集中</b>——头部位置更少，赢家通吃更狠。二、<b>SEO 没有死</b>——Agent 遵循的就是经典 SEO 规则，域名权威与品牌声量是最大变量；Wikipedia、Reddit、YouTube 和老牌编辑域名，主导着每一个数据集。三、最狠的一个数：<b>网络提及量头部 25% 的品牌，拿到的 AI 引用是下一个梯队的 10 倍</b>。四、llms.txt 尚未被平台普遍采用——但值得提前准备。</p>
+      <p>对出海工厂的含义很直接：<b>品牌声量就是 AI 时代的入场券</b>。持续自产内容——博客、播客、视频——不只是获客动作，是在为「被 AI 引用」攒资格。这也是我们为什么自己写博客、录这个播客：内容生产，就是新一代的 SEO。</p>
+
+      <div class="takeaway"><b>一句话总结本期：</b>Agent 的门槛不在代码、在上下文——谁先把数据喂进去，谁先让 Agent 干活；而持续自产内容，正在变成 AI 搜索时代的入场券。</div>
+      <p class="src">来源：Kickstarter 公开项目页面 · RMW Commerce 公开博客（rmwcommerce.com，公开行业信息源）· 检索于 2026-09-02 · 仅作信息分析</p>
+    </div>
+
+    <div class="art-nav">
+      <a href="ep-001.html"><div class="dir">← 上一期</div><div class="t">AI 硬件正在众筹集中出海</div></a>
+      <a href="../podcast.html"><div class="dir">返回电台 →</div><div class="t">Product Hub：把产品卖出去的每周电台</div></a>
+    </div>
+  </article>
+</div>
+
+<div class="wrap">
+  <div class="cta-band">
+    <h2>把节目里的信号变成系统输入</h2>
+    <p>Agent 的门槛在上下文——众筹信号订阅线就是那根数据管：数据 token 装进 Agent，一句话调出本周值得跟进的品类。</p>
+    <a class="btn btn-p" href="../data-platforms.html">看 Agent + 数据模式 →</a>
+    <a class="btn btn-s" href="../sell-on-oem-odm.html#meet">预约一次会议</a>
+  </div>
+</div>
+
+<footer><div class="wrap"><div class="f-grid">
+  <div class="f-brand">
+    <span class="mk">Factory<em>ToShelf</em></span>
+    <p>美国渠道公司 · 深圳运营中心 —— 渠道、数据、内容三位一体的品牌出海网络。</p>
+  </div>
+  <div class="f-links">
+    <div class="fk">Content</div>
+    <a href="../podcast.html">播客 · Product Hub</a>
+    <a href="../blog.html">博客首页</a>
+    <a href="../blog.html?cat=agent">Agent 业绩</a>
+    <div class="fk" style="margin-top:14px">Services</div>
+    <a href="../sell-on/">76 个平台入驻</a>
+    <a href="../data-platforms.html">业务数据订阅</a>
+    <span class="fc" style="color:var(--accent);font-family:var(--mono);font-size:.82rem;display:inline-block;margin-top:10px">haidong.zhou@outlook.com</span>
+  </div>
+</div></div></footer>
+
+<script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

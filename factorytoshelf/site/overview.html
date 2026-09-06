@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一个系统的进化 · 四层架构与七大服务线 | FactoryToShelf</title>
+<meta name="description" content="FactoryToShelf 是一套自底向上生长的四层系统：硬件层、智能体层、系统层、服务层。服务层含七大业务线：渠道入驻、数据洞察（数据 token）、系统工具、品牌增长、众筹分销、合规企业、展会服务。">
+<meta name="keywords" content="FactoryToShelf 业务, 品牌出海服务, 渠道入驻, 数据分析服务, 数据token, ERP WMS CRM, AI Agent 定制, 红人营销, AI短剧定制, 众筹分销, 公司注册 商标 VAT, 展会服务">
+<link rel="canonical" href="https://factorytoshelf.hdhaidong.workers.dev/overview.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一个系统的进化 · 四层架构 | FactoryToShelf">
+<meta property="og:description" content="渠道、数据、内容三位一体——七大业务线一张图看懂。">
+<meta property="og:url" content="https://factorytoshelf.hdhaidong.workers.dev/overview.html">
+<meta name="robots" content="index, follow">
+<style>
+:root{--bg:#0B0E13;--bg-2:#10141B;--bg-3:#151A23;--ink:#F2EEE6;--ink-dim:#A7ADB8;--ink-faint:#6E7683;--accent:#E8A33D;--accent-hi:#F4BA60;--hairline:rgba(242,238,230,.12);--hairline-soft:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono","Cascadia Code",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{border-bottom:1px solid var(--hairline-soft);background:rgba(11,14,19,.92);position:sticky;top:0;z-index:40;backdrop-filter:blur(10px)}
+.top-in{max-width:1040px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mk{font-weight:700;font-size:1rem}
+.brand .mk em{font-style:normal;color:var(--accent)}
+.brand .bc{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em}
+.brand .bc a{color:var(--ink-faint)}
+.hero{padding:64px 0 44px;position:relative;overflow:hidden;border-bottom:1px solid var(--hairline-soft)}
+.hero::before{content:"";position:absolute;top:-160px;right:-100px;width:440px;height:440px;background:radial-gradient(circle,rgba(232,163,61,.08),transparent 65%);pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+h1{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+h1 .hl{color:var(--accent)}
+.hero-sub{max-width:700px;margin-top:16px;color:var(--ink-dim);font-size:1.05rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;font-family:var(--sans);font-size:.95rem;font-weight:600;padding:13px 28px;border-radius:8px;transition:all .2s}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--accent-hi));color:#141414}
+.btn-p:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 24px rgba(232,163,61,.25)}
+.btn-s{border:1px solid var(--hairline);color:var(--ink-dim)}
+.btn-s:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline-soft);border:1px solid var(--hairline-soft);border-radius:10px;overflow:hidden;margin-top:36px}
+.tri .t{background:var(--bg-2);padding:18px 20px}
+.tri .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+.tri .v{font-size:1rem;font-weight:600;margin-top:6px}
+.sec{padding:52px 0 6px}
+.sec-head{margin-bottom:24px}
+h2{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700}
+.sec-head p{color:var(--ink-dim);margin-top:8px;font-size:.93rem;max-width:720px}
+.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.biz{border:1px solid var(--hairline-soft);border-radius:12px;padding:24px;background:var(--bg-2);position:relative;transition:border-color .2s}
+.biz:hover{border-color:rgba(232,163,61,.35)}
+.biz .no{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.biz h3{font-size:1.1rem;font-weight:700;margin:10px 0 2px}
+.biz .en{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.05em}
+.biz p{font-size:.86rem;color:var(--ink-dim);margin-top:10px}
+.biz ul{list-style:none;margin-top:12px}
+.biz li{font-size:.82rem;color:var(--ink-dim);padding:4px 0 4px 18px;position:relative}
+.biz li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.biz li b{color:var(--ink);font-weight:600}
+.biz .go{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.biz .go a{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(232,163,61,.3);border-radius:20px;padding:4px 12px}
+.biz .go a:hover{background:rgba(232,163,61,.1);text-decoration:none}
+.stack{margin-top:2px}
+.layer{display:grid;grid-template-columns:190px 1fr;border:1px solid var(--hairline-soft);border-radius:12px;background:var(--bg-2);overflow:hidden;transition:border-color .2s}
+.layer:hover{border-color:rgba(232,163,61,.4)}
+.layer .lh{padding:20px;border-right:1px solid var(--hairline-soft);background:var(--bg-3);display:flex;flex-direction:column;justify-content:center}
+.layer .ln{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.layer h3{font-size:1.02rem;font-weight:700;margin-top:5px}
+.layer .le{font-family:var(--mono);font-size:.62rem;color:var(--ink-faint);letter-spacing:.06em;margin-top:3px}
+.layer .lb{padding:20px 24px}
+.layer .lb p{font-size:.86rem;color:var(--ink-dim)}
+.layer .lb ul{list-style:none;margin-top:8px}
+.layer .lb li{font-size:.82rem;color:var(--ink-dim);padding:3px 0 3px 18px;position:relative}
+.layer .lb li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.layer .lb li b{color:var(--ink);font-weight:600}
+.layer .go{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.layer .go a{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--accent);border:1px solid rgba(232,163,61,.3);border-radius:20px;padding:4px 12px}
+.layer .go a:hover{background:rgba(232,163,61,.1);text-decoration:none}
+.lconn{display:flex;justify-content:center;align-items:center;gap:10px;padding:6px 0}
+.lconn .cap{font-family:var(--mono);font-size:.62rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.lconn .ar{color:var(--accent);font-family:var(--mono);font-size:.95rem;line-height:1}
+.path{border:1px solid var(--hairline-soft);border-radius:12px;background:var(--bg-2);padding:24px;margin-bottom:14px}
+.path .pt{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.path .pn{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:#141414;background:var(--accent);border-radius:4px;padding:3px 9px;font-weight:700}
+.path h3{font-size:1.05rem;font-weight:700}
+.path .pz{font-size:.78rem;color:var(--ink-faint)}
+.path .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.path .node{font-size:.78rem;color:var(--ink);border:1px solid var(--hairline);border-radius:8px;padding:5px 12px;background:var(--bg-3)}
+.path .arrow{color:var(--accent);font-family:var(--mono);font-size:.8rem}
+.path .who{font-size:.82rem;color:var(--ink-dim);margin-top:12px}
+.path .who b{color:var(--ink)}
+.note{margin-top:16px;padding:12px 16px;border-left:3px solid var(--accent);background:rgba(232,163,61,.06);border-radius:0 8px 8px 0;font-size:.84rem;color:var(--ink-dim)}
+.note b{color:var(--ink)}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.rel{display:block;border:1px solid var(--hairline-soft);border-radius:10px;padding:15px 17px;background:var(--bg-2);transition:border-color .2s}
+.rel:hover{border-color:rgba(232,163,61,.4);text-decoration:none}
+.rel .rn{font-weight:600;font-size:.92rem}
+.rel .rz{font-family:var(--mono);font-size:.64rem;color:var(--ink-faint);letter-spacing:.06em;margin-top:4px;display:block}
+.cta-band{margin:64px 0 0;padding:40px;border-radius:14px;background:linear-gradient(135deg,rgba(232,163,61,.1),rgba(232,163,61,.03));border:1px solid rgba(232,163,61,.22);text-align:center}
+.cta-band h2{margin-bottom:10px}
+.cta-band p{color:var(--ink-dim);max-width:560px;margin:0 auto 20px;font-size:.92rem}
+footer{margin-top:64px;border-top:1px solid var(--hairline-soft);padding:44px 0 54px}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.f-brand .mk{font-weight:700;font-size:1rem}
+.f-brand .mk em{font-style:normal;color:var(--accent)}
+.f-brand p{color:var(--ink-faint);font-size:.78rem;margin-top:6px;max-width:360px}
+.f-links{text-align:right}
+.f-links .fk{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:8px}
+.f-links a{display:block;font-size:.8rem;color:var(--ink-dim);padding:2px 0}
+.f-links a:hover{color:var(--accent)}
+@media (max-width:800px){.tri{grid-template-columns:1fr}.biz-grid{grid-template-columns:1fr}.rel-grid{grid-template-columns:1fr 1fr}.layer{grid-template-columns:1fr}.layer .lh{border-right:0;border-bottom:1px solid var(--hairline-soft);padding:15px 20px;flex-direction:row;align-items:baseline;gap:10px;flex-wrap:wrap}.layer h3{margin-top:0}.layer .le{margin-top:0}}
+@media (max-width:560px){.wrap{padding:0 16px}.rel-grid{grid-template-columns:1fr}.cta-band{padding:28px 18px}.f-links{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"FactoryToShelf","description":"七大业务线：渠道入驻、数据洞察、系统工具、品牌增长、众筹分销、合规企业、展会服务","url":"https://factorytoshelf.hdhaidong.workers.dev/"}
+</script>
+</head>
+<body>
+
+
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">System Architecture</div>
+  <h1>一个持续进化的<span class="hl">系统</span>，一图看懂</h1>
+  <p class="hero-sub">FactoryToShelf 不是一个项目集合，而是一套自底向上生长的系统：<b>硬件层</b>提供算力与物理边界，<b>智能体层</b>生产洞察，<b>系统层</b>沉淀为平台，<b>服务层</b>把能力交付到客户手里——把中国的供给能力接进美国的渠道与内容生态。四层共享同一套底层：渠道、数据、内容。</p>
+  <div class="cta-row">
+    <a class="btn btn-p" href="#products">系统架构</a>
+    <a class="btn btn-s" href="#biz">七大服务线</a>
+  </div>
+  <div class="tri">
+    <div class="t"><div class="k">主线一 · 渠道</div><div class="v">入驻 · 代理 · 展会 · 合规</div></div>
+    <div class="t"><div class="k">主线二 · 数据</div><div class="v">分析 · Token · 洞察 · 雷达</div></div>
+    <div class="t"><div class="k">主线三 · 内容</div><div class="v">红人 · 短剧 · 众筹 · 系统</div></div>
+  </div>
+</div></div>
+
+<!-- ================= 系统架构 ================= -->
+<div class="sec" id="products"><div class="wrap">
+  <div class="sec-head">
+    <h2>一个系统的进化</h2>
+    <p>自底向上生长的四层架构——硬件提供算力与物理边界，智能体生产洞察，系统层沉淀为平台，服务层把能力交付到客户手里。四层不是四个产品，是一套系统的四次进化。</p>
+  </div>
+
+  <div class="stack">
+
+    <div class="layer">
+      <div class="lh"><span class="ln">Layer 04 · 交付</span><h3>服务层</h3><span class="le">SERVICES</span></div>
+      <div class="lb">
+        <p>系统面向客户的交付形态——七大业务线，每条可独立交付，按客户阶段组合成解决方案。</p>
+        <ul>
+          <li><b>七条业务线：</b>渠道入驻 · 数据洞察 · 系统工具 · 品牌增长 · 众筹分销 · 合规企业 · 展会服务</li>
+          <li><b>交付物：</b>入驻方案、数据结论与 token、系统部署、内容与增长、展期执行</li>
+        </ul>
+        <div class="go"><a href="#biz">看七大服务线 ↓</a></div>
+      </div>
+    </div>
+
+    <div class="lconn"><span class="ar">↑</span><span class="cap">服务交付</span></div>
+
+    <div class="layer">
+      <div class="lh"><span class="ln">Layer 03 · 平台</span><h3>系统层</h3><span class="le">PLATFORM</span></div>
+      <div class="lb">
+        <p>自有商业平台——业务在系统里沉淀为客户资产，而不是散落在工具与表格之间。</p>
+        <ul>
+          <li><b>平台规模：</b>12 个业务分区、62 个页面，覆盖客户全生命周期</li>
+          <li><b>系统底座：</b>ERP / WMS / CRM 与智能体交付，都跑在这一层之上</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lconn"><span class="ar">↑</span><span class="cap">平台沉淀</span></div>
+
+    <div class="layer">
+      <div class="lh"><span class="ln">Layer 02 · 产能</span><h3>智能体层</h3><span class="le">AGENTS</span></div>
+      <div class="lb">
+        <p>研究与运营数字员工——替人跑研究腿：选品发现、竞品情报、社交聆听、自动报告，长在真实电商工作流上，不做聊天窗口。</p>
+        <ul>
+          <li><b>产能去向：</b>数据洞察业务线的分析结论与数据 token 由这一层生产</li>
+          <li><b>闭环：</b>token 装回 Agent——一句话调出报告，Agent 再生产新结论，数据养 Agent、Agent 产出数据</li>
+          <li><b>工作方式：</b>多源采集 + 交叉验证 + 人工研判，每个结论可复核</li>
+          <li><b>使用界面：</b>自然语言驱动——一句话调出选品、竞品、声量报告</li>
+          <li><b>经验沉淀：</b>熟练方法固化为可复用技能，Agent 越用越准，人走技能留下</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lconn"><span class="ar">↑</span><span class="cap">智能体产能</span></div>
+
+    <div class="layer">
+      <div class="lh"><span class="ln">Layer 01 · 底座</span><h3>硬件层</h3><span class="le">EDGE · HARDWARE</span></div>
+      <div class="lb">
+        <p>Agent 硬件与边缘算力——给智能体造身体，给数据上锁。</p>
+        <ul>
+          <li><b>能力：</b>工业与无线网关（Modbus / CAN / BLE / LoRa），端侧本地推理</li>
+          <li><b>边界：</b>物理 Approve 门禁，每一次写入都过真实开关；可拔插加密隐私卡，拔卡即带走全部历史</li>
+          <li><b>用途：</b>数据不出域的客户场景，分析直接跑在端侧</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note"><b>能力流向（自下而上）：</b>硬件算力 → 智能体产能 → 平台沉淀 → 服务交付。每一层只依赖下一层、为上一层供给——同一套数据与流程贯穿四层，这也是各业务线的结论能互相咬合的原因。</div>
+</div></div>
+
+<!-- ================= 七大服务线 ================= -->
+<div class="sec" id="biz"><div class="wrap">
+  <div class="sec-head">
+    <h2>七大服务线</h2>
+    <p>每张卡片是一条可独立交付的业务线，卡片底部是直达入口。业务之间的组合方式见下方「客户路径」。</p>
+  </div>
+  <div class="biz-grid">
+
+    <article class="biz">
+      <span class="no">Business 01</span>
+      <h3>渠道入驻</h3>
+      <span class="en">CHANNEL ONBOARDING</span>
+      <p>76 个电商平台专属入驻页 + 欧美渠道网络——从平台开店到销售代理对接，一条业务线解决「货往哪放」。</p>
+      <ul>
+        <li><b>平台入驻：</b>美国 / 欧洲 / 全球 76 个平台，入驻条件、佣金费用一站看懂</li>
+        <li><b>渠道网络：</b>美国零售销售代理与欧洲电商服务商体系，对接线下与多国渠道</li>
+        <li><b>资质清单：</b>OEM/ODM 工厂入驻资质自查，缺什么补什么</li>
+      </ul>
+      <div class="go">
+        <a href="sell-on/">76 平台入驻</a>
+        <a href="supplier.html">中文主落地页</a>
+        <a href="oem-odm-onboarding-checklist/index.html">入驻资质清单</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 02</span>
+      <h3>数据洞察</h3>
+      <span class="en">DATA INTELLIGENCE</span>
+      <p>我们提供数据分析与数据 token 交付——结论和数据给你，<b>数据源头不披露</b>。这是本条业务线的核心纪律。</p>
+      <ul>
+        <li><b>数据分析：</b>选品、定价、评论、竞品、市场趋势——按问题交付结论</li>
+        <li><b>数据 token：</b>以接口 / 数据包形式交付分析结果，直接接入你的系统</li>
+        <li><b>品牌洞察：</b>红人 × 品牌 × 内容三方洞察 + 众筹科技产品雷达</li>
+        <li><b>数据订阅：</b>选品、定价、消费者、竞品、众筹信号、品牌声量六条订阅线</li>
+      </ul>
+      <div class="go">
+        <a href="insights.html">品牌洞察</a>
+        <a href="data-platforms.html">业务数据订阅</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 03</span>
+      <h3>系统工具</h3>
+      <span class="en">SYSTEMS · ERP · AI AGENT</span>
+      <p>开发与业务匹配的系统：ERP 订单库存一体化、WMS 海外仓、CRM 自动化、AI Agent 定制——卖给客户的系统，我们自己先跑通。</p>
+      <ul>
+        <li><b>ERP：</b>订单、库存、采购、财务一体化，多平台统一管</li>
+        <li><b>WMS：</b>海外仓收发存、批次与库位、一件代发</li>
+        <li><b>CRM：</b>线索自动化旅程、展后跟进、客户分层运营</li>
+        <li><b>AI Agent 定制：</b>客服 / 运营 / 洞察智能体，按业务流程编排</li>
+      </ul>
+      <div class="go">
+        <a href="systems.html">系统工具服务</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 04</span>
+      <h3>品牌增长</h3>
+      <span class="en">BRAND GROWTH</span>
+      <p>红人营销投放、AI 短剧定制、网红经纪、品牌社媒推广、三方撮合——内容侧的完整弹药库，含给美国品牌与网红的 AI 短剧定制能力输出。</p>
+      <ul>
+        <li><b>红人营销：</b>头部造声量、腰部做转化、尾部铺矩阵，全流程托管</li>
+        <li><b>AI 短剧定制：</b>低成本低周期量产剧情内容，一剧多版本多语种</li>
+        <li><b>网红经纪：</b>红人商业化代理与商单管理</li>
+        <li><b>撮合：</b>网红 × 品牌 × 网剧三方撮合，内容资产沉淀 IP</li>
+      </ul>
+      <div class="go">
+        <a href="brand-growth.html">品牌增长服务</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 05</span>
+      <h3>众筹分销</h3>
+      <span class="en">CROWDFUNDING DISTRIBUTION</span>
+      <p>众筹雷达发现全球科技新品信号，分销体系把爆筹产品接进渠道——上游盯着 Kickstarter / Indiegogo，下游接着 76 平台与线下渠道。</p>
+      <ul>
+        <li><b>发现：</b>众筹平台科技品类监测，新项目上线与热度信号入库</li>
+        <li><b>研判：</b>达成速度、增速曲线、评论区反馈——区分真需求与泡沫</li>
+        <li><b>分销：</b>爆筹产品的渠道对接与分销落地，提前半年卡位需求</li>
+        <li><b>选题：</b>口播与短视频创作者的选题弹药，周报 + 选题卡</li>
+      </ul>
+      <div class="go">
+        <a href="insights.html#radar">众筹科技产品雷达</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 06</span>
+      <h3>合规与企业</h3>
+      <span class="en">COMPLIANCE &amp; ENTITY</span>
+      <p>出海的底座工程：美国公司注册、商标、域名、VAT、海关 Bond、税务——先把身份和合规立住，再谈生意。</p>
+      <ul>
+        <li><b>主体：</b>美国 LLC / C-Corp、欧盟主体注册</li>
+        <li><b>知产：</b>USPTO / EUIPO / UKIPO / 马德里商标布局</li>
+        <li><b>税务：</b>销售税、欧盟 VAT、EPR、海关 Bond</li>
+        <li><b>数字资产：</b>域名注册与品牌社媒资产开局</li>
+      </ul>
+      <div class="go">
+        <a href="compliance.html">合规与企业服务</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">Business 07</span>
+      <h3>展会服务</h3>
+      <span class="en">TRADE SHOWS</span>
+      <p>线下渠道的见面引擎：12+ 主力展会（High Point、Ambiente、Outdoor Retailer、MAGIC…）的选展、搭建、物流、买家邀约与展后跟进。</p>
+      <ul>
+        <li><b>规划：</b>按品类 × 买家 × 预算匹配展会，年度节奏排布</li>
+        <li><b>执行：</b>展位搭建、样品物流单证、现场翻译</li>
+        <li><b>邀约：</b>展前 60 天买家邀约话术体系与时段管理</li>
+        <li><b>跟进：</b>展后 30 天线索分级进 CRM，T+72h 红线</li>
+      </ul>
+      <div class="go">
+        <a href="exhibitions.html">展会服务</a>
+      </div>
+    </article>
+
+    <article class="biz">
+      <span class="no">· 组合拳</span>
+      <h3>三条主线怎么拧成一股</h3>
+      <span class="en">HOW IT COMPOUNDS</span>
+      <p>单点服务解决单点问题，业务线组合解决阶段问题——下面三条客户路径是典型组合。</p>
+      <ul>
+        <li><b>渠道 × 合规 × 系统：</b>工厂从 0 到 1 出海的黄金三角</li>
+        <li><b>数据 × 品牌：</b>洞察告诉你讲什么故事，增长线把它做出来</li>
+        <li><b>众筹 × 渠道：</b>雷达发现需求，入驻线收割需求</li>
+      </ul>
+      <div class="go">
+        <a href="#paths">看客户路径 ↓</a>
+      </div>
+    </article>
+
+  </div>
+</div></div>
+
+<!-- ================= 客户路径 ================= -->
+<div class="sec" id="paths"><div class="wrap">
+  <div class="sec-head">
+    <h2>三条客户路径</h2>
+    <p>不同客户用不同的业务组合——三条路径覆盖了我们 90% 的服务场景。</p>
+  </div>
+
+  <div class="path">
+    <div class="pt"><span class="pn">路径 A</span><h3>工厂出海路径</h3><span class="pz">FACTORY → MARKET</span></div>
+    <div class="flow">
+      <span class="node">资质清单自查</span><span class="arrow">→</span>
+      <span class="node">合规主体（公司 / 商标 / VAT）</span><span class="arrow">→</span>
+      <span class="node">76 平台入驻</span><span class="arrow">→</span>
+      <span class="node">ERP / WMS / CRM 系统</span><span class="arrow">→</span>
+      <span class="node">展会见买家</span><span class="arrow">→</span>
+      <span class="node">品牌增长转型</span>
+    </div>
+    <div class="who"><b>适合：</b>OEM / ODM 工厂从「卖货给渠道」升级到「做品牌进渠道」——第一年在渠道里活下来，第三年让渠道来找你。</div>
+  </div>
+
+  <div class="path">
+    <div class="pt"><span class="pn">路径 B</span><h3>品牌增长路径</h3><span class="pz">BRAND → VOICE</span></div>
+    <div class="flow">
+      <span class="node">数据洞察（品牌声量摸底）</span><span class="arrow">→</span>
+      <span class="node">红人营销投放</span><span class="arrow">→</span>
+      <span class="node">AI 短剧定制</span><span class="arrow">→</span>
+      <span class="node">社媒矩阵运营</span><span class="arrow">→</span>
+      <span class="node">三层影响复盘</span>
+    </div>
+    <div class="who"><b>适合：</b>已有渠道但缺声量的品牌方——用洞察决定打哪里，用红人与短剧打出声量，用复盘体系把预算变成资产。</div>
+  </div>
+
+  <div class="path">
+    <div class="pt"><span class="pn">路径 C</span><h3>数据与分销路径</h3><span class="pz">DATA → DISTRIBUTION</span></div>
+    <div class="flow">
+      <span class="node">众筹雷达发现新品</span><span class="arrow">→</span>
+      <span class="node">热度研判 + 卖点拆解</span><span class="arrow">→</span>
+      <span class="node">数据 token 接入客户系统</span><span class="arrow">→</span>
+      <span class="node">分销渠道对接</span>
+    </div>
+    <div class="who"><b>适合：</b>创作者（口播选题弹药）、选品团队（提前半年看需求）、渠道商（爆筹产品分销卡位）——数据先行，动作跟上。</div>
+  </div>
+
+  <div class="note"><b>数据纪律（全业务线通用）：</b>我们提供数据分析与数据 token，不提供、也不披露数据源头——你拿到的是结论和可用数据，不是我们的供应链。自有监测网络 + 多源交叉验证 + 人工研判，是我们输出判断的方式。</div>
+</div></div>
+
+<!-- ================= 全部入口 ================= -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>全部入口</h2>
+  </div>
+  <div class="rel-grid">
+    <a class="rel" href="overview-en.html"><span class="rn">Business Overview（EN）</span><span class="rz">英文版业务总览</span></a>
+    <a class="rel" href="sell-on/"><span class="rn">76 个平台入驻</span><span class="rz">线上渠道目录</span></a>
+    <a class="rel" href="sell-on-oem-odm-en.html"><span class="rn">English Main Page</span><span class="rz">SELL ON + OEM/ODM</span></a>
+    <a class="rel" href="insights.html"><span class="rn">品牌洞察</span><span class="rz">红人×品牌×内容 · 众筹雷达</span></a>
+    <a class="rel" href="data-platforms.html"><span class="rn">业务数据订阅</span><span class="rz">六条订阅线 · 数据 token</span></a>
+    <a class="rel" href="brand-growth.html"><span class="rn">品牌增长服务</span><span class="rz">红人 · 短剧 · 社媒</span></a>
+    <a class="rel" href="systems.html"><span class="rn">系统工具服务</span><span class="rz">ERP · WMS · CRM · AI</span></a>
+    <a class="rel" href="compliance.html"><span class="rn">合规与企业服务</span><span class="rz">公司 · 商标 · VAT</span></a>
+    <a class="rel" href="exhibitions.html"><span class="rn">展会服务</span><span class="rz">12+ 主力展会</span></a>
+    <a class="rel" href="oem-odm-onboarding-checklist/index.html"><span class="rn">入驻资质清单</span><span class="rz">OEM/ODM 自查</span></a>
+  </div>
+</div></div>
+
+<div class="cta-band"><div class="wrap">
+  <h2>从任意一条业务线进入</h2>
+  <p>邮件说明你的阶段与目标——工厂出海、品牌增长还是数据需求，我们回一份对应的路径建议与交付方式。</p>
+  <div class="cta-row" style="justify-content:center">
+    <a class="btn btn-p" href="mailto:haidong.zhou@outlook.com?subject=业务咨询（FactoryToShelf）">邮件咨询</a>
+    <a class="btn btn-s" href="sell-on/">先看 76 个平台入驻</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap"><div class="f-grid">
+  <div class="f-brand">
+    <span class="mk">Factory<em>ToShelf</em></span>
+    <p>美国渠道公司 · 深圳运营中心 —— 渠道、数据、内容三位一体的品牌出海网络。</p>
+  </div>
+  <div class="f-links">
+    <div class="fk">Services</div>
+    <a href="overview.html">全局业务总览</a>
+    <a href="sell-on/">76 个平台入驻</a>
+    <a href="insights.html">品牌洞察</a>
+    <a href="brand-growth.html">品牌增长服务</a>
+    <a href="systems.html">系统工具服务</a>
+    <a href="compliance.html">合规与企业服务</a>
+    <a href="exhibitions.html">展会服务</a>
+    <span class="fc" style="color:var(--accent);font-family:var(--mono);font-size:.82rem;display:inline-block;margin-top:10px">haidong.zhou@outlook.com</span>
+  </div>
+</div></div></footer>
+
+<script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

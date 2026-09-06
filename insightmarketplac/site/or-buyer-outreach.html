@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Outdoor Retailer 买家邀约话术手册 · 骑行 × 露营 | insightmarketplac 内部工具</title>
+<style>
+:root{--bg:#000000;--bg-2:#0A0A0A;--bg-3:#111111;--ink:#F2EEE6;--ink-dim:#A7ADB8;--ink-faint:#6E7683;--accent:#E8A33D;--accent-hi:#F4BA60;--hairline:rgba(242,238,230,.12);--hairline-soft:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono","Cascadia Code",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{border-bottom:1px solid var(--hairline-soft);background:rgba(0,0,0,.92);position:sticky;top:0;z-index:40;backdrop-filter:blur(10px)}
+.top-in{max-width:940px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mk{font-weight:700;font-size:1rem}
+.brand .mk em{font-style:normal;color:var(--accent)}
+.brand .bc{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em}
+.hero{padding:56px 0 40px;border-bottom:1px solid var(--hairline-soft);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-160px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(232,163,61,.08),transparent 65%);pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+h1{font-size:clamp(1.7rem,3.8vw,2.6rem);font-weight:700;line-height:1.25}
+h1 .hl{color:var(--accent)}
+.hero-sub{max-width:660px;margin-top:14px;color:var(--ink-dim);font-size:1rem}
+.meta-pill{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-dim);border:1px solid var(--hairline);border-radius:20px;padding:5px 14px}
+.pill b{color:var(--accent);font-weight:600}
+.sec{padding:48px 0 4px}
+.sec-head{margin-bottom:22px}
+h2{font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700}
+.sec-head p{color:var(--ink-dim);margin-top:7px;font-size:.92rem;max-width:720px}
+.tbl-scroll{overflow-x:auto;border:1px solid var(--hairline-soft);border-radius:12px;background:var(--bg-2)}
+.tbl{width:100%;border-collapse:collapse;font-size:.84rem}
+.tbl th{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-align:left;padding:10px 12px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.tbl td{padding:11px 12px;border-bottom:1px solid var(--hairline-soft);color:var(--ink-dim);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td:first-child{color:var(--ink);font-weight:600}
+.tbl .tag{display:inline-block;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;padding:2px 8px;border-radius:20px;border:1px solid rgba(232,163,61,.35);color:var(--accent);margin-top:4px}
+.script{border:1px solid rgba(232,163,61,.28);border-radius:12px;background:var(--bg-2);margin:18px 0 26px;overflow:hidden}
+.script .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--hairline-soft);background:rgba(232,163,61,.05)}
+.script .bar .t{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+.script .bar .s{font-family:var(--mono);font-size:.62rem;color:var(--ink-faint)}
+.script .body{padding:18px 20px;font-family:var(--mono);font-size:.8rem;line-height:1.85;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.tok{color:var(--accent-hi);background:rgba(232,163,61,.1);border-radius:3px;padding:0 4px}
+.why{border-top:1px dashed var(--hairline-soft);padding:14px 20px 16px}
+.why .wk{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:6px}
+.why ul{list-style:none}
+.why li{font-size:.8rem;color:var(--ink-dim);padding:3px 0 3px 16px;position:relative}
+.why li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.why li b{color:var(--ink);font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.card{border:1px solid var(--hairline-soft);border-radius:12px;background:var(--bg-2);padding:22px}
+.card.hi{border-color:rgba(232,163,61,.35);background:linear-gradient(160deg,rgba(232,163,61,.06),var(--bg-2))}
+.card .no{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.card h3{font-size:1rem;font-weight:700;margin:8px 0 4px}
+.card .en{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint)}
+.card p{font-size:.84rem;color:var(--ink-dim);margin-top:8px}
+.card ul{list-style:none;margin-top:10px}
+.card li{font-size:.8rem;color:var(--ink-dim);padding:4px 0 4px 16px;position:relative}
+.card li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.card li b{color:var(--ink);font-weight:600}
+.obj{border:1px solid var(--hairline-soft);border-radius:12px;background:var(--bg-2);margin-bottom:14px;overflow:hidden}
+.obj .q{padding:15px 18px;display:flex;gap:12px;align-items:baseline}
+.obj .q .chip{flex:none;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:#141414;background:var(--accent);border-radius:4px;padding:3px 8px;text-transform:uppercase}
+.obj .q .qt{font-weight:600;font-size:.92rem}
+.obj .q .qz{display:block;font-size:.76rem;color:var(--ink-faint);margin-top:2px}
+.obj .r{border-top:1px dashed var(--hairline-soft);padding:14px 18px 16px}
+.obj .r .body{font-family:var(--mono);font-size:.78rem;line-height:1.8;color:var(--ink);white-space:pre-wrap}
+.obj .r .note{font-size:.78rem;color:var(--ink-dim);margin-top:10px;padding-left:14px;border-left:2px solid var(--accent)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.step{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:16px}
+.step .n{font-family:var(--mono);color:var(--accent);font-size:.68rem;letter-spacing:.1em}
+.step h4{font-size:.88rem;font-weight:600;margin:6px 0 4px}
+.step p{font-size:.76rem;color:var(--ink-dim);line-height:1.6}
+.note{margin-top:16px;padding:12px 16px;border-left:3px solid var(--accent);background:rgba(232,163,61,.06);border-radius:0 8px 8px 0;font-size:.82rem;color:var(--ink-dim)}
+.note b{color:var(--ink)}
+.check{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.ck{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:14px 16px}
+.ck .ct{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.ck ul{list-style:none}
+.ck li{font-size:.78rem;color:var(--ink-dim);padding:3px 0 3px 16px;position:relative}
+.ck li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.ck li b{color:var(--ink);font-weight:600}
+footer{margin-top:56px;border-top:1px solid var(--hairline-soft);padding:36px 0 48px}
+footer p{color:var(--ink-faint);font-size:.76rem;max-width:640px}
+@media (max-width:800px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.check{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}.steps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="top-in">
+  <div class="brand">
+    <span class="mk">insight<em>marketplac</em></span>
+    <span class="bc">内部销售工具 / OR 买家邀约手册</span>
+  </div>
+  <span class="mono" style="font-size:.64rem;color:var(--ink-faint)">v1 · 2026-09</span>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Buyer Outreach Playbook</div>
+  <h1>Outdoor Retailer 买家邀约话术手册<br><span class="hl">骑行 × 露营 · 双品类版</span></h1>
+  <p class="hero-sub">展会的胜负在开幕前 60 天就决定了。这本手册覆盖：目标买家分层、五轮触达节奏、全套英文话术模板、品类钩子速查、现场异议应对与 20 分钟会议流程——按 <span class="tok">[方括号]</span> 替换变量即可直接发送。</p>
+  <div class="meta-pill">
+    <span class="pill">展会锚点 <b>OR 2027 · 8 月 18–20</b> 明尼阿波利斯会议中心</span>
+    <span class="pill">触达节奏 <b>5 轮</b> T-60 → T+72h</span>
+    <span class="pill">话术模板 <b>9 个</b> 英文即用</span>
+    <span class="pill">异议应对 <b>6 条</b></span>
+  </div>
+</div></div>
+
+<!-- ============ 1. 目标买家分层 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>一、先搞清楚约谁：四层目标买家</h2>
+    <p>OR 的到场买家以专业零售与品牌方为主（2026 届 275+ 展商、550+ 零售买家，买家比展商还多）。骑行与露营品类的邀约优先级如下——T1 难约但值钱，T3/T4 是成交主力。</p>
+  </div>
+  <div class="tbl-scroll">
+  <table class="tbl">
+    <thead><tr><th>层级</th><th>买家类型</th><th>骑行品类</th><th>露营品类</th><th>邀约策略</th></tr></thead>
+    <tbody>
+      <tr><td>T1<div class="tag">战略层</div></td><td>全国连锁专业零售的自有品牌采购（private label）团队</td><td>头盔、车灯、驮包、货架、骑行服</td><td>营地家具、帐篷、灯具、睡眠系统</td><td>年度采购周期，展前 90 天开始；电话优先；准备 landed cost 口径</td></tr>
+      <tr><td>T2<div class="tag">主力层</div></td><td>品牌方产品经理 / 采购经理（无自有工厂的轻资产品牌）</td><td>骑行配件品牌、e-bike 新品牌、车包类品牌</td><td>营地家具品牌、帐篷/睡袋品牌、露营厨具灯具品牌</td><td>Email 为主 + LinkedIn；钩子用合规认证与新品类开发能力</td></tr>
+      <tr><td>T3<div class="tag">成长层</div></td><td>新兴 DTC 品牌 / 加速器背景品牌（OR 设有新兴品牌与教育日环节，此类买家浓度高）</td><td>gravel / bikepacking 新品牌、智能骑行配件初创</td><td>glamping 新品牌、solo 创业者露营品牌</td><td>小单快反钩子最有效；500 件首单 MOQ 是核心卖点</td></tr>
+      <tr><td>T4<div class="tag">渠道层</div></td><td>区域户外店 / 自行车店联合采购组织、进口商与分销商</td><td>自行车店采购联盟、骑行分销商</td><td>区域户外用品店、露营用品分销商</td><td>批量邀约 + 展位时段表；重点推 ODM 现货设计线</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note"><b>名单规模建议：</b>250–400 个目标买家（骑行 120–200 / 露营 130–200），每个买家标注 1–2 个个性化钩子再进入话术流程——没有钩子的名字不进名单。</div>
+</div></div>
+
+<!-- ============ 2. 触达节奏 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>二、五轮触达节奏（锚定 2027-08-18）</h2>
+    <p>每轮只做一件事，不叠加；买家回复即跳出序列转人工跟进。发送时间统一为美东周二–周四上午 7:30–9:30。</p>
+  </div>
+  <div class="tbl-scroll">
+  <table class="tbl">
+    <thead><tr><th>时点</th><th>动作</th><th>渠道</th><th>内容核心</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">T-90（5 月中）</td><td>名单建设 + 钩子标注</td><td>内部</td><td>250–400 名单，每条 1–2 个钩子；准备话术变量表</td></tr>
+      <tr><td class="mono">T-60（6 月中）</td><td>第一轮：Email 1 + 电话尝试</td><td>邮件 → 电话</td><td>品类钩子开场，约展位 20 分钟</td></tr>
+      <tr><td class="mono">T-45（7 月初）</td><td>第二轮：LinkedIn 触达</td><td>LinkedIn</td><td>连接备注 + 未回复者轻互动</td></tr>
+      <tr><td class="mono">T-40（7 月上旬）</td><td>第三轮：Email 2 新角度</td><td>邮件</td><td>换钩子不换诉求：新品首秀 / 样品照片</td></tr>
+      <tr><td class="mono">T-21（7 月底）</td><td>第四轮：Email 3 锁日历</td><td>邮件</td><td>给出具体两个时段二选一 + 日历链接</td></tr>
+      <tr><td class="mono">T-3（8 月 15 日）</td><td>第五轮：短确认</td><td>邮件/短信</td><td>三行确认：时间、展位号、带了什么来</td></tr>
+      <tr><td class="mono">展中（8/18–20）</td><td>到场提醒 + 现场登记</td><td>短信</td><td>样品已备的轻提醒，不催促</td></tr>
+      <tr><td class="mono">T+24–72h</td><td>展后跟进</td><td>邮件</td><td>承诺物交付 + 下一步动作 + 一个资格问题</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div></div>
+
+<!-- ============ 3. 话术库 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>三、邀约话术库（英文即用版）</h2>
+    <p>所有 <span class="tok">[TOKEN]</span> 为必填变量：[First Name] [Brand] [Booth #] [Day] [Product] [Your Name] [Factory] [Scheduling Link] [Mobile]。每封控制在 120 词以内——买家在手机上读邮件。</p>
+  </div>
+
+  <!-- 3.1 EMAIL 1 CYCLING -->
+  <div class="script">
+    <div class="bar"><span class="t">Email 1 · 第一轮 T-60 · 骑行版</span><span class="s">约 100 词</span></div>
+    <div class="body">Subject: <span class="tok">[Product]</span> at Booth <span class="tok">[Booth #]</span> — 20 minutes at OR?
+
+Hi <span class="tok">[First Name]</span>,
+
+You'll be at Outdoor Retailer in Minneapolis in August — so will we, with our cycling line.
+
+Quick context: <span class="tok">[Factory]</span> manufactures <span class="tok">[bikepacking bags / racks / lights / panniers]</span> for <span class="tok">[X US brands]</span>, and we're bringing the <span class="tok">[2027 ODM collection]</span> to the show — <span class="tok">[one concrete product + price point, e.g. "a welded-pannier line built to hit $59–79 retail with 40%+ shop margin"]</span>.
+
+What might matter for <span class="tok">[Brand]</span>:
+- <span class="tok">[Hook 1 — e.g. "UL-certified lighting, USB-C across the whole line"]</span>
+- <span class="tok">[Hook 2 — e.g. "First-run MOQs at 500 units, 45-day reorders"]</span>
+
+Can I hold 20 minutes at Booth <span class="tok">[Booth #]</span> on <span class="tok">[Day]</span>? Full sample set on the table — no slideshow.
+
+<span class="tok">[Your Name]</span>
+<span class="tok">[Title]</span> · insightmarketplac — US channel for <span class="tok">[Factory]</span></div>
+    <div class="why">
+      <div class="wk">为什么这样写</div>
+      <ul>
+        <li><b>标题即邀请：</b>买家看邮件只看标题两秒——品类词 + 展位号 + 时长承诺，三个信息够了；不放感叹号、不大写。</li>
+        <li><b>第二段就给价格带：</b>骑行买家对 "$59–79 retail / 40% margin" 的反应远大于 "high quality"——具体的数字证明你懂他的生意。</li>
+        <li><b>"no slideshow"：</b>对买家的隐性承诺：20 分钟不会被销售流程绑架。这是反套路套路。</li>
+        <li><b>签名用渠道身份：</b>以 insightmarketplac 美国渠道名义发，买家不用跟中国工厂倒时差沟通。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.2 EMAIL 1 CAMPING -->
+  <div class="script">
+    <div class="bar"><span class="t">Email 1 · 第一轮 T-60 · 露营版</span><span class="s">约 95 词</span></div>
+    <div class="body">Subject: PFAS-free <span class="tok">[tents / camp furniture / sleeping pads]</span> — Booth <span class="tok">[Booth #]</span>
+
+Hi <span class="tok">[First Name]</span>,
+
+Heading into OR, the question we keep getting from buyers is <span class="tok">["what's your PFAS-free timeline"]</span>. We'll have the answer on the table.
+
+<span class="tok">[Factory]</span> manufactures <span class="tok">[tents / sleeping pads / camp furniture / lanterns]</span> for <span class="tok">[X outdoor brands]</span> — the <span class="tok">[new line]</span> runs fully PFAS-free water repellency, third-party tested, production-ready, with <span class="tok">[GRS-certified recycled fabrics in the same program]</span>.
+
+Also bringing: <span class="tok">[camp furniture line / price-point hook]</span>.
+
+Worth 20 minutes at Booth <span class="tok">[Booth #]</span> on <span class="tok">[Day]</span>? Samples out, coffee on.
+
+<span class="tok">[Your Name]</span>
+<span class="tok">[Title]</span> · insightmarketplac — US channel for <span class="tok">[Factory]</span></div>
+    <div class="why">
+      <div class="wk">为什么这样写</div>
+      <ul>
+        <li><b>PFAS 打头阵：</b>多州法规驱动下，无氟防水是露营品类买家当下最真实的合规焦虑——首封邮件就命中，回复率显著高于泛泛的 "quality manufacturer"。</li>
+        <li><b>"third-party tested"：</b>合规声明必须可验证，这句话是给采购流程里的合规审核留的。</li>
+        <li><b>问题开场制造共鸣：</b>"the question we keep getting" 让买家觉得你是行业里被反复需要的那一方，而不是推销员。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.3 EMAIL 2 -->
+  <div class="script">
+    <div class="bar"><span class="t">Email 2 · 第三轮 T-40 · 换角度跟进（未回复者）</span><span class="s">约 80 词</span></div>
+    <div class="body">Subject: First samples just landed — OR debut
+
+Hi <span class="tok">[First Name]</span>,
+
+Following up on my note about Outdoor Retailer — one thing I didn't mention:
+
+<span class="tok">[New angle — e.g. "We just finished tooling on the new [product]. First samples landed this week, and OR will be its public debut. If [Brand] wants a first look before it's on anyone else's line sheet, Booth [Booth #] is the place."]</span>
+
+If your calendar's already packed, no problem — happy to send the <span class="tok">[line sheet / sample photos]</span> now and connect after the show.
+
+<span class="tok">[Your Name]</span></div>
+    <div class="why">
+      <div class="wk">为什么这样写</div>
+      <ul>
+        <li><b>绝不写 "just following up"：</b>纯跟进邮件是死信。第二轮必须带新信息——新品首秀的稀缺性是最好的第二钩子。</li>
+        <li><b>给台阶：</b>"calendar's already packed, no problem" 降低对抗感，同时埋下展后线索——不回复也可以在展后继续。</li>
+        <li><b>此轮后未回复即停止邮件：</b>转 LinkedIn 触达，避免被标记 spam 影响整个邮箱域声誉。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.4 EMAIL 3 -->
+  <div class="script">
+    <div class="bar"><span class="t">Email 3 · 第四轮 T-21 · 锁日历</span><span class="s">约 75 词</span></div>
+    <div class="body">Subject: Two open slots for <span class="tok">[Brand]</span> — OR, Booth <span class="tok">[Booth #]</span>
+
+Hi <span class="tok">[First Name]</span>,
+
+Three weeks out. The meeting board is filling, but I still have:
+- <span class="tok">[Thursday 10:30 AM]</span>
+- <span class="tok">[Thursday 2:00 PM]</span>
+
+Both at Booth <span class="tok">[Booth #]</span>. 20 minutes, samples in hand — and I'll bring <span class="tok">[specific prep, e.g. "a cost sheet already built to [Brand]'s price points"]</span> so we can talk real numbers.
+
+Which works? Or grab any slot: <span class="tok">[Scheduling Link]</span>
+
+<span class="tok">[Your Name]</span></div>
+    <div class="why">
+      <div class="wk">为什么这样写</div>
+      <ul>
+        <li><b>二选一提问：</b>不给开放选项，"A 还是 B" 的回复率远高于 "你什么时候有空"。</li>
+        <li><b>"cost sheet built to their price points"：</b>说明你查过他们的零售价——这是个性化准备的最高证明。</li>
+        <li><b>注意避开 8/18 教育日：</b>展期第一天是教育与行业日，买家会议约在后两天的展馆开放日。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.5 LINKEDIN + VOICEMAIL -->
+  <div class="grid2">
+  <div class="script" style="margin:0">
+    <div class="bar"><span class="t">LinkedIn 连接备注</span><span class="s">≤300 字符</span></div>
+    <div class="body">Hi <span class="tok">[First Name]</span> — we'll be at Outdoor Retailer in August with our <span class="tok">[cycling / camping]</span> manufacturing line (<span class="tok">[one hook, e.g. "UL-certified lights / PFAS-free tents"]</span>). Would love to say hi at Booth <span class="tok">[Booth #]</span> if you're walking the show. No pitch — just samples.</div>
+    <div class="why">
+      <div class="wk">要点</div>
+      <ul>
+        <li>连接备注控制在 300 字符内，<b>"No pitch — just samples"</b> 是通过率关键。</li>
+        <li>对方接受连接后 48 小时内再发站内信引导到邮件序列，不要在备注里塞链接。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="script" style="margin:0">
+    <div class="bar"><span class="t">语音留言 · T-60 电话未接后</span><span class="s">约 25 秒</span></div>
+    <div class="body">Hi <span class="tok">[First Name]</span>, this is <span class="tok">[Your Name]</span> with <span class="tok">[Factory]</span>. I emailed about Outdoor Retailer — we're at Booth <span class="tok">[Booth #]</span> with the <span class="tok">[PFAS-free camping line / new bikepacking collection]</span>. I'll try you again tomorrow, or grab a time at <span class="tok">[Scheduling Link]</span>. Thanks, <span class="tok">[First Name]</span> — talk soon.</div>
+    <div class="why">
+      <div class="wk">要点</div>
+      <ul>
+        <li>25 秒内说完，<b>提两遍对方名字</b>——被记住的成本最低的方式。</li>
+        <li>留言后立刻跟进一封 "just tried you by phone" 短邮件，形成电话+邮件双触点。</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- 3.6 CONFIRM + SMS -->
+  <div class="grid2">
+  <div class="script" style="margin:0">
+    <div class="bar"><span class="t">T-3 短确认</span><span class="s">3 行</span></div>
+    <div class="body">Subject: Booth <span class="tok">[Booth #]</span> — see you <span class="tok">[Thursday]</span>?
+
+Hi <span class="tok">[First Name]</span> — confirming we're on for <span class="tok">[Thursday 2:00 PM]</span>, Booth <span class="tok">[Booth #]</span>. Bringing <span class="tok">[the PFAS-free sample set / the welded-pannier line]</span>. If anything changes, text me: <span class="tok">[Mobile]</span>. — <span class="tok">[Your Name]</span></div>
+    <div class="why">
+      <div class="wk">要点</div>
+      <ul>
+        <li><b>三行上限：</b>此封的目的是降低缺席率（no-show），不是再销售一遍。</li>
+        <li>留手机号 = 给买家一个零摩擦改期的出口，改期好过缺席。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="script" style="margin:0">
+    <div class="bar"><span class="t">展中到场提醒 · SMS</span><span class="s">2 行</span></div>
+    <div class="body"><span class="tok">[First Name]</span> — <span class="tok">[Your Name]</span> from Booth <span class="tok">[Booth #]</span>. The <span class="tok">[samples you wanted]</span> are on the table whenever you're ready. No rush.</div>
+    <div class="why">
+      <div class="wk">要点</div>
+      <ul>
+        <li>仅在约定时间过点未到时发，<b>"No rush" 收尾</b>——催促感是现场邀约的大忌。</li>
+        <li>短信在展会现场打开率接近 100%，是最后 500 米的唯一武器。</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- 3.7 POST-SHOW -->
+  <div class="script">
+    <div class="bar"><span class="t">展后跟进 · T+48–72h</span><span class="s">约 90 词</span></div>
+    <div class="body">Subject: Great meeting — <span class="tok">[product]</span> next steps
+
+Hi <span class="tok">[First Name]</span>,
+
+Good meeting you at OR. As promised:
+
+1. <span class="tok">[Spec sheet / sample photos]</span> — attached
+2. <span class="tok">[Quote for X units]</span> — with you by <span class="tok">[date]</span>
+3. <span class="tok">[NDA / line sheet]</span> — attached / on request
+
+You mentioned <span class="tok">[their specific pain, e.g. "padding out your sleeping-pad category for spring"]</span>. I've flagged <span class="tok">[product]</span> as the fit and can have samples at your office by <span class="tok">[date]</span>.
+
+One question while I build the quote: <span class="tok">[qualification question, e.g. "Is your target retail on this $79 or $99?"]</span>
+
+<span class="tok">[Your Name]</span></div>
+    <div class="why">
+      <div class="wk">为什么这样写</div>
+      <ul>
+        <li><b>72 小时红线：</b>展会上买家平均见 30+ 家展商，三天后记忆归零。A 级线索 24 小时内必须发出。</li>
+        <li><b>复述对方说过的话：</b>"You mentioned..." 证明你听了，这是从名片变成商机的分水岭。</li>
+        <li><b>结尾一个问题：</b>带具体问题的邮件必然有回复，哪怕答案是 "not now"——回复本身维持了对话。</li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 4. 品类钩子 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>四、品类钩子速查表</h2>
+    <p>钩子是话术的弹药——每个买家匹配 1–2 个，写进 Email 1 的两个 bullet 里。按买家当前的真实焦虑选，不按我们最强的能力选。</p>
+  </div>
+  <div class="grid2">
+    <div class="card hi">
+      <span class="no">Cycling · 骑行</span>
+      <h3>骑行品类钩子</h3>
+      <ul>
+        <li><b>Gravel / bikepacking 装备：</b>增长最快的骑行配件方向——车架包、驮包、货架，匹配骑行人群从公路向砾石路的迁移</li>
+        <li><b>电池产品认证能力：</b>UL 认证（灯光 / 充电类含锂电池产品）是北美零售上架的硬门槛，工厂能带着认证出货 = 买家的上架时间表不被卡</li>
+        <li><b>USB-C 全线统一：</b>一根线解决所有设备，零售端退货率更低——讲给买手听的技术卖点</li>
+        <li><b>头盔与防护合规：</b>CPSC 1203 等北美标准合规出厂，报价含认证成本</li>
+        <li><b>小单快反：</b>500 件首单 MOQ + 45 天补货——新品牌试错友好</li>
+      </ul>
+    </div>
+    <div class="card hi">
+      <span class="no">Camping · 露营</span>
+      <h3>露营品类钩子</h3>
+      <ul>
+        <li><b>无氟防水（PFAS-free）：</b>多州法规驱动下的强制改配方窗口期—— tents / jackets 买家当下最硬的合规焦虑，能提供第三方检测报告的工厂稀缺</li>
+        <li><b>GRS 再生面料：</b>同一产品线里做再生材质版本，帮品牌讲可持续故事而不加价太多</li>
+        <li><b>营地家具：</b>中国供应链的传统强项——折叠椅桌的价差与产能是品牌方绕不开的理由，重点打 "same factory quality, better margin"</li>
+        <li><b>轻量化趋势：</b>UL 背包客市场的睡垫 / 帐篷克重竞赛，克重是技术对话的入口</li>
+        <li><b>Glamping / 汽车露营：</b>客单价高、设计驱动，适合 ODM 设计库合作而非纯代工</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><b>钩子使用纪律：</b>一封邮件最多两个钩子。钩子之间不叠加 "我们还有十个优势"——买家的注意力只够处理两件事。</div>
+</div></div>
+
+<!-- ============ 5. 异议应对 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>五、现场与邮件异议应对（6 条）</h2>
+    <p>买家说 "不" 的六种方式，和每一种的英文回应。原则：先接住情绪，再给一个极小的下一步。</p>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 1</span><span><span class="qt">"We already have suppliers."</span><span class="qz">我们已有长期供应商。</span></span></div>
+    <div class="r"><div class="body">"That's exactly why I'd still take 20 minutes. Most brands we work with started as a second source on one SKU. When a delivery slips or a cost jumps next season, you already know our line sheet, MOQs, and lead times. All I'm asking for today is a first look."</div>
+    <div class="note">策略：把"已有供应商"转化为"二供定位"——不为替换，为备份。买家对供应链风险的记忆永远比销售短。</div></div>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 2</span><span><span class="qt">"We're not adding factories this year."</span><span class="qz">今年不打算新增供应商。</span></span></div>
+    <div class="r"><div class="body">"Understood — then let's make it zero-commitment. Walk the booth, see the <span class="tok">[PFAS-free line]</span>, and I'll hand you our line sheet. If nothing else, you'll know exactly who to call in Q1 when planning starts."</div>
+    <div class="note">策略：接受"今年不买"，但占领"明年想起谁"。Q1 是户外品牌新季度规划的固定起点，把时间坐标交还给他。</div></div>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 3</span><span><span class="qt">"We don't buy direct from China." / tariff concerns</span><span class="qz">我们不直接从中国采购 / 关税问题。</span></span></div>
+    <div class="r"><div class="body">"Fair — and that's a structural question, so let's answer it structurally. We handle it through <span class="tok">[bonded logistics / tariff classification review / our US channel entity]</span>. Here's my offer: quote one program, delivered, with the duty math included — so you're comparing landed cost to landed cost. If the number doesn't work, you've lost 20 minutes. If it works, you've got a second source."</div>
+    <div class="note">策略：不辩解关税，把比较基准从 FOB 换成 landed cost（到岸成本）。链动合规与企业服务页的 Bond / 关税能力——这是 insightmarketplac 渠道模式的差异化主场。</div></div>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 4</span><span><span class="qt">"Your MOQs are too high for us."</span><span class="qz">起订量太高。</span></span></div>
+    <div class="r"><div class="body">"Our first-run MOQ is <span class="tok">[500 units]</span> specifically so brands can test small. We've run programs that started at one pallet and scaled to twelve containers. The reorder conversation is where MOQs flex — let's get the first one right."</div>
+    <div class="note">策略：首单小、返单涨——给出真实的成长案例路径。"从一托到十二柜" 的画面感比任何数字都有效。</div></div>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 5</span><span><span class="qt">"Just send me a catalog."</span><span class="qz">把目录发我就行。</span></span></div>
+    <div class="r"><div class="body">"Will do — sending the line sheet today. One ask: rather than 40 pages of everything, tell me your <span class="tok">[1–2 target categories]</span> and I'll mark up the six pages that matter for <span class="tok">[Brand]</span>. Easier to read, easier to act on. And if any of it's interesting, 20 minutes at Booth <span class="tok">[Booth #]</span> beats a PDF."</div>
+    <div class="note">策略："要目录"多为礼貌性拒绝。用"帮你画重点"换取品类信息，同时保留展位邀约的口子——比直接发 PDF 的转化率高数倍。</div></div>
+  </div>
+
+  <div class="obj">
+    <div class="q"><span class="chip">Objection 6</span><span><span class="qt">"Are you a brand or a factory?"</span><span class="qz">你是品牌还是工厂？</span></span></div>
+    <div class="r"><div class="body">"<span class="tok">[Factory]</span> — we manufacture for <span class="tok">[type of clients, e.g. "US and EU outdoor brands"]</span>, and we run our US buyer relationships through insightmarketplac, our channel partner here. You get factory pricing with local account management — no 14-hour time-zone emails."</div>
+    <div class="note">策略：定位必须一句话说清。渠道模式的最大卖点不是价格，是"本地账号经理 + 工厂价格"的组合——直接回应美国买家对跨境沟通成本的顾虑。</div></div>
+  </div>
+</div></div>
+
+<!-- ============ 6. 现场会议流程 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>六、现场 20 分钟会议流程</h2>
+    <p>约到的每一场会议都按这个结构走——时间纪律本身就是专业度的展示。</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n">0–3 min</span><h4>破冰定位</h4><p>交换名片，一句话工厂定位 + 客户构成（"we make X for Y-type brands"）。确认对方时间："我们说好 20 分钟，我盯着表。"</p></div>
+    <div class="step"><span class="n">3–8 min</span><h4>提问为主</h4><p>资格问题（见下）优先于产品展示——先搞清楚他在找什么，再决定亮哪条产品线。</p></div>
+    <div class="step"><span class="n">8–15 min</span><h4>样品与数字</h4><p>按他说的方向亮样品 + 报零售价带 / MOQ / 交期。数字要敢说清楚，"回去问问工厂"是最减分的话。</p></div>
+    <div class="step"><span class="n">15–18 min</span><h4>下一步共识</h4><p>当场约定具体动作与时间："下周三前把这款的 cost sheet 发你，你回来告诉我目标零售价。"</p></div>
+    <div class="step"><span class="n">18–20 min</span><h4>收口记录</h4><p>CRM 线索卡当场录完：层级（A/B/C）、品类、痛点原话、承诺事项。别攒到晚上。</p></div>
+  </div>
+  <div class="check" style="margin-top:16px">
+    <div class="ck">
+      <div class="ct">资格问题清单 · 问对暗涨</div>
+      <ul>
+        <li>What categories are you actively looking to add for <b>spring / fall</b>?</li>
+        <li>Who makes those for you today — domestic, China, Vietnam?</li>
+        <li>Where do your current programs hurt most: <b>cost, lead time, MOQ, or development speed</b>?</li>
+        <li>What's the last product a supplier pitched you that actually made your line?</li>
+      </ul>
+    </div>
+    <div class="ck">
+      <div class="ct">推进问题清单 · 找到决策链</div>
+      <ul>
+        <li>Walk me through how a new vendor gets on your line — <b>who else needs to see this</b>?</li>
+        <li>What's your timeline from sample approval to first PO?</li>
+        <li>If the numbers work, what would a <b>pilot program</b> look like for you?</li>
+        <li>展会现场不问预算，只问节奏——预算在报价后的第二封邮件里谈。</li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 7. 发送纪律与度量 ============ -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>七、发送纪律与度量基准</h2>
+    <p>话术负责质量，纪律负责送达率。以下红线违反任何一条，整批邮件的回复率都会塌方。</p>
+  </div>
+  <div class="grid2">
+    <div class="ck">
+      <div class="ct">发送纪律 · 红线</div>
+      <ul>
+        <li><b>1:1 单发，绝不群发</b>——没有 BCC，没有邮件营销平台群发痕迹</li>
+        <li>用 <b>企业域名邮箱</b>发，不用免费邮箱；发前查 SPF / DKIM / DMARC</li>
+        <li>发送窗口：<b>美东周二–周四 7:30–9:30</b>，避开周一堆积期与周五遗忘期</li>
+        <li>每封 <b>&lt;120 词</b>，附件 &lt;2MB（大文件用链接），首封邮件不报价、不放价格表</li>
+        <li>标题不用 ALL CAPS、不用感叹号、不写 "free / guarantee /!!!</li>
+        <li>同一买家邮件序列最多 <b>3 封</b>，之后只走 LinkedIn 与电话</li>
+        <li>开头永远 <b>Hi [First Name]</b>——"Dear Sir/Madam" 直接进垃圾箱</li>
+      </ul>
+    </div>
+    <div class="ck">
+      <div class="ct">度量基准 · 按实际校准</div>
+      <ul>
+        <li>名单规模：<b>250–400</b> 目标买家（骑行 120–200 / 露营 130–200）</li>
+        <li>打开率基准：冷名单 35–45%，暖名单（展会名片 / 引荐）55%+</li>
+        <li>回复率基准：8–15%——低于 8% 先换钩子再换话术</li>
+        <li>确认会议：<b>25–40 场</b>（名单的 10% 左右）</li>
+        <li>现场新增 walk-in 谈话：30–50 组（短信召回 + 展位动线设计贡献）</li>
+        <li>A 级线索（验厂 / 打样 / 报价意向）：<b>10–15 条</b></li>
+        <li>90 天内进入买家供应商池或成单：<b>3–5 家</b></li>
+        <li>每个数字进 CRM 周报，T-30 做一次偏差复盘</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note"><b>个性化检查（发送前 30 秒）：</b>对方品牌近 90 天上过什么新品？他的门店在什么区域市场？你们有没有共同联系人？他在 OR 的议程里有没有演讲？——邮件里出现任何一条，回复率翻倍；一条都没有，这封邮件先别发。</div>
+</div></div>
+
+<footer><div class="wrap">
+  <p>insightmarketplac 内部销售工具 · Outdoor Retailer 买家邀约话术手册 v1（骑行 × 露营版）· 2026-09<br>
+  展会锚点：Outdoor Retailer 2027，8 月 18–20 日，明尼阿波利斯会议中心（档期以主办方官方公布为准）。话术模板中的认证、MOQ、交期数字发送前须经工厂确认。本文件为内部资产，请勿外发或公开部署。</p>
+</div></footer>
+
+</body>
+</html>

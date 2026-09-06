@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌洞察 · 红人内容策略 / 众筹新品雷达 | FactoryToShelf</title>
+<meta name="description" content="FactoryToShelf 品牌洞察回答两个问题：内容怎么做才积累品牌资产？下一个爆品先在哪冒头？红人×品牌×内容三方洞察定制选题，众筹科技产品雷达周更捕捉全球新品趋势，为口播与选品提供弹药。样例与初诊免费，报告与订阅按项计费，无套餐、无长约。">
+<meta name="keywords" content="红人洞察, 网红内容洞察, 品牌 IP 内容策略, 口播选题, 众筹产品雷达, Kickstarter 趋势, Indiegogo 新品, 科技产品众筹, 内容营销洞察, 爆款内容拆解, influencer content intelligence">
+<link rel="canonical" href="https://factorytoshelf.hdhaidong.workers.dev/insights.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="品牌洞察 · 红人内容策略 / 众筹新品雷达 | FactoryToShelf">
+<meta property="og:description" content="内容怎么做才积累品牌资产？下一个爆品先在哪冒头？红人×品牌×内容三方洞察 + 众筹科技产品雷达——看见别人还没看见的。">
+<meta property="og:url" content="https://factorytoshelf.hdhaidong.workers.dev/insights.html">
+<meta name="robots" content="index, follow">
+<style>
+:root{--bg:#0B0E13;--bg-2:#10141B;--bg-3:#151A23;--ink:#F2EEE6;--ink-dim:#A7ADB8;--ink-faint:#6E7683;--accent:#E8A33D;--accent-hi:#F4BA60;--hairline:rgba(242,238,230,.12);--hairline-soft:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono","Cascadia Code",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{border-bottom:1px solid var(--hairline-soft);background:rgba(11,14,19,.92);position:sticky;top:0;z-index:40;backdrop-filter:blur(10px)}
+.top-in{max-width:1000px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mk{font-weight:700;font-size:1rem}
+.brand .mk em{font-style:normal;color:var(--accent)}
+.brand .bc{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em}
+.brand .bc a{color:var(--ink-faint)}
+.hero{padding:64px 0 44px;position:relative;overflow:hidden;border-bottom:1px solid var(--hairline-soft)}
+.hero::before{content:"";position:absolute;top:-160px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(232,163,61,.08),transparent 65%);pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+h1{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+h1 .hl{color:var(--accent)}
+.hero-sub{max-width:660px;margin-top:16px;color:var(--ink-dim);font-size:1.05rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;font-family:var(--sans);font-size:.95rem;font-weight:600;padding:13px 28px;border-radius:8px;transition:all .2s}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--accent-hi));color:#141414}
+.btn-p:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 24px rgba(232,163,61,.25)}
+.btn-s{border:1px solid var(--hairline);color:var(--ink-dim)}
+.btn-s:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hairline-soft);border:1px solid var(--hairline-soft);border-radius:10px;overflow:hidden;margin-top:36px}
+.stat{background:var(--bg-2);padding:16px 18px}
+.stat .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--ink-faint);text-transform:uppercase}
+.stat .v{font-size:.98rem;font-weight:600;margin-top:5px;line-height:1.4}
+.sec{padding:52px 0 6px}
+.sec-head{margin-bottom:24px}
+h2{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700}
+.sec-head p{color:var(--ink-dim);margin-top:8px;font-size:.93rem;max-width:680px}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc{border:1px solid var(--hairline-soft);border-radius:12px;padding:24px;background:var(--bg-2);position:relative}
+.svc.hi{border-color:rgba(232,163,61,.35);background:linear-gradient(160deg,rgba(232,163,61,.07),var(--bg-2))}
+.svc .no{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.svc h3{font-size:1.05rem;font-weight:700;margin:10px 0 8px}
+.svc .en{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.05em}
+.svc p{font-size:.88rem;color:var(--ink-dim);margin-top:8px}
+.svc ul{list-style:none;margin-top:12px}
+.svc li{font-size:.83rem;color:var(--ink-dim);padding:4px 0 4px 18px;position:relative}
+.svc li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.svc li b{color:var(--ink);font-weight:600}
+.layer{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.layer-col{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:20px}
+.layer-col .mt{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.layer-col h4{font-size:.95rem;font-weight:600;margin:8px 0 6px}
+.layer-col p{font-size:.8rem;color:var(--ink-dim)}
+.match{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:6px}
+.match-col{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:20px}
+.match-col .mt{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.match-col h4{font-size:.95rem;font-weight:600;margin:8px 0 6px}
+.match-col p{font-size:.8rem;color:var(--ink-dim)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:6px}
+.step{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:18px}
+.step .n{font-family:var(--mono);color:var(--accent);font-size:.72rem;letter-spacing:.1em}
+.step h4{font-size:.92rem;font-weight:600;margin:7px 0 5px}
+.step p{font-size:.8rem;color:var(--ink-dim);line-height:1.6}
+details{border:1px solid var(--hairline-soft);border-radius:10px;background:var(--bg-2);margin-bottom:10px;overflow:hidden}
+summary{cursor:pointer;padding:15px 18px;font-weight:600;font-size:.94rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--accent);font-size:1.1rem;flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 18px 16px;color:var(--ink-dim);font-size:.88rem;border-top:1px dashed var(--hairline-soft);padding-top:14px}
+.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+.rel{display:block;border:1px solid var(--hairline-soft);border-radius:10px;padding:15px 17px;background:var(--bg-2);transition:border-color .2s}
+.rel:hover{border-color:rgba(232,163,61,.4);text-decoration:none}
+.rel .rn{font-weight:600;font-size:.92rem}
+.rel .rz{font-family:var(--mono);font-size:.64rem;color:var(--ink-faint);letter-spacing:.06em;margin-top:4px;display:block}
+.note{margin-top:14px;padding:12px 16px;border-left:3px solid var(--accent);background:rgba(232,163,61,.06);border-radius:0 8px 8px 0;font-size:.84rem;color:var(--ink-dim)}
+.radar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.radar-col{background:var(--bg-2);border:1px solid var(--hairline-soft);border-radius:10px;padding:20px}
+.radar-col .mt{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.radar-col h4{font-size:.95rem;font-weight:600;margin:8px 0 6px}
+.radar-col p{font-size:.8rem;color:var(--ink-dim)}
+.cta-band{margin:64px 0 0;padding:40px;border-radius:14px;background:linear-gradient(135deg,rgba(232,163,61,.1),rgba(232,163,61,.03));border:1px solid rgba(232,163,61,.22);text-align:center}
+.cta-band h2{margin-bottom:10px}
+.cta-band p{color:var(--ink-dim);max-width:540px;margin:0 auto 20px;font-size:.92rem}
+footer{margin-top:64px;border-top:1px solid var(--hairline-soft);padding:44px 0 54px}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.f-brand .mk{font-weight:700;font-size:1rem}
+.f-brand .mk em{font-style:normal;color:var(--accent)}
+.f-brand p{color:var(--ink-faint);font-size:.78rem;margin-top:6px;max-width:360px}
+.f-links{text-align:right}
+.f-links .fk{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:8px}
+.f-links a{display:block;font-size:.8rem;color:var(--ink-dim);padding:2px 0}
+.f-links a:hover{color:var(--accent)}
+@media (max-width:800px){.stats{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr}.match{grid-template-columns:1fr}.layer{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.rel-grid{grid-template-columns:1fr 1fr}.radar{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}.steps{grid-template-columns:1fr}.rel-grid{grid-template-columns:1fr}.radar{grid-template-columns:1fr}.cta-band{padding:28px 18px}.f-links{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
+.why-card{border:1px solid var(--hairline-soft);border-radius:10px;padding:22px;background:var(--bg-2)}
+.why-card .wn{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:.16em}
+.why-card h3{font-size:1rem;margin:10px 0 6px}
+.why-card p{font-size:.86rem;color:var(--ink-dim)}
+.why-band{margin-top:24px;padding:18px 24px;border:1px solid var(--hairline);border-radius:10px;background:var(--bg-3);text-align:center;font-size:.98rem}
+.why-band b{color:var(--accent)}
+.vsx-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.vsx-col{border:1px solid var(--hairline-soft);border-radius:12px;padding:24px;background:var(--bg-2)}
+.vsx-col.us{border-color:var(--accent)}
+.vsx-col .vt{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px}
+.vsx-col.us .vt{color:var(--accent)}
+.vsx-col ul{list-style:none}
+.vsx-col li{font-size:.88rem;color:var(--ink-dim);padding:9px 0 9px 22px;position:relative;border-top:1px dashed var(--hairline-soft)}
+.vsx-col li:first-child{border-top:none}
+.vsx-col li::before{position:absolute;left:0;font-weight:700}
+.vsx-col.diy-x li::before{content:"×";color:#C56A6A}
+.vsx-col.us li::before{content:"✓";color:var(--accent)}
+.vsx-col.us li{color:var(--ink)}
+.fee-note2{margin-top:24px;padding:16px 22px;border:1px solid var(--hairline);border-radius:10px;background:var(--bg-2);font-size:.88rem;color:var(--ink-dim)}
+.fee-note2 b{color:var(--ink)}
+.fee-note2 .fk{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:8px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}.vsx-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"FactoryToShelf 品牌洞察","description":"红人×品牌×内容三方洞察与众筹科技产品雷达服务：帮网红定制对品牌 IP 影响力大的内容，众筹雷达周更捕捉全球新品趋势。样例与初诊免费，报告与订阅按项计费。","provider":{"@type":"Organization","name":"FactoryToShelf"}}
+</script>
+</head>
+<body>
+
+
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Brand Insights</div>
+  <h1>看见别人<span class="hl">还没看见的</span></h1>
+  <p class="hero-sub">品牌洞察两条产品线：<b>红人 × 品牌 × 内容</b>三方洞察——帮网红定制对品牌 IP 影响力大的内容；<b>众筹科技产品雷达</b>——第一时间发现全球众筹平台上的新品信号，为口播、选品与开发提供弹药。所有洞察以<b>数据分析报告或数据 token</b> 形式交付——你拿到的是结论与数据，<b>不是数据源头</b>。</p>
+  <div class="cta-row">
+    <a class="btn btn-p" href="#creator">红人品牌内容洞察</a>
+    <a class="btn btn-s" href="#radar">众筹科技产品雷达</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="k">覆盖对象</div><div class="v">红人 · 品牌 · 内容<br>三方交叉</div></div>
+    <div class="stat"><div class="k">监测源</div><div class="v">自有监测网络<br>多源交叉验证</div></div>
+    <div class="stat"><div class="k">众筹雷达</div><div class="v">全球主流众筹平台<br>科技品类</div></div>
+    <div class="stat"><div class="k">输出形态</div><div class="v">选题卡 · 周报<br>复盘报告</div></div>
+  </div>
+</div></div>
+
+<!-- ================= Why ================= -->
+<div class="sec" id="why"><div class="wrap">
+  <div class="sec-head">
+    <h2>同样是做内容，差距在洞察方式</h2>
+    <p>有人凭感觉押注选题，有人按三层影响框架排内容——流量散了以后，品牌剩下什么，每一次决策都在拉开差距。而大多数内容团队的决策，还停留在四个困境里。</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="wn">PAIN 01</span>
+      <h3>投放凭感觉，复盘只会看播放量</h3>
+      <p>播放高就是好？没人拆内容对品牌积累了什么——认知、搜索、资产三层没人看，预算花完只剩一堆散掉的流量。</p>
+    </div>
+    <div class="why-card">
+      <span class="wn">PAIN 02</span>
+      <h3>选题靠模仿，永远慢半拍</h3>
+      <p>等别人爆了才拆解跟拍，进场就是高点；先行信号没人盯，你看到的「趋势」其实是「尾声」。</p>
+    </div>
+    <div class="why-card">
+      <span class="wn">PAIN 03</span>
+      <h3>商单做完就散，观众记不住品牌</h3>
+      <p>红人换了一批又一批，话术一场一个样——观众记住了段子，没记住你，预算没沉淀成 IP 资产。</p>
+    </div>
+    <div class="why-card">
+      <span class="wn">PAIN 04</span>
+      <h3>新品信号没人替你盯</h3>
+      <p>下一个需求先在众筹平台冒头，等上渠道货架才看到——你看到的选品答案，已经是别人爆款的第二季。</p>
+    </div>
+  </div>
+  <div class="why-band">订阅的不是报告，是<b>「下一条内容怎么做」的判断</b>——选题卡、复盘结论、雷达信号，全部直接落到动作。</div>
+</div></div>
+
+<!-- ================= Module A ================= -->
+<div class="sec" id="creator"><div class="wrap">
+  <div class="sec-head">
+    <h2>红人 × 品牌 × 内容洞察</h2>
+    <p>回答一个具体的问题：<b>什么样的内容，对这个品牌 IP 的影响最大？</b>——不是泛泛的曝光数据，而是把「内容形式 × 红人特质 × 品牌叙事」放在一起看，找出真正沉淀为品牌资产的那部分内容。</p>
+  </div>
+  <div class="svc-grid">
+    <article class="svc hi">
+      <span class="no">Insight 01</span>
+      <h3>品牌声量与情感追踪</h3>
+      <span class="en">BRAND MENTION &amp; SENTIMENT</span>
+      <p>品牌在内容生态里被谁谈论、以什么语气谈论、趋势往哪里走——投放前摸底，投放后验证。</p>
+      <ul>
+        <li><b>声量：</b>提及量、平台分布、内容形式分布</li>
+        <li><b>情感：</b>正面 / 中性 / 负面语气与话题点</li>
+        <li><b>趋势：</b>品牌词搜索与讨论热度的联动变化</li>
+      </ul>
+    </article>
+    <article class="svc hi">
+      <span class="no">Insight 02</span>
+      <h3>内容形式效能</h3>
+      <span class="en">FORMAT EFFECTIVENESS</span>
+      <p>口播、测评、剧情植入、开箱、直播切片——不同形式对「认知、搜索、转化」三个目标的杠杆完全不同。按目标选形式，不按流行选形式。</p>
+      <ul>
+        <li><b>认知层：</b>什么样的钩子让人记住品牌</li>
+        <li><b>搜索层：</b>什么内容真正带动品牌词搜索</li>
+        <li><b>转化层：</b>什么结构把观看变成下单</li>
+      </ul>
+    </article>
+    <article class="svc">
+      <span class="no">Insight 03</span>
+      <h3>爆款内容拆解</h3>
+      <span class="en">VIRAL CONTENT TEARDOWN</span>
+      <p>拆到可以复用的颗粒度：前三秒钩子、叙事结构、节奏点、评论区高赞信号——把「爆款」从运气变成方法。</p>
+      <ul>
+        <li><b>结构：</b>钩子 → 冲突 → 产品位 → 行动指令</li>
+        <li><b>信号：</b>评论区在看什么、在问什么、在骂什么</li>
+        <li><b>复用：</b>输出可执行的选题卡，不是漂亮报告</li>
+      </ul>
+    </article>
+    <article class="svc">
+      <span class="no">Insight 04</span>
+      <h3>红人匹配度评估</h3>
+      <span class="en">CREATOR-BRAND FIT</span>
+      <p>同一个品牌，换一个红人，效果差十倍。用三个维度算匹配度，而不是看粉丝数。</p>
+      <ul>
+        <li><b>类目契合：</b>内容主线与品牌品类的自然关联</li>
+        <li><b>受众重合：</b>粉丝画像与品牌目标人群的重叠度</li>
+        <li><b>历史表现：</b>过往同类内容与商单的真实效果</li>
+      </ul>
+    </article>
+    <article class="svc">
+      <span class="no">Insight 05</span>
+      <h3>竞品投放复盘</h3>
+      <span class="en">COMPETITOR CAMPAIGN REVIEW</span>
+      <p>竞品跟哪些红人合作过、投过什么形式、内容矩阵怎么排——花竞品的钱，买自己的答案。</p>
+      <ul>
+        <li><b>合作盘：</b>竞品的红人组合与层级结构</li>
+        <li><b>内容盘：</b>形式、频次、话术与卖点口径</li>
+        <li><b>机会点：</b>未被覆盖的人群与内容空白</li>
+      </ul>
+    </article>
+    <article class="svc">
+      <span class="no">Insight 06</span>
+      <h3>品牌 IP 内容策略</h3>
+      <span class="en">IP CONTENT STRATEGY</span>
+      <p>IP 不是 logo，是一致的人格与叙事。我们帮品牌梳理「叙事资产」，让每一次红人合作都往同一个 IP 记忆点上叠加。</p>
+      <ul>
+        <li><b>叙事资产：</b>品牌故事的可传播化提炼</li>
+        <li><b>人设契合：</b>红人风格与品牌人格的匹配设计</li>
+        <li><b>系列化：</b>把单条内容规划成可持续的栏目</li>
+      </ul>
+    </article>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>「对品牌 IP 影响大」怎么判断</h2>
+    <p>一条内容是否在为品牌 IP 积累资产，我们分三层看——只有走到第三层，内容才是资产而不是流量。</p>
+  </div>
+  <div class="layer">
+    <div class="layer-col">
+      <span class="mt">Layer 1 · 认知</span>
+      <h4>被看见</h4>
+      <p>曝光、播放、完播——内容触达了人群。这是及格线，不是目标：只停在这一层的内容，流量散了品牌什么也没剩下。</p>
+    </div>
+    <div class="layer-col">
+      <span class="mt">Layer 2 · 搜索</span>
+      <h4>被记住</h4>
+      <p>品牌词搜索量、自然提及、评论区主动@官方——观众看完内容后主动来找你。这是内容变成品牌的转折信号。</p>
+    </div>
+    <div class="layer-col">
+      <span class="mt">Layer 3 · 资产</span>
+      <h4>被信任</h4>
+      <p>用户开始用品牌的话术描述品类、二创、自来水推荐——IP 记忆点成立，内容资产开始复利，后续每次投放边际成本下降。</p>
+    </div>
+  </div>
+  <div class="note">网红定制内容的交付标准：每一条商单内容，都明确它在为品牌的哪一层积累——认知层看触达效率，搜索层看主动行为，资产层看记忆点与复用性。</div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>内容定制工作流</h2>
+    <p>从品牌诊断到投放复盘，五步把「对 IP 影响大的内容」变成可复制的流程。</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n">STEP 1</span><h4>品牌诊断</h4><p>声量摸底、叙事资产盘点、现有内容的三层影响评估。</p></div>
+    <div class="step"><span class="n">STEP 2</span><h4>IP 叙事提炼</h4><p>提炼记忆点与人格设定，确定内容口径与红线。</p></div>
+    <div class="step"><span class="n">STEP 3</span><h4>红人匹配</h4><p>按契合度筛人、分级组合，输出 Brief 与创作边界。</p></div>
+    <div class="step"><span class="n">STEP 4</span><h4>内容定制</h4><p>口播 / 测评 / 短剧多版本并行，小步测试形式效能。</p></div>
+    <div class="step"><span class="n">STEP 5</span><h4>投放复盘</h4><p>三层影响归因，沉淀选题卡，滚动进入下一轮。</p></div>
+  </div>
+</div></div>
+
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>给谁用</h2>
+  </div>
+  <div class="match">
+    <div class="match-col">
+      <span class="mt">For Creators</span>
+      <h4>网红 / 创作者</h4>
+      <p>知道什么内容对品牌 IP 影响大，把商单做成作品：更准的选品、更值钱的报价、更长期的续约——用影响力数据谈下一条。</p>
+    </div>
+    <div class="match-col">
+      <span class="mt">For Brands</span>
+      <h4>品牌方</h4>
+      <p>投什么形式、找什么人、怎么归因：红人预算从「感觉有用」变成「哪一层在涨」。竞品复盘直接抄作业的修正版。</p>
+    </div>
+    <div class="match-col">
+      <span class="mt">For Factories</span>
+      <h4>工厂 / 白牌转型</h4>
+      <p>从卖货逻辑升级到叙事逻辑：洞察告诉你市场愿意为哪个故事买单，再决定把哪条产品线做成品牌。</p>
+    </div>
+  </div>
+</div></div>
+
+<!-- ================= Module B ================= -->
+<div class="sec" id="radar"><div class="wrap">
+  <div class="sec-head">
+    <h2>众筹科技产品雷达</h2>
+    <p>全球主流众筹平台的科技品类监测：新项目上线、热度信号、卖点结构——第一时间发现「下一个会被谈到的产品」，为口播选题、选品判断与开发方向提供弹药。</p>
+  </div>
+  <div class="radar">
+    <div class="radar-col">
+      <span class="mt">监测</span>
+      <h4>新品发现</h4>
+      <p>Kickstarter、Indiegogo、Makuake 等平台科技品类的新项目，按上线时间与热度信号入库。</p>
+    </div>
+    <div class="radar-col">
+      <span class="mt">信号</span>
+      <h4>热度研判</h4>
+      <p>达成速度、增速曲线、评论区的真实反馈——区分真需求与营销泡沫，给出可信度分层。</p>
+    </div>
+    <div class="radar-col">
+      <span class="mt">拆解</span>
+      <h4>卖点提炼</h4>
+      <p>爆筹项目的卖点结构：解决了什么痛点、怎么讲故事、定价锚点在哪——翻译成可用的中文选题卡。</p>
+    </div>
+    <div class="radar-col">
+      <span class="mt">输出</span>
+      <h4>选题弹药</h4>
+      <p>每周趋势简报 + 选题卡库：口播脚本切入角度、短视频素材方向、直播演示亮点。</p>
+    </div>
+  </div>
+  <div class="svc-grid" style="margin-top:14px">
+    <article class="svc hi">
+      <span class="no">场景一 · 口播 / 短视频创作者</span>
+      <h3>永远有新东西可讲</h3>
+      <p>科技口播最怕选题枯竭。众筹雷达每周输出「正在起量的新品」：产品是什么、为什么值得讲、观众会问什么——按选题卡直接开录。</p>
+    </article>
+    <article class="svc hi">
+      <span class="no">场景二 · 工厂 / 选品团队</span>
+      <h3>提前半年看到需求</h3>
+      <p>众筹平台是全球新品需求的预演场：今天爆筹的科技品，就是明年渠道的热卖候选。监测它，等于提前看到选品答案——差异化开发从对标抄款升级为需求预判。</p>
+    </article>
+  </div>
+</div></div>
+
+<!-- ================= Fees ================= -->
+<div class="sec" id="fees"><div class="wrap">
+  <div class="sec-head">
+    <h2>样例免费，报告与订阅按项计费</h2>
+    <p>不卖套餐、不签长约——先看脱敏样例，再决定买哪一项：每一项花在哪、值不值，全部透明。</p>
+  </div>
+  <div class="svc-grid">
+    <article class="svc hi">
+      <span class="no">Free · 非收费项</span>
+      <h3>样例与初诊</h3>
+      <span class="en">SAMPLE &amp; FIRST LOOK</span>
+      <p>邮件说明角色（创作者 / 品牌 / 工厂）与关注品类后免费出具，先看结论再谈付费。</p>
+      <ul>
+        <li><b>脱敏样例：</b>对应方向的诊断 / 复盘样例报告</li>
+        <li><b>初诊建议：</b>三层影响框架下的现状初评</li>
+        <li><b>方案建议：</b>订阅线与交付形态的优先级建议</li>
+      </ul>
+    </article>
+    <article class="svc">
+      <span class="no">Per Item · 收费项</span>
+      <h3>报告与订阅</h3>
+      <span class="en">REPORTS &amp; SUBSCRIPTIONS</span>
+      <p>按项次计费，初诊后 1 个工作日内发送对应报价单。</p>
+      <ul>
+        <li><b>品牌诊断报告：</b>按项目计费，一次交付</li>
+        <li><b>投放复盘报告：</b>按投放轮次计费</li>
+        <li><b>众筹雷达订阅：</b>按订阅线计费，周更 + 选题卡库</li>
+        <li><b>红人匹配评估：</b>按批次计费</li>
+        <li><b>数据 token 接入：</b>按字段权限计费</li>
+      </ul>
+    </article>
+  </div>
+  <div class="fee-note2">
+    <span class="fk">Fee Note</span>
+    样例与初诊永远免费；报告与订阅<b>按项次报价</b>，不设套餐、不捆绑长约——先看到样例质量，再决定付费项。洞察承诺的是分析质量与交付节奏，不承诺投放结果。
+  </div>
+</div></div>
+
+<!-- ================= DIY vs ================= -->
+<div class="sec" id="vs"><div class="wrap">
+  <div class="sec-head">
+    <h2>自己盯数据，还是订阅洞察？</h2>
+    <p>内容团队可以自己拼工具盯数据，也可以把「结论」直接订回来——两条路的差距不在努力程度，在反馈速度。</p>
+  </div>
+  <div class="vsx-grid">
+    <div class="vsx-col diy-x">
+      <div class="vt">自己盯 · DIY</div>
+      <ul>
+        <li>后台只看得到自己的播放量，看不见竞品投了什么、行业在聊什么</li>
+        <li>买来的报告讲大势不讲动作，看完还是不知道下条内容拍什么</li>
+        <li>众筹平台几万个项目靠肉眼筛，热点过了才刷到</li>
+        <li>复盘停留在「播放高不高」，品牌词搜索与记忆点没人归因</li>
+      </ul>
+    </div>
+    <div class="vsx-col us">
+      <div class="vt">订阅洞察 · With Us</div>
+      <ul>
+        <li>三层影响框架（认知 / 搜索 / 资产），每条内容明确在为哪一层积累</li>
+        <li>选题卡拆到钩子、结构、话术可直接复用的颗粒度</li>
+        <li>众筹雷达周更，正在起量的新品每周到手，提前半年看到需求</li>
+        <li>复盘结论直接落到动作：哪层在涨、下轮调整什么，滚动迭代</li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+
+<!-- ================= FAQ ================= -->
+<div class="sec" id="faq"><div class="wrap">
+  <div class="sec-head">
+    <h2>常见问题</h2>
+  </div>
+  <details>
+    <summary>洞察的数据从哪里来？</summary>
+    <div class="a">自有监测网络与研究体系：多源交叉验证 + 人工研判，形成内部数据库后输出结论。我们提供<b>数据分析与数据 token</b>，不提供、也不披露任何单一外部数据来源——你拿到的是判断和可用数据，不是转售的源头。数据 token 以接口或数据包形式交付，可直接接入你的 ERP / CRM 或自有看板（详见系统工具服务）。</div>
+  </details>
+  <details>
+    <summary>什么是数据 token 交付？</summary>
+    <div class="a">把分析结果做成标准化的数据接口或周期性数据包：趋势信号、热度分值、选题卡结构化字段——你的系统按 token 拉取即可，不需要采购原始数据源，也不需要自己搭分析团队。适合已有技术团队但缺数据能力的客户。</div>
+  </details>
+  <details>
+    <summary>品牌洞察和「业务数据订阅」是什么关系？</summary>
+    <div class="a">两条服务，可以独立订阅：<b>业务数据订阅</b>回答「生意数据」问题——选品、定价、消费者、竞品的持续数据供给，以数据 token / 数据包 / 报告交付；<b>品牌洞察</b>回答「内容与 IP」问题——红人 × 品牌 × 内容三方交叉，输出选题卡、复盘报告与策略建议。前者让经营有数可依，后者让内容对 IP 积累资产。</div>
+  </details>
+  <details>
+    <summary>更新频率是怎样的？</summary>
+    <div class="a">众筹雷达按周输出趋势简报，热点项目不定期加更；红人×品牌×内容洞察按项目节奏交付——诊断报告通常 1–2 周，投放复盘在每轮投放结束后 5 个工作日内。</div>
+  </details>
+  <details>
+    <summary>我是个网红，怎么合作？</summary>
+    <div class="a">两条路：一是订阅选题弹药（众筹雷达周报 + 内容形式洞察），持续提升内容命中率；二是接我们的品牌商单——洞察体系帮你把商单做成对品牌 IP 影响大的定制内容，品牌方续约，你涨价。</div>
+  </details>
+  <details>
+    <summary>怎么收费？</summary>
+    <div class="a">样例与初诊免费；品牌诊断报告<b>按项目</b>、投放复盘<b>按轮次</b>、众筹雷达<b>按订阅线</b>、数据 token <b>按字段权限</b>逐项报价——不设套餐、不捆绑长约，先看样例再决定付费项，见「收费方式」区块。</div>
+  </details>
+  <details>
+    <summary>可以先看一份样例吗？</summary>
+    <div class="a">可以。邮件说明你的角色（创作者 / 品牌 / 工厂）与关注的品类，我们回一份对应方向的脱敏样例与报价结构。</div>
+  </details>
+</div></div>
+
+<!-- ================= Related ================= -->
+<div class="sec"><div class="wrap">
+  <div class="sec-head">
+    <h2>配套能力</h2>
+  </div>
+  <div class="rel-grid">
+    <a class="rel" href="brand-growth.html"><span class="rn">品牌增长服务</span><span class="rz">红人 · 短剧 · 社媒 · 撮合</span></a>
+    <a class="rel" href="systems.html"><span class="rn">系统工具服务</span><span class="rz">ERP · WMS · CRM · AI AGENT</span></a>
+    <a class="rel" href="compliance.html"><span class="rn">合规与企业服务</span><span class="rz">公司 / 商标 / VAT / BOND</span></a>
+    <a class="rel" href="data-platforms.html"><span class="rn">业务数据订阅</span><span class="rz">六条订阅线 · 数据 token 交付</span></a>
+  </div>
+</div></div>
+
+<div class="cta-band" id="apply"><div class="wrap">
+  <h2>先看见，再出手</h2>
+  <p>邮件说明你的角色（创作者 / 品牌 / 工厂）与关注品类，获取一份对应方向的洞察样例与订阅方案。</p>
+  <div class="cta-row" style="justify-content:center">
+    <a class="btn btn-p" href="mailto:haidong.zhou@outlook.com?subject=品牌洞察订阅咨询（FactoryToShelf）">邮件订阅洞察</a>
+    <a class="btn btn-s" href="sell-on/">先看 76 个平台入驻</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap"><div class="f-grid">
+  <div class="f-brand">
+    <span class="mk">Factory<em>ToShelf</em></span>
+    <p>美国渠道公司 · 深圳运营中心 —— 渠道、数据、内容三位一体的品牌出海网络。</p>
+  </div>
+  <div class="f-links">
+    <div class="fk">Services</div>
+    <a href="sell-on/">76 个平台入驻</a>
+    <a href="data-platforms.html">业务数据订阅</a>
+    <a href="brand-growth.html">品牌增长服务</a>
+    <a href="compliance.html">合规与企业服务</a>
+    <a href="systems.html">系统工具服务</a>
+    <span class="fc" style="color:var(--accent);font-family:var(--mono);font-size:.82rem;display:inline-block;margin-top:10px">haidong.zhou@outlook.com</span>
+  </div>
+</div></div></footer>
+
+<script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

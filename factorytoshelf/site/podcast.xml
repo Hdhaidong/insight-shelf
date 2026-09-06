@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Product Hub</title>
+<link>https://factorytoshelf.hdhaidong.workers.dev/podcast.html</link>
+<language>zh-cn</language>
+<copyright>Copyright 2026 FactoryToShelf</copyright>
+<description>面向出海工厂的每周音频节目——三个固定板块：Product 产品（众筹爆品与 AI 硬件信号）、Agent 智能体（业绩与一线应用）、Impact 营销 Agent（AI 营销打法）。内容自产，RSS 自托管分发。</description>
+<itunes:author>FactoryToShelf</itunes:author>
+<itunes:summary>面向出海工厂的每周音频节目——Product 产品 / Agent 智能体 / Impact 营销 Agent 三个固定板块。内容自产，RSS 全平台分发。</itunes:summary>
+<itunes:owner>
+<itunes:name>FactoryToShelf</itunes:name>
+<itunes:email>haidong.zhou@outlook.com</itunes:email>
+</itunes:owner>
+<itunes:category text="Technology"/>
+<itunes:category text="Business"/>
+<itunes:image href="https://factorytoshelf.hdhaidong.workers.dev/podcast/cover/cover.jpg"/>
+<itunes:explicit>false</itunes:explicit>
+<item>
+<title>第 2 期：12.6 万行代码零手写——Agent 开始替公司干活</title>
+<link>https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html</link>
+<guid isPermaLink="true">https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-002.html</guid>
+<pubDate>Wed, 02 Sep 2026 08:00:00 +0000</pubDate>
+<description>Product 看 M5Stack CardputerZero 口袋 Linux 电脑众筹 HK$1,496 万；Agent 拆美国电商老兵 Rick Watson 用 Claude Code 搭的公司大脑——5 周、12.6 万行、零手写；Impact 讲头部 25% 品牌拿走 10 倍 AI 引用。AI 配音版。</description>
+<enclosure url="https://factorytoshelf.hdhaidong.workers.dev/podcast/audio/ep-002.mp3" length="1980288" type="audio/mpeg"/>
+<itunes:duration>5:30</itunes:duration>
+<itunes:episode>2</itunes:episode>
+</item>
+<item>
+<title>第 1 期：AI 硬件正在众筹集中出海</title>
+<link>https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-001.html</link>
+<guid isPermaLink="true">https://factorytoshelf.hdhaidong.workers.dev/podcast/ep-001.html</guid>
+<pubDate>Wed, 02 Sep 2026 06:00:00 +0000</pubDate>
+<description>Product 读八月末众筹周榜：iKKO MindOne 卡片 AI 手机 HK$1,152 万；Agent 看本地跑 Agent 的真需求——Tiiny 口袋超算 $307 万；Impact 拆 Cosori 的先测后上。AI 配音版。</description>
+<enclosure url="https://factorytoshelf.hdhaidong.workers.dev/podcast/audio/ep-001.mp3" length="1171296" type="audio/mpeg"/>
+<itunes:duration>3:15</itunes:duration>
+<itunes:episode>1</itunes:episode>
+</item>
+</channel>
+</rss>

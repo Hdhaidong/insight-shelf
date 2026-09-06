@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技能库业务映射与缺口分析 | insightmarketplac</title>
+<meta name="description" content="内部参考：131 个 Agent 技能按三条客户路径 × 七大服务线的映射结果、平台覆盖对照与缺口补齐优先级。">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://insightmarketplac.hdhaidong.workers.dev/skill-gap-analysis.html">
+<style>
+:root {
+  --bg: #000000;
+  --bg2: #0A0A0A;
+  --bg3: #111111;
+  --ink: #F2EEE6;
+  --muted: #A7ADB8;
+  --faint: #6E7683;
+  --rule: rgba(242,238,230,.14);
+  --rule-soft: rgba(242,238,230,.07);
+  --accent: #E8A33D;
+  --accent2: #F4BA60;
+  --font: "Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --font-mono: Consolas,"SF Mono","Cascadia Code","Courier New",monospace;
+  --max: 980px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.75; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+article.page { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Cover ---------- */
+.cover { padding: 64px 0 40px; border-bottom: 1px solid var(--rule-soft); position: relative; }
+.cover::before { content:""; position:absolute; top:-120px; right:-60px; width:340px; height:340px; background:radial-gradient(circle,rgba(232,163,61,.08),transparent 65%); pointer-events:none; }
+.eyebrow { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.24em; color: var(--accent); text-transform: uppercase; margin-bottom:14px; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height:1.22; letter-spacing:-.015em; font-weight:700; }
+h1 em { font-style: normal; color: var(--accent); }
+.cover .dek { color: var(--muted); max-width:720px; margin-top:16px; font-size:1.02rem; }
+.cover .meta { display:flex; gap:22px; flex-wrap:wrap; margin-top:26px; font-family:var(--font-mono); font-size:.72rem; color:var(--faint); }
+.cover .meta b { color: var(--accent2); font-weight:700; }
+
+/* ---------- Nav ---------- */
+nav.toc { position: sticky; top: 0; z-index: 60; background: rgba(0,0,0,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule-soft); margin: 0 -24px; padding: 10px 24px; display:flex; gap:16px; flex-wrap:wrap; }
+nav.toc a { font-family: var(--font-mono); font-size:.72rem; color: var(--muted); text-decoration:none; }
+nav.toc a:hover { color: var(--accent); }
+
+/* ---------- Sections ---------- */
+section { padding: 46px 0 8px; border-bottom: 1px solid var(--rule-soft); }
+.sn { font-family: var(--font-mono); font-size:.68rem; letter-spacing:.2em; color: var(--accent); text-transform:uppercase; margin-bottom:8px; }
+h2 { font-size: 1.5rem; letter-spacing:-.01em; margin-bottom: 6px; }
+h3 { font-size: 1.08rem; margin: 26px 0 10px; color: var(--accent2); }
+h4 { font-size: .95rem; margin: 18px 0 8px; }
+p { margin: 10px 0; color: var(--ink); }
+p.lead { color: var(--muted); font-size:.95rem; margin-bottom: 18px; max-width: 780px; }
+strong { color: var(--accent2); font-weight: 600; }
+ul.plain { list-style: none; margin: 12px 0; }
+ul.plain li { padding: 6px 0 6px 18px; position: relative; color: var(--muted); font-size: .92rem; border-bottom: 1px dashed var(--rule-soft); }
+ul.plain li::before { content:"›"; position:absolute; left:2px; color: var(--accent); font-weight:700; }
+ul.plain li b { color: var(--ink); }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 620px; margin: 16px 0; border: 1px solid var(--rule); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: .84rem; min-width: 620px; }
+th { text-align:left; font-family: var(--font-mono); font-size:.66rem; letter-spacing:.1em; color: var(--accent); text-transform: uppercase; padding: 9px 12px; border-bottom: 1px solid var(--rule); position: sticky; top: 0; background: var(--bg2); z-index:2; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; color: var(--muted); }
+td b { color: var(--ink); }
+td.num { font-family: var(--font-mono); color: var(--faint); width: 34px; }
+tr:hover td { background: rgba(232,163,61,.03); }
+
+/* ---------- Cards ---------- */
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 14px; margin: 18px 0; }
+.card { background: var(--bg2); border: 1px solid var(--rule); border-radius: 10px; padding: 18px; }
+.card .cn { font-family: var(--font-mono); font-size:.64rem; letter-spacing:.14em; color: var(--accent); text-transform:uppercase; }
+.card h4 { margin: 6px 0 6px; font-size: 1rem; }
+.card p { font-size: .82rem; color: var(--muted); margin: 4px 0; }
+.card .pill { display:inline-block; font-family:var(--font-mono); font-size:.64rem; color: var(--accent); border:1px solid rgba(232,163,61,.35); border-radius:99px; padding:1px 8px; margin:6px 4px 0 0; background: rgba(232,163,61,.06); }
+
+/* ---------- Callouts / stats ---------- */
+.callout { background: rgba(232,163,61,.05); border: 1px solid rgba(232,163,61,.25); border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 18px; font-size: .88rem; color: var(--muted); margin: 20px 0; }
+.callout b { color: var(--accent2); }
+.callout.red { background: rgba(220,80,60,.05); border-color: rgba(220,80,60,.3); border-left-color: #DC503C; }
+.callout.red b { color: #F09A8C; }
+.kv { display:grid; grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin: 20px 0; }
+.kv .k { background: var(--bg2); border:1px solid var(--rule); border-radius:8px; padding: 12px 14px; }
+.kv .v { font-family: var(--font-mono); font-size: 1.45rem; font-weight: 700; color: var(--accent); }
+.kv .t { font-size: .7rem; color: var(--faint); margin-top: 2px; }
+
+/* ---------- Bars ---------- */
+.bars { margin: 18px 0; }
+.bar-row { display:grid; grid-template-columns: 150px 1fr 58px; align-items:center; gap:12px; padding:7px 0; border-bottom:1px dashed var(--rule-soft); }
+.bar-row .bl { font-size:.86rem; color:var(--muted); text-align:right; }
+.bar-row .bl b { color: var(--ink); }
+.bar-track { background: var(--bg3); border-radius:5px; height:11px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:5px; background: linear-gradient(90deg,var(--accent),var(--accent2)); }
+.bar-fill.zero { background: repeating-linear-gradient(45deg, rgba(220,80,60,.35) 0 6px, transparent 6px 12px); }
+.bar-fill.dim { background: linear-gradient(90deg,rgba(232,163,61,.4),rgba(244,186,96,.5)); }
+.bar-row .bv { font-family:var(--font-mono); font-size:.78rem; color:var(--accent2); }
+
+/* ---------- Chips ---------- */
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0; }
+.chip { font-family:var(--font-mono); font-size:.72rem; padding: 4px 11px; border-radius:99px; border:1px solid rgba(232,163,61,.4); color:var(--accent2); background:rgba(232,163,61,.07); }
+.chip.off { border-color: var(--rule); color: var(--faint); background: transparent; }
+
+/* ---------- Rating ---------- */
+.rate { display:inline-block; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.08em; padding: 2px 9px; border-radius: 4px; white-space:nowrap; }
+.rate.s { color:#7FD6A4; border:1px solid rgba(127,214,164,.4); background:rgba(127,214,164,.07); }
+.rate.m { color:var(--accent2); border:1px solid rgba(232,163,61,.4); background:rgba(232,163,61,.07); }
+.rate.w { color:#F0B24E; border:1px solid rgba(240,178,78,.4); background:rgba(240,178,78,.07); }
+.rate.z { color:#F09A8C; border:1px solid rgba(240,154,140,.4); background:rgba(240,154,140,.07); }
+
+footer { padding: 40px 0 30px; }
+footer .fine { font-family:var(--font-mono); font-size:.7rem; color:var(--faint); line-height:2; }
+@media (max-width: 640px) { .bar-row { grid-template-columns: 96px 1fr 46px; } .bar-row .bl { font-size:.76rem; } }
+</style>
+</head>
+<body>
+<article class="page">
+
+<!-- ============ COVER ============ -->
+<header class="cover">
+  <div class="eyebrow">Internal Reference · Agent Skills Audit · 2026-09-02</div>
+  <h1>技能库业务映射<em>与缺口分析</em></h1>
+  <p class="dek">对当前 Agent 技能市场在架的 <strong>131 个技能</strong>做一次业务侧盘点：按三条客户路径 × 七大服务线逐线映射，对照 77 个入驻平台与数据订阅六线，回答三个问题——<strong>弹药在哪里、缺口有哪些、先补什么</strong>。</p>
+  <div class="meta">
+    <span>属性 <b>内部参考 · noindex</b></span>
+    <span>范围 <b>131 技能 / 38+ 平台 / 9 工具方</b></span>
+    <span>产出 <b>11 项缺口 · P0×3 / P1×4 / P2×4</b></span>
+  </div>
+  <div class="kv">
+    <div class="k"><div class="v">131</div><div class="t">在架技能总数</div></div>
+    <div class="k"><div class="v">29%</div><div class="t">入驻平台数据覆盖率（22/77）</div></div>
+    <div class="k"><div class="v">58%</div><div class="t">合作渠道数据支撑（11/19）</div></div>
+    <div class="k"><div class="v">4/6</div><div class="t">数据订阅线覆盖为强</div></div>
+    <div class="k"><div class="v">11</div><div class="t">识别缺口总数</div></div>
+  </div>
+  <div class="callout"><b>文档纪律：</b>本文含技能供应商与工具方构成信息，仅限内部参考。对外页面、数据 token 交付、知识库问答中均不得复用本章供应商名称与数据源信息（硬约束：数据源不披露）。</div>
+</header>
+
+<nav class="toc">
+  <a href="#overview">① 清单总览</a>
+  <a href="#frame">② 映射框架</a>
+  <a href="#lines">③ 七线逐线映射</a>
+  <a href="#datalines">④ 数据六线深查</a>
+  <a href="#platforms">⑤ 平台覆盖对照</a>
+  <a href="#gaps">⑥ 缺口与优先级</a>
+  <a href="#verdict">⑦ 结论</a>
+  <a href="#log">⑧ 执行日志</a>
+</nav>
+
+<!-- ============ 1. OVERVIEW ============ -->
+<section id="overview">
+  <div class="sn">Section 01 · Inventory</div>
+  <h2>一、清单总览</h2>
+  <p class="lead">131 个技能横跨 38+ 平台与 9 个工具方。品类标签存在交叉（合计 240 个标签 ÷ 131 个技能 ≈ 平均 1.8 个标签/技能），说明多数技能同时服务选品与数据两个场景——这本身是数据线业务的好消息。</p>
+
+  <h3>1.1 品类分布（市场官方分类）</h3>
+  <div class="bars">
+    <div class="bar-row"><span class="bl"><b>选品与开发</b></span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bv">85</span></div>
+    <div class="bar-row"><span class="bl"><b>数据分析</b></span><div class="bar-track"><div class="bar-fill" style="width:95%"></div></div><span class="bv">81</span></div>
+    <div class="bar-row"><span class="bl">产品运营</span><div class="bar-track"><div class="bar-fill dim" style="width:41%"></div></div><span class="bv">35</span></div>
+    <div class="bar-row"><span class="bl">营销广告</span><div class="bar-track"><div class="bar-fill dim" style="width:36%"></div></div><span class="bv">31</span></div>
+    <div class="bar-row"><span class="bl">通用 / 热点</span><div class="bar-track"><div class="bar-fill dim" style="width:9%"></div></div><span class="bv">8</span></div>
+    <div class="bar-row"><span class="bl"><b>产品视觉</b></span><div class="bar-track"><div class="bar-fill zero" style="width:0.8%"></div></div><span class="bv">0</span></div>
+  </div>
+  <p class="lead" style="margin-top:14px">两个结构性事实：<strong>选品 + 数据双主力</strong>（85 / 81，与「数据与分销」路径高度匹配）；<strong>产品视觉为零</strong>（Listing 图片、A+ 内容、视频脚本——品牌增长路径的刚性环节在技能市场是空白品类）。</p>
+
+  <h3>1.2 平台分布（按技能归属统计，131 = 全部）</h3>
+  <div class="bars">
+    <div class="bar-row"><span class="bl"><b>Amazon</b></span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bv">53</span></div>
+    <div class="bar-row"><span class="bl">其他跨境平台</span><div class="bar-track"><div class="bar-fill dim" style="width:49%"></div></div><span class="bv">26</span></div>
+    <div class="bar-row"><span class="bl">国内电商</span><div class="bar-track"><div class="bar-fill dim" style="width:24.5%"></div></div><span class="bv">13</span></div>
+    <div class="bar-row"><span class="bl">Walmart</span><div class="bar-track"><div class="bar-fill dim" style="width:22.6%"></div></div><span class="bv">12</span></div>
+    <div class="bar-row"><span class="bl">1688 货源</span><div class="bar-track"><div class="bar-fill dim" style="width:17%"></div></div><span class="bv">9</span></div>
+    <div class="bar-row"><span class="bl">Shopee</span><div class="bar-track"><div class="bar-fill dim" style="width:17%"></div></div><span class="bv">9</span></div>
+    <div class="bar-row"><span class="bl">社媒 / 搜索</span><div class="bar-track"><div class="bar-fill dim" style="width:15%"></div></div><span class="bv">8</span></div>
+    <div class="bar-row"><span class="bl">企业内部</span><div class="bar-track"><div class="bar-fill dim" style="width:2%"></div></div><span class="bv">1</span></div>
+  </div>
+  <p class="lead" style="margin-top:14px">「其他跨境平台」26 个技能覆盖 22 个站点（Temu / SHEIN / Lazada / Ozon / Wildberries / Noon / Coupang / Rakuten / Trendyol / Bol / Kaufland / Zalando / Wayfair / Etsy / Newegg / Lowes / Best Buy / Target / MercadoLibre / AliExpress / Alibaba 国际站 / Shopify），加上 Amazon / Walmart / Shopee / 1688 与国内 5 站，平台触达横跨<strong>美、欧、俄、韩、日、东南亚、中东、拉美、土耳其</strong>——多平台广度是现成的差异化叙事。</p>
+
+  <h3>1.3 工具方构成（内部信息）</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>工具方</th><th>技能数</th><th>占比</th><th>主要供给</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sorftime</b></td><td class="num">46</td><td>35%</td><td>Amazon 关键词 / 类目 / 商品全家桶、Shopee、Walmart、1688 货源</td></tr>
+      <tr><td><b>Wenmai API</b></td><td class="num">41</td><td>31%</td><td>22 站点商品 / 评论 / 店铺抓取、社媒舆情、企业用量</td></tr>
+      <tr><td><b>卖家精灵</b></td><td class="num">12</td><td>9%</td><td>Amazon 类目统计 / ASIN 详情 / 流量词、Google Trends</td></tr>
+      <tr><td><b>Onebound</b></td><td class="num">12</td><td>9%</td><td>淘宝 / 京东 / 1688 / B 站 搜索 / 详情 / 评论</td></tr>
+      <tr><td><b>Alpha</b></td><td class="num">6</td><td>5%</td><td>Coupang 四件套、Shopee / 1688 评论采集</td></tr>
+      <tr><td><b>SIF</b></td><td class="num">4</td><td>3%</td><td>关键词流量竞争 / 需求概览、ASIN 反查 / 流量结构</td></tr>
+      <tr><td><b>本地工作流</b></td><td class="num">6</td><td>5%</td><td>选品分析报告、广告推进方案、AdPilot 演示、竞品监控、词库、标题合规</td></tr>
+      <tr><td><b>Keepa</b></td><td class="num">3</td><td>2%</td><td>价格 / BSR / 卖家数历史</td></tr>
+      <tr><td><b>Seller Central</b></td><td class="num">1</td><td>1%</td><td>批量折扣查询与授权修改</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout red"><b>集中度风险：</b>前两家工具方合计占 <b>66%</b>（87 / 131）。任一供给方波动会直接冲击数据线交付——建议关键能力（商品详情、评论、关键词）保持「至少两家可替代」的双源结构，本地工作流作为兜底沉淀。</div>
+</section>
+
+<!-- ============ 2. FRAME ============ -->
+<section id="frame">
+  <div class="sn">Section 02 · Mapping Frame</div>
+  <h2>二、映射框架：三路径 × 七服务线</h2>
+  <p class="lead">沿用业务梳理报告的结论框架——三条客户路径是客户视角的入口，七大服务线是交付视角的底座。技能库的映射先看路径支撑度，再看逐线弹药。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>客户路径</th><th>依赖服务线</th><th>技能支撑度</th><th>一句话判断</th></tr></thead>
+    <tbody>
+      <tr><td><b>A · 工厂出海</b><br><span style="font-size:.76rem;color:var(--faint)">渠道 × 合规 × 系统</span></td><td>渠道入驻 + 系统工具 + 合规与企业 + 展会服务</td><td><span class="rate m">中</span></td><td>渠道数据覆盖 29%，本地工作流是「业务 Agent 工具」的实证样板；合规 / 展会为零但属低频人工环节</td></tr>
+      <tr><td><b>B · 品牌增长</b><br><span style="font-size:.76rem;color:var(--faint)">洞察决定打哪里，声量打出复利</span></td><td>品牌增长 + 数据洞察</td><td><span class="rate w">前重后轻</span></td><td>洞察与声量监测充足；执行侧红人匹配 / 短剧制作 / 产品视觉三个缺口叠加</td></tr>
+      <tr><td><b>C · 数据与分销</b><br><span style="font-size:.76rem;color:var(--faint)">数据先行，动作跟上</span></td><td>数据洞察 + 众筹分销</td><td><span class="rate s">强</span></td><td>选品 / 定价 / 消费者 / 竞品四线弹药充足；补上众筹信号线即闭环</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>路径即漏斗的技能含义：</b>路径 C 的数据能力同时服务 A 的选品与 B 的声量决策——技能库「选品 + 数据双主力」的结构，恰好是三条路径共享的公共底座；而三条路径各自独占的环节（A 的合规、B 的内容制作、C 的众筹信号），正是缺口集中区。</div>
+</section>
+
+<!-- ============ 3. LINES ============ -->
+<section id="lines">
+  <div class="sn">Section 03 · Line by Line</div>
+  <h2>三、七大服务线逐线映射</h2>
+  <p class="lead">技能数按「主要服务该线」归集（多标签技能计入其主场景），覆盖度分四级：强 / 中 / 弱 / 零。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>服务线</th><th>技能支撑</th><th>覆盖度</th><th>代表能力</th><th>主要缺口</th></tr></thead>
+    <tbody>
+      <tr><td><b>渠道入驻</b></td><td class="num">约 30</td><td><span class="rate m">中</span></td><td>22 个入驻平台的市场 / 类目 / 热搜数据；Seller Central 批量折扣执行；Amazon 批量标题合规</td><td>TikTok Shop 数据、欧洲主流渠道、多平台 Listing 管理</td></tr>
+      <tr><td><b>数据洞察</b></td><td class="num">约 50</td><td><span class="rate s">强</span></td><td>VOC 评论 13+ 平台多语言、竞品与流量全链路、关键词全家桶、Keepa 历史、Google Trends</td><td>众筹信号线零自动化（详见第四章）</td></tr>
+      <tr><td><b>系统工具</b></td><td class="num">6</td><td><span class="rate m">中</span></td><td>AdPilot 广告自动化演示、选品分析报告、广告推进方案、竞品情报监控、ASIN 分层词库、标题合规——本地工作流即「业务 Agent 工具」的可展示实证</td><td>ERP / WMS / CRM 对接类技能缺失</td></tr>
+      <tr><td><b>品牌增长</b></td><td class="num">约 15</td><td><span class="rate w">弱</span></td><td>社媒监测 8 项（FB 广告库 / IG / X / YouTube / Reddit / Google SERP / Trends / 小红书）支撑声量摸底与投放情报</td><td>红人发现与管理、AI 短剧制作、产品视觉（品类计数 0）</td></tr>
+      <tr><td><b>众筹分销</b></td><td class="num">约 10</td><td><span class="rate w">弱</span></td><td>多平台商品 / 价格 / 销量数据支撑分销选品与卡位决策</td><td>Kickstarter / Indiegogo 数据源为零</td></tr>
+      <tr><td><b>合规与企业</b></td><td class="num">0</td><td><span class="rate z">零</span></td><td>—</td><td>全线无技能，纯人工交付（或有意的服务型定位）</td></tr>
+      <tr><td><b>展会服务</b></td><td class="num">0</td><td><span class="rate z">零</span></td><td>—</td><td>展会日程 / 参展商 / 买家情报无技能，radar 展会档期人工维护</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3.1 三张能力底牌</h3>
+  <div class="cards">
+    <div class="card"><div class="cn">Strength 01</div><h4>VOC / 消费者洞察最厚</h4><p>评论类技能覆盖 Amazon、Walmart、Shopee、Coupang、1688、淘宝、京东、YouTube、Reddit、小红书、B 站——多语言 VOC 是「消费者」订阅线与产品改良服务的直接弹药。</p><span class="pill">消费者线</span><span class="pill">选品验证</span></div>
+    <div class="card"><div class="cn">Strength 02</div><h4>Amazon 全链路最深</h4><p>53 个技能覆盖关键词、类目、ASIN 流量、竞品、评论、广告、Keepa、Seller Central——单个平台纵深全网最深，是「竞品」与「选品」两线的主引擎。</p><span class="pill">竞品线</span><span class="pill">关键词</span></div>
+    <div class="card"><div class="cn">Strength 03</div><h4>本地工作流 = Agent 实证</h4><p>6 个本地技能（选品报告 / 广告推进 / AdPilot / 竞品监控 / 词库 / 标题合规）把「业务 Agent 工具」从叙事变成可演示的实物——这是四层架构中智能体层的门面。</p><span class="pill">系统工具线</span><span class="pill">Agent 叙事</span></div>
+  </div>
+</section>
+
+<!-- ============ 4. DATA LINES ============ -->
+<section id="datalines">
+  <div class="sn">Section 04 · Six Data Lines</div>
+  <h2>四、数据订阅六线深查</h2>
+  <p class="lead">数据洞察线是订阅业务的主战场——按六条订阅线逐一核对技能弹药。结论：<strong>四强、一中、一零</strong>。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>订阅线</th><th>技能支撑</th><th>覆盖度</th><th>代表技能</th><th>缺口</th></tr></thead>
+    <tbody>
+      <tr><td><b>选品</b></td><td class="num">约 35</td><td><span class="rate s">强</span></td><td>潜力商品筛选、类目市场研究 / 实时 / 历史报告、历史商品筛选、Keepa 搜索、相似商品特征、1688 以图搜款 / 同款货源、多平台商品池抓取</td><td>—</td></tr>
+      <tr><td><b>定价</b></td><td class="num">约 15</td><td><span class="rate s">强</span></td><td>Keepa 历史趋势、商品历史趋势（Amazon / Walmart / Shopee）、优惠券趋势、DealWatch 促销监控、多平台价格带抓取</td><td>—</td></tr>
+      <tr><td><b>消费者</b></td><td class="num">约 18</td><td><span class="rate s">强</span></td><td>VOC 全家桶（评论洞察 / VOC 分析 / 列表 / 抓取）+ Reddit 舆情 + 小红书内容趋势 + B 站三件套 + YouTube 评论</td><td>小语种 VOC 覆盖待验证</td></tr>
+      <tr><td><b>竞品</b></td><td class="num">约 20</td><td><span class="rate s">强</span></td><td>竞品列表 / 竞品关键词 / 竞品情报监控、ASIN 关键词反查 / 流量词反查 / 关联流量 / 流量结构 / 流量来源、关键词流量竞争</td><td>Walmart 竞品关键词仅 3 个，纵深不足</td></tr>
+      <tr><td><b>众筹信号</b></td><td class="num">0</td><td><span class="rate z">零</span></td><td>间接可用：Google 搜索 / SERP、Reddit 舆情、X 抓取（热度侧写，非众筹平台原生数据）</td><td><b>Kickstarter / Indiegogo 数据源为零——P0 缺口</b></td></tr>
+      <tr><td><b>品牌声量</b></td><td class="num">约 10</td><td><span class="rate m">中</span></td><td>FB 广告库素材、IG 内容、X 推文、YouTube 评论、Google SERP / Trends、小红书 / 抖音</td><td>缺聚合与情感分析工作流（可由本地工作流补）</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout red"><b>最痛的一格：</b>「众筹信号」是六线中唯一零自动化的订阅线，而它同时是 radar 众筹雷达周报与「提前半年看需求」叙事的数据底座——当前全靠人工。补齐一个 Kickstarter / Indiegogo 数据技能，六线即全部闭环。</div>
+</section>
+
+<!-- ============ 5. PLATFORMS ============ -->
+<section id="platforms">
+  <div class="sn">Section 05 · Platform Coverage</div>
+  <h2>五、平台覆盖对照</h2>
+
+  <h3>5.1 合作渠道墙（19 个）× 数据技能</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>渠道</th><th>数据技能</th><th>状态</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><b>Amazon</b></td><td class="num">53</td><td><span class="rate s">覆盖</span></td><td>关键词 / 类目 / ASIN / 评论 / 广告 / Keepa 全链路</td></tr>
+      <tr><td><b>Walmart</b></td><td class="num">12</td><td><span class="rate s">覆盖</span></td><td>关键词 / 类目销量 / 商品 / 热搜，第二深的平台</td></tr>
+      <tr><td><b>Shopee</b></td><td class="num">9</td><td><span class="rate s">覆盖</span></td><td>热搜词 / 商品筛选 / 店铺 / 历史趋势</td></tr>
+      <tr><td><b>Target</b> / Best Buy / Zalando / bol / noon / Lazada / Wildberries / Ozon</td><td class="num">各 1</td><td><span class="rate m">基础</span></td><td>商品抓取级（商品 / 价格 / 评论），无关键词与类目纵深</td></tr>
+      <tr><td><b>TikTok Shop</b></td><td class="num">0</td><td><span class="rate z">缺口</span></td><td>抖音有国内技能、TikTok Shop 无海外技能——内容电商主战场缺位</td></tr>
+      <tr><td><b>Sam's Club / Costco / Macy's / Kohl's / Kroger</b></td><td class="num">0</td><td><span class="rate z">缺口</span></td><td>线下零售渠道天然缺公开数据源，可用第三方货架扫描类替代</td></tr>
+      <tr><td><b>Otto / Allegro</b></td><td class="num">0</td><td><span class="rate z">缺口</span></td><td>欧洲主流渠道，渠道墙在列、数据为零</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead">19 个合作渠道中 <strong>11 个有数据支撑（58%）</strong>；缺口的 8 个里，5 个是线下零售（数据源天然稀缺）、TikTok Shop / Otto / Allegro 三个线上渠道是真实可补的缺口。</p>
+
+  <h3>5.2 入驻平台页（77 个）× 专属数据技能</h3>
+  <p class="lead"><strong>22 / 77 覆盖（29%）</strong>。有专属技能的平台：</p>
+  <div class="chips">
+    <span class="chip">amazon</span><span class="chip">walmart</span><span class="chip">shopee</span><span class="chip">temu</span><span class="chip">shein</span><span class="chip">lazada</span><span class="chip">ozon</span><span class="chip">wildberries</span><span class="chip">noon</span><span class="chip">rakuten</span><span class="chip">trendyol</span><span class="chip">bol</span><span class="chip">kaufland</span><span class="chip">zalando</span><span class="chip">wayfair</span><span class="chip">etsy</span><span class="chip">newegg</span><span class="chip">lowes</span><span class="chip">best-buy</span><span class="chip">target-plus</span><span class="chip">aliexpress</span><span class="chip">shopify</span>
+  </div>
+  <p class="lead">无覆盖的 54 个平台中，业务权重最高的十个：</p>
+  <div class="chips">
+    <span class="chip off">tiktok-shop</span><span class="chip off">ebay</span><span class="chip off">home-depot</span><span class="chip off">costco</span><span class="chip off">macys</span><span class="chip off">kohls</span><span class="chip off">allegro</span><span class="chip off">otto</span><span class="chip off">carrefour</span><span class="chip off">mediamarkt</span>
+  </div>
+  <div class="callout"><b>另一面：</b>技能库还覆盖了 10+ 个非入驻页平台（1688 货源、Coupang、MercadoLibre、Alibaba 国际站、淘宝 / 京东 / 抖音 / 小红书 / B 站）——供给端与国内情报的弹药超出入驻页叙事，选品与货源核验场景是现成的用武之地。</div>
+</section>
+
+<!-- ============ 6. GAPS ============ -->
+<section id="gaps">
+  <div class="sn">Section 06 · Gap Register</div>
+  <h2>六、缺口清单与补齐优先级</h2>
+  <p class="lead">11 项缺口按「对主营叙事的杀伤力」排序：P0 直接影响在售叙事，P1 覆盖缺口明显，P2 长尾补强。</p>
+
+  <h3>P0 · 直接影响主营叙事（3 项）</h3>
+  <div class="cards">
+    <div class="card"><div class="cn">Gap 01 · P0</div><h4>众筹平台数据</h4><p>Kickstarter / Indiegogo（可延展 Makuake、Campfire）的商品 / 融资 / 进度数据。</p><p><b>杀伤点：</b>「众筹信号」订阅线与 radar 众筹雷达周报当前零自动化、全靠人工。</p></div>
+    <div class="card"><div class="cn">Gap 02 · P0</div><h4>TikTok Shop 数据</h4><p>商品 / 店铺 / 达人带货数据。</p><p><b>杀伤点：</b>渠道墙成员 + 77 平台页在列 + 内容电商主战场；抖音技能无法覆盖海外版，与红人主线也互相卡位。</p></div>
+    <div class="card"><div class="cn">Gap 03 · P0</div><h4>产品视觉类技能</h4><p>Listing 主图 / A+ 内容 / 视频脚本 / 品牌素材生成。</p><p><b>杀伤点：</b>品类计数 0；路径 B 的执行侧刚需，且是「品牌增长」从洞察走向交付的最后一公里。</p></div>
+  </div>
+
+  <h3>P1 · 覆盖缺口明显（4 项）</h3>
+  <div class="cards">
+    <div class="card"><div class="cn">Gap 04 · P1</div><h4>红人发现与管理</h4><p>达人库检索 / 匹配 / 报价 / 排期。</p><p><b>影响：</b>红人营销是三大主线之一，技能库现无任何直接支撑（Instagram 抓取最接近但非达人库）。</p></div>
+    <div class="card"><div class="cn">Gap 05 · P1</div><h4>欧洲主流渠道数据</h4><p>Otto / Allegro / eBay / 法国系（Carrefour / Cdiscount / Fnac）。</p><p><b>影响：</b>渠道墙与入驻页在列、数据为零；现有 Bol / Kaufland / Zalando 抓取证明欧洲数据可得。</p></div>
+    <div class="card"><div class="cn">Gap 06 · P1</div><h4>线下零售数据</h4><p>Sam's Club / Costco / Macy's / Kohl's / Kroger。</p><p><b>影响：</b>5 个渠道墙成员零数据；可用第三方货架扫描类数据源替代。</p></div>
+    <div class="card"><div class="cn">Gap 07 · P1</div><h4>AI 短剧 / 内容制作执行</h4><p>脚本 / 分镜 / 成片工作流。</p><p><b>影响：</b>路径 B 核心交付物（AI 短剧定制）无技能化支撑，服务交付全靠人工排期。</p></div>
+  </div>
+
+  <h3>P2 · 长尾补强（4 项）</h3>
+  <div class="cards">
+    <div class="card"><div class="cn">Gap 08 · P2</div><h4>展会情报技能</h4><p>日程 / 参展商 / 买家名录。展会服务线纯人工；radar 展会档期手工维护。</p></div>
+    <div class="card"><div class="cn">Gap 09 · P2</div><h4>合规流程技能</h4><p>商标查重 / VAT 测算 / 注册状态查询。合规线纯人工，属可接受的低频环节。</p></div>
+    <div class="card"><div class="cn">Gap 10 · P2</div><h4>跨平台 Listing 分发</h4><p>多平台批量上架 / 同步 / 合规校验。现仅 Amazon 标题合规 1 个技能。</p></div>
+    <div class="card"><div class="cn">Gap 11 · P2</div><h4>ERP / WMS / CRM 对接</h4><p>订单 / 库存 / 客户数据同步类技能。系统工具线从演示走向生产的关键一步。</p></div>
+  </div>
+</section>
+
+<!-- ============ 7. VERDICT ============ -->
+<section id="verdict">
+  <div class="sn">Section 07 · Verdict</div>
+  <h2>七、结论与补齐路线</h2>
+  <p class="lead">一句话总评：<strong>选品与数据引擎已经成型，品牌与内容执行等待补装。</strong></p>
+  <ul class="plain">
+    <li><b>路径 C 数据与分销——弹药充足。</b>选品 / 定价 / 消费者 / 竞品四线强覆盖，多平台广度（4 大洲 38+ 平台）是现成差异化；补齐众筹信号即六线闭环，这是<b>性价比最高的一步棋</b>。</li>
+    <li><b>路径 A 工厂出海——够用但不厚。</b>渠道数据覆盖 29%、合作渠道 58%；Amazon / Walmart / Shopee 三平台纵深可用，本地工作流是「业务 Agent 工具」的实证样板；扩欧洲渠道数据即可放大。</li>
+    <li><b>路径 B 品牌增长——前重后轻。</b>洞察与监测能力够，但红人匹配 / 短剧制作 / 产品视觉三个执行缺口叠加——<b>下一步的主战场在这里</b>，也是技能市场本身的产品视觉 = 0 所揭示的行业空位。</li>
+    <li><b>结构性风险两条：</b>工具方集中度 66%（双源备份）；「分析类 129 个 vs 执行类 2 个」的失衡——执行类（视觉 / 制作 / 投放 / 分发）全是自建机会。</li>
+  </ul>
+  <h3>补齐路线图</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>阶段</th><th>动作</th><th>完成后</th></tr></thead>
+    <tbody>
+      <tr><td><b>第一步（P0）</b></td><td>接入众筹平台数据 + TikTok Shop 数据 + 首个产品视觉技能</td><td>数据六线闭环；渠道墙 13/19 有数据；路径 B 打开执行侧第一块板</td></tr>
+      <tr><td><b>第二步（P1）</b></td><td>红人发现管理 + 欧洲渠道（Otto / Allegro / eBay）+ 线下零售替代源 + 短剧工作流</td><td>三大主线全部有技能化支撑；欧洲叙事与渠道墙对齐</td></tr>
+      <tr><td><b>第三步（P2）</b></td><td>展会情报 + 合规流程 + 跨平台 Listing 分发 + ERP 对接</td><td>七线全链路技能化，系统工具线从演示走向生产</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>一个自建视角：</b>P0 / P1 缺口多数在技能市场无现成供给（众筹、TikTok Shop、视觉、红人）——这恰好符合「自建系统、避免第三方中介」的原则：缺口即产品机会，先以本地工作流形式自建（如 AdPilot 先例），跑通后再决定是否对外供给。</div>
+</section>
+
+<!-- ============ 8. EXECUTION LOG ============ -->
+<section id="log">
+  <div class="sn">Section 08 · Execution Log</div>
+  <h2>八、执行日志（P0 第一批落地）</h2>
+  <p class="lead">2026-09-02：缺口分析定稿当日启动 P0 三项补齐。自建优先，全部以 agent-skills 本地工作流形式交付。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>日期</th><th>对应缺口</th><th>动作</th><th>交付物</th><th>状态</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>2026-09-02</b></td>
+        <td>Gap 01 · P0<br>众筹平台数据</td>
+        <td>验证 Kickstarter discover JSON 公开通道可免登录直读；搭建本地提取工作流</td>
+        <td><b>agent-skills/crowdfunding-signal/</b>：extract-ks.ps1（提取脚本）+ README.md（每周 3 分钟运行手册）+ output/ 首期样例（2026-09-02，12 个在筹项目 CSV + 周报 HTML 片段，与博客周报 .num/.kv/.vv 结构一致）</td>
+        <td><span class="rate s">已落地</span></td>
+      </tr>
+      <tr>
+        <td><b>2026-09-02</b></td>
+        <td>Gap 02 · P0<br>TikTok Shop 数据</td>
+        <td>四条获取路径评估（官方开放平台 API / 公开自采集 / 付费 API / SaaS 平台），产出自建优先三步走</td>
+        <td><b>tiktok-shop-data-evaluation.html</b>（内部 noindex）：Step 1 官方 API 授权店铺运营（0 成本，月内）→ Step 2 竞对 URL 级追踪（1–2 月）→ Step 3 全市场数据触发式评估（≥2 个付费需求才启动，原则例外需用户批准）</td>
+        <td><span class="rate m">评估完成</span></td>
+      </tr>
+      <tr>
+        <td><b>2026-09-02</b></td>
+        <td>Gap 03 · P0<br>产品视觉类技能</td>
+        <td>自建本地视觉规划工作台：填 8 个产品字段，一键产出主图 / A+ / 视频三组制作提示词</td>
+        <td><b>agent-skills/product-visual-studio/</b>：index.html（单文件本地工具，noindex）+ README.md。产出：主图七宫格（含即用生成提示词）、A+ 五模块、15s / 30s 短视频脚本、8 条上架合规自查清单</td>
+        <td><span class="rate s">已落地</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+  <ul class="plain">
+    <li><b>对外口径：</b>三件交付物均为内部能力——众筹周报片段进入博客周报素材管线；产品视觉工作台为交付侧工具（视觉资产按项次计费）；TikTok 评估结论指导 Step 1 官方通道申报，均不在公开站露面。</li>
+    <li><b>下一步（P0 收尾）：</b>radar 周报接入 crowdfunding-signal 周度输出；TikTok Shop 官方开放平台应用注册启动。</li>
+    <li><b>再下一步（P1 排期）：</b>红人发现管理 → 欧洲渠道数据（Otto / Allegro / eBay）→ 线下零售替代源 → AI 短剧工作流。</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="fine">
+    insightmarketplac · 技能库业务映射与缺口分析 · 内部参考 · 2026-09-02（执行日志更新：P0 第一批落地）<br>
+    本页 noindex / nofollow，不进 sitemap 与 llms.txt，不提交 IndexNow；供应商与数据源信息仅限内部使用。<br>
+    关联文档：<a href="tiktok-shop-data-evaluation.html">TikTok Shop 数据路径评估</a>（Gap 02 产出）· <a href="system-map.html">系统总图</a>。<br>
+    数据来源：Agent 技能市场在架清单（131 项，2026-09-02 快照）× 业务梳理报告框架（三路径 × 七服务线 × 数据六线）× 77 入驻平台页清单 × 19 合作渠道墙。
+  </div>
+</footer>
+
+</article>
+</body>
+</html>

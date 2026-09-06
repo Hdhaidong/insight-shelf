@@ -1,0 +1,67 @@
+# FactoryToShelf — https://factorytoshelf.hdhaidong.workers.dev/
+# All crawlers and AI answer engines are welcome.
+
+User-agent: *
+Allow: /
+
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- AI answer engines ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Chinese AI engines ---
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+Sitemap: https://factorytoshelf.hdhaidong.workers.dev/sitemap.xml

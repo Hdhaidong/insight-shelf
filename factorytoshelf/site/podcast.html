@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Hub 播客 · 产品 / Agent / 营销 Agent | FactoryToShelf</title>
+<meta name="description" content="工厂出海每周听什么？Product Hub 出海电台每周一期，三个固定板块：Product 产品、Agent 智能体、Impact 营销 Agent。内容自产、讲稿自写、RSS 自托管全平台分发。">
+<meta name="keywords" content="出海播客, Product Hub, 产品播客, Agent 业绩, 营销 Agent, AI 营销, 众筹分析, 出海工厂, RSS 订阅, 播客 RSS">
+<link rel="canonical" href="https://factorytoshelf.hdhaidong.workers.dev/podcast.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Product Hub 播客 · 产品 / Agent / 营销 Agent | FactoryToShelf">
+<meta property="og:description" content="工厂出海每周听什么？Product Hub 出海电台每周一期，三个固定板块：Product 产品、Agent 智能体、Impact 营销 Agent。内容自产、RSS 全平台分发。">
+<meta property="og:url" content="https://factorytoshelf.hdhaidong.workers.dev/podcast.html">
+<meta property="og:image" content="https://factorytoshelf.hdhaidong.workers.dev/podcast/cover/cover-1200.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0E13'/%3E%3Ctext x='16' y='21' font-family='Consolas,monospace' font-size='13' font-weight='700' fill='%23E8A33D' text-anchor='middle'%3Eim%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"PodcastSeries","name":"Product Hub","url":"https://factorytoshelf.hdhaidong.workers.dev/podcast.html","webFeed":"https://factorytoshelf.hdhaidong.workers.dev/podcast.xml","image":"https://factorytoshelf.hdhaidong.workers.dev/podcast/cover/cover.jpg","description":"面向出海工厂的每周音频节目——三个固定板块：Product 产品、Agent 智能体、Impact 营销 Agent。内容自产，RSS 全平台分发。","author":{"@type":"Organization","name":"FactoryToShelf"}}
+</script>
+<style>
+:root{--bg:#0B0E13;--bg-2:#10141B;--bg-3:#151A23;--ink:#F2EEE6;--ink-dim:#A7ADB8;--ink-faint:#6E7683;--accent:#E8A33D;--accent-hi:#F4BA60;--hairline:rgba(242,238,230,.12);--hairline-soft:rgba(242,238,230,.07);--sans:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;--mono:"SF Mono","Cascadia Code",Consolas,"Courier New",monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{border-bottom:1px solid var(--hairline-soft);background:rgba(11,14,19,.92);position:sticky;top:0;z-index:40;backdrop-filter:blur(10px)}
+.top-in{max-width:1000px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mk{font-weight:700;font-size:1rem}
+.brand .mk em{font-style:normal;color:var(--accent)}
+.brand .bc{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);letter-spacing:.06em}
+.brand .bc a{color:var(--ink-faint)}
+.hero{padding:64px 0 44px;position:relative;overflow:hidden;border-bottom:1px solid var(--hairline-soft)}
+.hero::before{content:"";position:absolute;top:-160px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(232,163,61,.08),transparent 65%);pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+h1{font-size:clamp(1.8rem,4vw,2.9rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+h1 .hl{color:var(--accent)}
+.hero-sub{max-width:680px;margin-top:16px;color:var(--ink-dim);font-size:1.05rem}
+.hero-sub b{color:var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:center}
+.hero-cover img{width:100%;border-radius:14px;border:1px solid var(--hairline);box-shadow:0 24px 60px rgba(0,0,0,.55),0 8px 24px rgba(0,0,0,.4);display:block}
+@media (max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-cover{display:flex;justify-content:center}}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;font-size:.95rem;font-weight:600;padding:13px 28px;border-radius:8px;transition:all .2s;cursor:pointer}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--accent-hi));color:#141414}
+.btn-p:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 24px rgba(232,163,61,.25)}
+.btn-s{border:1px solid var(--hairline);color:var(--ink-dim);background:transparent}
+.btn-s:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hairline-soft);border:1px solid var(--hairline-soft);border-radius:10px;overflow:hidden;margin-top:36px}
+.stat{background:var(--bg-2);padding:16px 18px}
+.stat .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--ink-faint);text-transform:uppercase}
+.stat .v{font-size:.98rem;font-weight:600;margin-top:5px;line-height:1.4}
+.sec{padding:52px 0 6px}
+.sec-head{margin-bottom:24px}
+h2{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700}
+.sec-head p{color:var(--ink-dim);margin-top:8px;font-size:.93rem;max-width:680px}
+.chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(232,163,61,.4);border-radius:5px;padding:3px 9px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 4px}
+.num{border:1px solid var(--hairline-soft);border-radius:8px;padding:12px 14px;background:var(--bg-3)}
+.num .kv{font-family:var(--mono);font-size:.6rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.num .vv{font-size:.95rem;font-weight:700;margin-top:4px}
+.num .vv small{font-weight:400;color:var(--ink-dim);font-size:.72rem;display:block;margin-top:2px}
+.feat{border:1px solid rgba(232,163,61,.3);border-radius:14px;background:linear-gradient(160deg,rgba(232,163,61,.07),var(--bg-2))}
+.feat-in{padding:30px}
+.feat .label{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+.feat h2{font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.35}
+.feat h2 a{color:var(--ink)}
+.feat h2 a:hover{color:var(--accent);text-decoration:none}
+.feat .dek{color:var(--ink-dim);font-size:.95rem;margin-top:12px;max-width:640px}
+.playbox{display:flex;align-items:center;gap:14px;margin-top:20px;padding:16px 18px;border:1px dashed rgba(232,163,61,.35);border-radius:10px;background:rgba(232,163,61,.04);flex-wrap:wrap}
+.playbox .pb-ic{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid rgba(232,163,61,.5);display:flex;align-items:center;justify-content:center}
+.playbox .pb-ic::before{content:"";display:block;width:0;height:0;border-left:13px solid var(--accent);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.playbox b{display:block;font-size:.92rem}
+.playbox span{display:block;font-size:.78rem;color:var(--ink-dim);margin-top:2px}
+.lines{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{border:1px solid var(--hairline-soft);border-radius:12px;padding:24px;background:var(--bg-2)}
+.svc.hi{border-color:rgba(232,163,61,.35);background:linear-gradient(160deg,rgba(232,163,61,.07),var(--bg-2))}
+.svc .no{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.svc h3{font-size:1.05rem;font-weight:700;margin:10px 0 8px}
+.svc p{font-size:.88rem;color:var(--ink-dim);margin-top:8px}
+.svc p b{color:var(--ink)}
+.rss-box{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;padding:12px 16px;border:1px solid var(--hairline);border-radius:8px;background:var(--bg-3);flex-wrap:wrap}
+.eplist{display:flex;flex-direction:column;gap:10px}
+.eprow{display:flex;align-items:center;gap:14px;border:1px solid var(--hairline-soft);border-radius:10px;padding:15px 18px;background:var(--bg-2);transition:border-color .2s;flex-wrap:wrap}
+.eprow:hover{border-color:rgba(232,163,61,.4);text-decoration:none}
+.eprow .epno{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;flex-shrink:0}
+.eprow .ept{font-size:.94rem;font-weight:600;color:var(--ink);flex:1;min-width:220px}
+.eprow .epd{font-family:var(--mono);font-size:.68rem;color:var(--ink-faint)}
+.rss-box code{font-family:var(--mono);font-size:.78rem;color:var(--ink-dim);word-break:break-all}
+.rss-box .btn{font-size:.78rem;padding:8px 16px}
+.note{margin-top:14px;padding:12px 16px;border-left:3px solid var(--accent);background:rgba(232,163,61,.06);border-radius:0 8px 8px 0;font-size:.84rem;color:var(--ink-dim)}
+.note b{color:var(--ink)}
+.cta-band{margin:64px 0 0;padding:40px;border-radius:14px;background:linear-gradient(135deg,rgba(232,163,61,.1),rgba(232,163,61,.03));border:1px solid rgba(232,163,61,.22);text-align:center}
+.cta-band h2{margin-bottom:10px}
+.cta-band p{color:var(--ink-dim);max-width:540px;margin:0 auto 20px;font-size:.92rem}
+footer{margin-top:64px;border-top:1px solid var(--hairline-soft);padding:44px 0 54px}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.f-brand .mk{font-weight:700;font-size:1rem}
+.f-brand .mk em{font-style:normal;color:var(--accent)}
+.f-brand p{color:var(--ink-faint);font-size:.78rem;margin-top:6px;max-width:360px}
+.f-links{text-align:right}
+.f-links .fk{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:8px}
+.f-links a{display:block;font-size:.8rem;color:var(--ink-dim);padding:2px 0}
+.f-links a:hover{color:var(--accent)}
+@media (max-width:800px){.stats{grid-template-columns:1fr 1fr}.lines{grid-template-columns:1fr}.nums{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}.cta-band{padding:28px 18px}.f-links{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+
+<div class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Podcast · Product Hub · Weekly</div>
+      <h1>Product Hub：把产品卖出去的<span class="hl">每周电台</span></h1>
+      <p class="hero-sub">出海工厂自己的音频节目，<b>内容自产</b>——每期三个固定板块：<b>Product 产品</b>（众筹爆品与 AI 硬件信号）、<b>Agent 智能体</b>（业绩与一线应用）、<b>Impact 营销 Agent</b>（AI 营销打法与品牌增长）。讲稿与博客同源生产，音频上线后 RSS 分发全平台。</p>
+      <div class="cta-row">
+        <button class="btn btn-p copyRss" type="button">复制 RSS 地址</button>
+        <a class="btn btn-s" href="#ep">去听最新一期</a>
+        <a class="btn btn-s" href="blog.html">返回博客</a>
+      </div>
+    </div>
+    <div class="hero-cover">
+      <img src="podcast/cover/cover-1200.jpg" alt="Product Hub 播客封面——深色底金色声波与三节点图标" width="260" height="260" loading="lazy">
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="k">更新节奏</div><div class="v">每周一期<br>与博客同步</div></div>
+    <div class="stat"><div class="k">节目时长</div><div class="v">约 15 分钟<br>通勤刚好听完</div></div>
+    <div class="stat"><div class="k">固定板块</div><div class="v">Product · Agent<br>Impact 营销</div></div>
+    <div class="stat"><div class="k">分发方式</div><div class="v">RSS 自托管<br>全平台可入驻</div></div>
+  </div>
+</div></div>
+
+<!-- ================= Latest episode ================= -->
+<div class="sec" id="ep"><div class="wrap">
+  <div class="feat">
+    <div class="feat-in">
+      <div class="label">第 2 期 · 2026-09-02 · Product / Agent / Impact</div>
+      <h2><a href="podcast/ep-002.html">12.6 万行代码零手写：Agent 开始替公司干活</a></h2>
+      <p class="dek">Product 看 M5Stack 口袋 Linux 电脑筹到 HK$1,496 万；Agent 拆美国电商老兵的「公司大脑」——5 周、12.6 万行代码、零手写；Impact 讲头部品牌拿走 10 倍 AI 引用。音频已上线（AI 配音，5 分 30 秒）。</p>
+      <div class="playbox" style="flex-direction:column;align-items:stretch;gap:10px">
+        <audio controls preload="none" src="podcast/audio/ep-002.mp3" style="width:100%;display:block"></audio>
+        <span>第 2 期 · AI 配音版 · 已同步 <a href="podcast.xml">RSS feed</a> 分发至 Apple Podcasts / 小宇宙 / Spotify</span>
+      </div>
+      <div class="nums">
+        <div class="num"><div class="kv">M5Stack CardputerZero</div><div class="vv">HK$1,496 万<small>13,644 名支持者的口袋电脑</small></div></div>
+        <div class="num"><div class="kv">公司大脑</div><div class="vv">12.6 万行<small>5 周 · 零手写 · Claude Code</small></div></div>
+        <div class="num"><div class="kv">AI 引用差距</div><div class="vv">10 倍<small>头部 25% 品牌 vs 下一梯队</small></div></div>
+      </div>
+      <a class="btn btn-p" style="margin-top:18px;font-size:.85rem;padding:10px 22px" href="podcast/ep-002.html">阅读完整讲稿 →</a>
+    </div>
+  </div>
+  <div class="sec-head" style="margin-top:30px">
+    <h2>全部节目</h2>
+    <p>每期音频与讲稿同步上线，RSS 全平台分发。</p>
+  </div>
+  <div class="eplist">
+    <a class="eprow" href="podcast/ep-002.html"><span class="epno">Ep.02</span><span class="ept">12.6 万行代码零手写：Agent 开始替公司干活</span><span class="epd">2026-09-02 · 5:30</span></a>
+    <a class="eprow" href="podcast/ep-001.html"><span class="epno">Ep.01</span><span class="ept">AI 硬件正在众筹集中出海</span><span class="epd">2026-09-02 · 3:15</span></a>
+  </div>
+</div></div>
+
+<!-- ================= Fixed segments ================= -->
+<div class="sec" id="lines"><div class="wrap">
+  <div class="sec-head">
+    <h2>三个固定板块</h2>
+    <p>每期结构一致：读数、判断、动作——听得懂、记得住、周一上班能用上。</p>
+  </div>
+  <div class="lines">
+    <article class="svc hi">
+      <span class="no">Segment 01</span>
+      <h3>Product · 产品</h3>
+      <p>众筹爆品、AI 硬件与选品信号——每周值得工厂盯的产品动态，<b>读完数直接给判断</b>，不堆资讯。</p>
+    </article>
+    <article class="svc">
+      <span class="no">Segment 02</span>
+      <h3>Agent · 智能体</h3>
+      <p>Agent 业绩与一线应用——<b>谁在用 Agent 提业绩、怎么提、坑在哪</b>，跑业务的 Agent 讲人话。</p>
+    </article>
+    <article class="svc">
+      <span class="no">Segment 03</span>
+      <h3>Impact · 营销 Agent</h3>
+      <p>AI 营销打法与品牌增长——<b>营销 Agent 带来的冲击</b>与可复制的发布模型、增长案例。</p>
+    </article>
+  </div>
+</div></div>
+
+<!-- ================= How to listen ================= -->
+<div class="sec" id="how"><div class="wrap">
+  <div class="sec-head">
+    <h2>如何收听与订阅</h2>
+    <p>RSS 自托管分发，不经过任何第三方中间服务——哪种方便用哪种。</p>
+  </div>
+  <div class="lines">
+    <article class="svc hi">
+      <span class="no">RSS 直连</span>
+      <h3>最通用的方式</h3>
+      <p>复制下方地址，粘贴到任意播客 App 的「通过 RSS 添加」——不依赖平台，节目直接到你手机。</p>
+      <div class="rss-box">
+        <code>https://factorytoshelf.hdhaidong.workers.dev/podcast.xml</code>
+        <button class="btn btn-p copyRss" type="button">复制</button>
+      </div>
+    </article>
+    <article class="svc">
+      <span class="no">播客平台</span>
+      <h3>Apple · 小宇宙 · Spotify</h3>
+      <p>音频上线后提交各大播客平台，届时搜索 <b>Product Hub</b> 即可订阅。入驻进度以本页更新为准。</p>
+    </article>
+    <article class="svc">
+      <span class="no">图文版</span>
+      <h3>不方便听的时候</h3>
+      <p>每期讲稿在播客页与博客同步首发；也可以在博客用邮件订阅每周更新——<a href="blog.html#subscribe">去订阅</a>。</p>
+    </article>
+  </div>
+  <div class="note"><b>自产内容声明：</b>Product Hub 为 FactoryToShelf 自产节目——讲稿自写、音频自录、RSS 自托管分发，不转载他人节目；引用的公开众筹与行业数据，在每期 show notes 注明来源。</div>
+</div></div>
+
+<!-- ================= CTA ================= -->
+<div class="wrap" style="padding-bottom:8px;margin-top:44px">
+  <div class="cta-band">
+    <h2>想把节目里的信号变成系统输入？</h2>
+    <p>每周读数是给人听的版本。众筹信号订阅线是给系统用的版本——数据 token 装进 Agent，一句话调出本周值得跟进的品类。</p>
+    <a class="btn btn-p" href="data-platforms.html#agent">看 Agent + 数据模式 →</a>
+    <a class="btn btn-s" href="sell-on-oem-odm.html#meet">预约一次会议</a>
+  </div>
+</div>
+
+<footer><div class="wrap"><div class="f-grid">
+  <div class="f-brand">
+    <span class="mk">Factory<em>ToShelf</em></span>
+    <p>美国渠道公司 · 深圳运营中心 —— 渠道、数据、内容三位一体的品牌出海网络。</p>
+  </div>
+  <div class="f-links">
+    <div class="fk">Content</div>
+    <a href="blog.html">博客</a>
+    <a href="podcast.html">播客 · Product Hub</a>
+    <a href="blog.html?cat=video">科技视频</a>
+    <div class="fk" style="margin-top:14px">Services</div>
+    <a href="sell-on/">76 个平台入驻</a>
+    <a href="data-platforms.html">业务数据订阅</a>
+    <a href="brand-growth.html">品牌增长服务</a>
+    <a href="exhibitions.html">展会服务</a>
+    <span class="fc" style="color:var(--accent);font-family:var(--mono);font-size:.82rem;display:inline-block;margin-top:10px">haidong.zhou@outlook.com</span>
+  </div>
+</div></div></footer>
+
+<script>
+(function(){
+  var url='https://factorytoshelf.hdhaidong.workers.dev/podcast.xml';
+  var btns=document.querySelectorAll('.copyRss');
+  function flash(b){var t=b.textContent;b.textContent='已复制';setTimeout(function(){b.textContent=t},2000)}
+  function fallback(b){
+    var t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();
+    try{document.execCommand('copy');flash(b)}catch(e){}
+    document.body.removeChild(t);
+  }
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click',function(){
+      var b=this;
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(url).then(function(){flash(b)},function(){fallback(b)});
+      }else{fallback(b)}
+    });
+  }
+})();
+(function(){
+  var now=new Date();now.setHours(0,0,0,0);
+  var q=document.querySelectorAll('.cd');
+  for(var i=0;i<q.length;i++){
+    var el=q[i];
+    var s=new Date(el.getAttribute('data-s')+'T00:00:00');
+    var e=new Date(el.getAttribute('data-e')+'T23:59:59');
+    var d=Math.round((s-now)/864e5);
+    el.textContent=d>0?('距开幕 '+d+' 天'):(now<=e?'进行中':'已闭幕');
+  }
+})();
+</script>
+
+<script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

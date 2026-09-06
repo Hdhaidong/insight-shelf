@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "factorytoshelf",
+  "compatibility_date": "2025-09-01",
+  "main": "index.js",
+  "assets": {
+    "directory": "./site"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "factorytoshelf-db",
+      "database_id": "64e83f87-6f5c-42c5-b537-46f645729e25"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
