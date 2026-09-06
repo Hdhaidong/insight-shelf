@@ -23,8 +23,8 @@ insight-shelf/
 
 | 项目 | 独立主页 | 独立仓 |
 |------|----------|--------|
-| FactoryToShelf（工厂到货架） | https://factorytoshelf.hdhaidong.workers.dev | [Hdhaidong/factorytoshelf](https://github.com/Hdhaidong/factorytoshelf) |
-| Insight Marketplac（供应商主站） | https://insightmarketplac.hdhaidong.workers.dev | [Hdhaidong/insightmarketplac](https://github.com/Hdhaidong/insightmarketplac)（`site/main` 分支） |
+| FactoryToShelf（工厂到货架） | https://factorytoshelf.insightmarketplac.com （大陆可访问，备用 https://factorytoshelf.hdhaidong.workers.dev） | [Hdhaidong/factorytoshelf](https://github.com/Hdhaidong/factorytoshelf) |
+| Insight Marketplac（供应商主站） | https://supplier.insightmarketplac.com （大陆可访问，备用 https://insightmarketplac.hdhaidong.workers.dev） | [Hdhaidong/insightmarketplac](https://github.com/Hdhaidong/insightmarketplac)（`site/main` 分支） |
 
 ## 业务定位
 
